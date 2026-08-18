@@ -1,166 +1,354 @@
 /* =========================================================
    PANTHEOS GLOBAL STORE V11
-   GLOBAL APPLICATION JAVASCRIPT
+   MAIN JAVASCRIPT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initLoader();
+    /* =====================================================
+       01. PREMIUM LOADER
+    ===================================================== */
 
-    initHeader();
+    const loader = document.querySelector(".page-loader");
 
-    initMobileMenu();
+    if (loader) {
+        window.addEventListener("load", () => {
 
-    initFAQ();
+            setTimeout(() => {
+                loader.classList.add("hidden");
+            }, 500);
 
-    initCounters();
-
-    initRevealAnimations();
-
-    initBackToTop();
-
-    initSearch();
-
-});
-
-
-/* =========================================================
-   LOADER
-========================================================= */
-
-function initLoader() {
-
-    const loader =
-        document.getElementById("pageLoader");
-
-    const progress =
-        document.getElementById("loaderProgress");
-
-    if (!loader || !progress) {
-        return;
+        });
     }
 
-    let value = 0;
 
-    const interval =
-        setInterval(() => {
+    /* =====================================================
+       02. STICKY HEADER
+    ===================================================== */
 
-            value += Math.floor(
-                Math.random() * 12
-            ) + 5;
+    const header = document.querySelector(".site-header");
 
-            if (value >= 100) {
+    const handleHeader = () => {
 
-                value = 100;
+        if (!header) return;
 
-                progress.style.width =
-                    `${value}%`;
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
 
-                clearInterval(interval);
+    };
 
-                setTimeout(() => {
+    handleHeader();
 
-                    loader.classList.add(
-                        "loaded"
+    window.addEventListener("scroll", handleHeader, {
+        passive: true
+    });
+
+
+    /* =====================================================
+       03. MOBILE MENU
+    ===================================================== */
+
+    const mobileButton =
+        document.querySelector(".mobile-menu-btn");
+
+    const mobileMenu =
+        document.querySelector(".mobile-menu");
+
+    if (mobileButton && mobileMenu) {
+
+        mobileButton.addEventListener("click", () => {
+
+            const opened =
+                mobileMenu.classList.toggle("open");
+
+            mobileButton.setAttribute(
+                "aria-expanded",
+                opened ? "true" : "false"
+            );
+
+            mobileButton.innerHTML =
+                opened ? "✕" : "☰";
+
+        });
+
+
+        mobileMenu.querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.remove("open");
+
+                    mobileButton.innerHTML = "☰";
+
+                    mobileButton.setAttribute(
+                        "aria-expanded",
+                        "false"
                     );
 
-                }, 350);
+                });
+
+            });
+
+    }
+
+
+    /* =====================================================
+       04. SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    if (revealElements.length) {
+
+        const revealObserver =
+            new IntersectionObserver(
+                (entries, observer) => {
+
+                    entries.forEach(entry => {
+
+                        if (!entry.isIntersecting) return;
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+    }
+
+
+    /* =====================================================
+       05. BACK TO TOP
+    ===================================================== */
+
+    const backToTop =
+        document.querySelector(".back-to-top");
+
+    if (backToTop) {
+
+        const updateBackToTop = () => {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.add("visible");
 
             } else {
 
-                progress.style.width =
-                    `${value}%`;
+                backToTop.classList.remove("visible");
 
             }
 
-        }, 90);
+        };
 
-}
+        updateBackToTop();
 
+        window.addEventListener(
+            "scroll",
+            updateBackToTop,
+            { passive: true }
+        );
 
-/* =========================================================
-   HEADER
-========================================================= */
+        backToTop.addEventListener(
+            "click",
+            () => {
 
-function initHeader() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
-    const header =
-        document.getElementById("siteHeader");
+            }
+        );
 
-    if (!header) {
-        return;
     }
 
-    function updateHeader() {
 
-        if (window.scrollY > 25) {
+    /* =====================================================
+       06. SMOOTH INTERNAL LINKS
+    ===================================================== */
 
-            header.classList.add(
-                "scrolled"
-            );
+    document.querySelectorAll(
+        'a[href^="#"]'
+    ).forEach(link => {
 
-        } else {
+        link.addEventListener("click", event => {
 
-            header.classList.remove(
-                "scrolled"
-            );
+            const targetId =
+                link.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const target =
+                document.querySelector(targetId);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            const headerHeight =
+                header
+                    ? header.offsetHeight
+                    : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top
+                +
+                window.scrollY
+                -
+                headerHeight
+                -
+                15;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+
+    /* =====================================================
+       07. ACTIVE NAVIGATION
+    ===================================================== */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+    document.querySelectorAll(
+        ".desktop-nav a, .mobile-menu a"
+    ).forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const cleanHref =
+            href
+                .split("?")[0]
+                .split("#")[0]
+                .split("/")
+                .pop()
+                .toLowerCase();
+
+        if (
+            cleanHref &&
+            cleanHref === currentPage
+        ) {
+
+            link.classList.add("active");
 
         }
 
-    }
-
-    updateHeader();
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        { passive: true }
-    );
-
-}
+    });
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+    /* =====================================================
+       08. ANIMATED COUNTERS
+    ===================================================== */
 
-function initMobileMenu() {
-
-    const button =
-        document.getElementById(
-            "mobileMenuBtn"
+    const counters =
+        document.querySelectorAll(
+            "[data-counter]"
         );
 
-    const menu =
-        document.getElementById(
-            "mobileMenu"
-        );
+    if (counters.length) {
 
-    if (!button || !menu) {
-        return;
-    }
+        const counterObserver =
+            new IntersectionObserver(
+                (entries, observer) => {
 
-    button.addEventListener(
-        "click",
-        () => {
+                    entries.forEach(entry => {
 
-            menu.classList.toggle(
-                "open"
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        animateCounter(
+                            entry.target
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    });
+
+                },
+                {
+                    threshold: 0.5
+                }
             );
 
-        }
-    );
+        counters.forEach(counter => {
+
+            counterObserver.observe(counter);
+
+        });
+
+    }
 
 
-    menu.querySelectorAll("a")
-        .forEach(link => {
+    /* =====================================================
+       09. PRICE CARD SELECTION
+    ===================================================== */
 
-            link.addEventListener(
-                "click",
+    setupPriceCards();
+
+
+    /* =====================================================
+       10. PRODUCT SEARCH
+    ===================================================== */
+
+    setupSearch();
+
+
+    /* =====================================================
+       11. FAQ ACCORDION
+    ===================================================== */
+
+    setupFAQ();
+
+
+    /* =====================================================
+       12. IMAGE ERROR PROTECTION
+    ===================================================== */
+
+    document.querySelectorAll("img")
+        .forEach(img => {
+
+            img.addEventListener(
+                "error",
                 () => {
 
-                    menu.classList.remove(
-                        "open"
+                    img.classList.add(
+                        "image-error"
                     );
 
                 }
@@ -168,171 +356,90 @@ function initMobileMenu() {
 
         });
 
-}
 
+    /* =====================================================
+       13. ESCAPE KEY
+    ===================================================== */
 
-/* =========================================================
-   FAQ
-========================================================= */
+    document.addEventListener(
+        "keydown",
+        event => {
 
-function initFAQ() {
+            if (event.key !== "Escape") {
+                return;
+            }
 
-    const questions =
-        document.querySelectorAll(
-            ".faq-question"
-        );
+            if (
+                mobileMenu &&
+                mobileMenu.classList.contains("open")
+            ) {
 
-    questions.forEach(question => {
+                mobileMenu.classList.remove(
+                    "open"
+                );
 
-        question.addEventListener(
-            "click",
-            () => {
+                if (mobileButton) {
 
-                const item =
-                    question.closest(
-                        ".faq-item"
+                    mobileButton.innerHTML =
+                        "☰";
+
+                    mobileButton.setAttribute(
+                        "aria-expanded",
+                        "false"
                     );
-
-                const answer =
-                    item.querySelector(
-                        ".faq-answer"
-                    );
-
-                const isOpen =
-                    item.classList.contains(
-                        "open"
-                    );
-
-
-                document
-                    .querySelectorAll(
-                        ".faq-item.open"
-                    )
-                    .forEach(openItem => {
-
-                        openItem.classList.remove(
-                            "open"
-                        );
-
-                        const openAnswer =
-                            openItem.querySelector(
-                                ".faq-answer"
-                            );
-
-                        openAnswer.style.maxHeight =
-                            null;
-
-                    });
-
-
-                if (!isOpen) {
-
-                    item.classList.add(
-                        "open"
-                    );
-
-                    answer.style.maxHeight =
-                        answer.scrollHeight +
-                        "px";
 
                 }
 
             }
-        );
 
-    });
+        }
+    );
 
-}
+});
 
 
 /* =========================================================
-   COUNTERS
+   COUNTER FUNCTION
 ========================================================= */
 
-function initCounters() {
+function animateCounter(element) {
 
-    const counters =
-        document.querySelectorAll(
-            "[data-counter]"
+    const target =
+        Number(
+            element.dataset.counter || 0
         );
 
-    if (!counters.length) {
-        return;
-    }
-
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    const element =
-                        entry.target;
-
-                    if (
-                        element.dataset.started
-                    ) {
-                        return;
-                    }
-
-                    element.dataset.started =
-                        "true";
-
-                    const target =
-                        Number(
-                            element.dataset.counter
-                        );
-
-                    animateCounter(
-                        element,
-                        target
-                    );
-
-                });
-
-            },
-            {
-                threshold: .5
-            }
+    const duration =
+        Number(
+            element.dataset.duration || 1600
         );
 
+    const suffix =
+        element.dataset.suffix || "";
 
-    counters.forEach(counter => {
+    const prefix =
+        element.dataset.prefix || "";
 
-        observer.observe(counter);
-
-    });
-
-}
-
-
-function animateCounter(
-    element,
-    target
-) {
-
-    const duration = 1600;
-
-    const start =
+    const startTime =
         performance.now();
 
+    const formatNumber = value => {
 
-    function update(now) {
+        return Math.floor(value)
+            .toLocaleString("en-IN");
+
+    };
+
+    const update = currentTime => {
 
         const elapsed =
-            now - start;
+            currentTime - startTime;
 
         const progress =
             Math.min(
                 elapsed / duration,
                 1
             );
-
 
         const eased =
             1 -
@@ -341,32 +448,28 @@ function animateCounter(
                 3
             );
 
-
         const value =
-            Math.floor(
-                eased * target
-            );
-
+            target * eased;
 
         element.textContent =
-            value.toLocaleString() + "+";
-
+            prefix +
+            formatNumber(value) +
+            suffix;
 
         if (progress < 1) {
 
-            requestAnimationFrame(
-                update
-            );
+            requestAnimationFrame(update);
 
         } else {
 
             element.textContent =
-                target.toLocaleString() + "+";
+                prefix +
+                formatNumber(target) +
+                suffix;
 
         }
 
-    }
-
+    };
 
     requestAnimationFrame(update);
 
@@ -374,58 +477,52 @@ function animateCounter(
 
 
 /* =========================================================
-   REVEAL ANIMATIONS
+   PRICE CARD SYSTEM
 ========================================================= */
 
-function initRevealAnimations() {
+function setupPriceCards() {
 
-    const targets =
+    const cards =
         document.querySelectorAll(
-            ".section, .game-card, .service-card, .trend-card, .community-card, .category-card"
+            ".price-card[data-price]"
         );
 
+    if (!cards.length) {
+        return;
+    }
 
-    targets.forEach(element => {
+    cards.forEach(card => {
 
-        element.classList.add(
-            "reveal"
-        );
+        card.addEventListener(
+            "click",
+            () => {
 
-    });
+                const group =
+                    card.dataset.group ||
+                    "default";
 
+                document
+                    .querySelectorAll(
+                        `.price-card[data-group="${group}"]`
+                    )
+                    .forEach(item => {
 
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.classList.add(
-                            "visible"
+                        item.classList.remove(
+                            "selected"
                         );
 
-                        observer.unobserve(
-                            entry.target
-                        );
+                    });
 
-                    }
+                card.classList.add(
+                    "selected"
+                );
 
-                });
+                updateOrderSummary(
+                    card
+                );
 
-            },
-            {
-                threshold: .08
             }
         );
-
-
-    targets.forEach(element => {
-
-        observer.observe(element);
 
     });
 
@@ -433,51 +530,141 @@ function initRevealAnimations() {
 
 
 /* =========================================================
-   BACK TO TOP
+   ORDER SUMMARY UPDATE
 ========================================================= */
 
-function initBackToTop() {
+function updateOrderSummary(card) {
 
-    const button =
-        document.getElementById(
-            "backToTop"
+    const price =
+        card.dataset.price || "";
+
+    const product =
+        card.dataset.product ||
+        card.querySelector(
+            ".price-card-main strong"
+        )?.textContent ||
+        "Selected Product";
+
+    const priceElement =
+        document.querySelector(
+            "#summaryPrice"
         );
 
-    if (!button) {
+    const productElement =
+        document.querySelector(
+            "#summaryProduct"
+        );
+
+    const messageElement =
+        document.querySelector(
+            "#selectionMessage"
+        );
+
+    const orderButton =
+        document.querySelector(
+            "#orderButton"
+        );
+
+    if (priceElement) {
+
+        priceElement.textContent =
+            `₹${price}`;
+
+    }
+
+    if (productElement) {
+
+        productElement.textContent =
+            product;
+
+    }
+
+    if (messageElement) {
+
+        messageElement.textContent =
+            `Selected: ${product}`;
+
+        messageElement.classList.add(
+            "ready"
+        );
+
+    }
+
+    if (orderButton) {
+
+        orderButton.disabled = false;
+
+        orderButton.dataset.price =
+            price;
+
+        orderButton.dataset.product =
+            product;
+
+    }
+
+    document.dispatchEvent(
+        new CustomEvent(
+            "pantheos:productSelected",
+            {
+                detail: {
+                    product,
+                    price,
+                    card
+                }
+            }
+        )
+    );
+
+}
+
+
+/* =========================================================
+   SEARCH SYSTEM
+========================================================= */
+
+function setupSearch() {
+
+    const searchInput =
+        document.querySelector(
+            "#globalSearch"
+        );
+
+    if (!searchInput) {
         return;
     }
 
+    const searchableItems =
+        document.querySelectorAll(
+            "[data-search]"
+        );
 
-    window.addEventListener(
-        "scroll",
+    searchInput.addEventListener(
+        "input",
         () => {
 
-            if (window.scrollY > 500) {
+            const query =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
 
-                button.classList.add(
-                    "show"
-                );
+            searchableItems.forEach(item => {
 
-            } else {
+                const searchableText =
+                    (
+                        item.dataset.search ||
+                        item.textContent ||
+                        ""
+                    ).toLowerCase();
 
-                button.classList.remove(
-                    "show"
-                );
+                const match =
+                    !query ||
+                    searchableText.includes(
+                        query
+                    );
 
-            }
+                item.style.display =
+                    match ? "" : "none";
 
-        },
-        { passive: true }
-    );
-
-
-    button.addEventListener(
-        "click",
-        () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
             });
 
         }
@@ -487,193 +674,593 @@ function initBackToTop() {
 
 
 /* =========================================================
-   GLOBAL SEARCH
+   FAQ ACCORDION
 ========================================================= */
 
-function initSearch() {
+function setupFAQ() {
 
-    const input =
-        document.getElementById(
-            "globalSearch"
+    const faqItems =
+        document.querySelectorAll(
+            ".faq-item"
         );
 
-    const results =
-        document.getElementById(
-            "searchResults"
-        );
-
-    if (!input || !results) {
+    if (!faqItems.length) {
         return;
     }
 
+    faqItems.forEach(item => {
 
-    const products = [
-
-        {
-            name: "Mobile Legends",
-            type: "Game Top-Up",
-            url: "mlbb.html"
-        },
-
-        {
-            name: "BGMI",
-            type: "Game Top-Up",
-            url: "bgmi.html"
-        },
-
-        {
-            name: "Free Fire",
-            type: "Game Top-Up",
-            url: "freefire.html"
-        },
-
-        {
-            name: "Call of Duty Mobile",
-            type: "Game Top-Up",
-            url: "codm.html"
-        },
-
-        {
-            name: "Valorant",
-            type: "Game Top-Up",
-            url: "valorant.html"
-        },
-
-        {
-            name: "Genshin Impact",
-            type: "Game Top-Up",
-            url: "genshin.html"
-        },
-
-        {
-            name: "Honkai Star Rail",
-            type: "Game Top-Up",
-            url: "hsr.html"
-        },
-
-        {
-            name: "Gift Cards",
-            type: "Digital Products",
-            url: "giftcards.html"
-        },
-
-        {
-            name: "OTT Services",
-            type: "Subscriptions",
-            url: "ott.html"
-        },
-
-        {
-            name: "Instagram Boosting",
-            type: "Social Media",
-            url: "boosting.html"
-        },
-
-        {
-            name: "YouTube Boosting",
-            type: "Social Media",
-            url: "boosting.html"
-        }
-
-    ];
-
-
-    input.addEventListener(
-        "input",
-        () => {
-
-            const query =
-                input.value
-                    .trim()
-                    .toLowerCase();
-
-
-            if (!query) {
-
-                results.innerHTML = "";
-
-                results.classList.remove(
-                    "show"
-                );
-
-                return;
-
-            }
-
-
-            const matches =
-                products.filter(product =>
-                    product.name
-                        .toLowerCase()
-                        .includes(query)
-                );
-
-
-            if (!matches.length) {
-
-                results.innerHTML = `
-                    <div class="search-result">
-                        <strong>
-                            No products found
-                        </strong>
-                        <div style="color:#64748b;font-size:11px;margin-top:3px;">
-                            Try another search.
-                        </div>
-                    </div>
-                `;
-
-            } else {
-
-                results.innerHTML =
-                    matches
-                        .slice(0, 6)
-                        .map(product => `
-
-                            <a
-                                href="${product.url}"
-                                class="search-result"
-                            >
-
-                                <strong>
-                                    ${product.name}
-                                </strong>
-
-                                <div style="color:#64748b;font-size:10px;margin-top:3px;">
-                                    ${product.type}
-                                </div>
-
-                            </a>
-
-                        `)
-                        .join("");
-
-            }
-
-
-            results.classList.add(
-                "show"
+        const question =
+            item.querySelector(
+                ".faq-question"
             );
 
+        if (!question) {
+            return;
         }
-    );
 
+        question.addEventListener(
+            "click",
+            () => {
 
-    document.addEventListener(
-        "keydown",
-        event => {
+                const wasOpen =
+                    item.classList.contains(
+                        "open"
+                    );
 
-            if (
-                event.key === "/" &&
-                document.activeElement !== input
-            ) {
+                faqItems.forEach(other => {
 
-                event.preventDefault();
+                    other.classList.remove(
+                        "open"
+                    );
 
-                input.focus();
+                });
+
+                if (!wasOpen) {
+
+                    item.classList.add(
+                        "open"
+                    );
+
+                }
 
             }
+        );
 
-        }
+    });
+
+}
+
+
+/* =========================================================
+   GET CUSTOMER DATA
+========================================================= */
+
+function getCustomerData() {
+
+    const playerId =
+        document.querySelector(
+            "#playerId"
+        )?.value.trim() || "";
+
+    const serverId =
+        document.querySelector(
+            "#serverId"
+        )?.value.trim() || "";
+
+    const uid =
+        document.querySelector(
+            "#uid"
+        )?.value.trim() || "";
+
+    const characterId =
+        document.querySelector(
+            "#characterId"
+        )?.value.trim() || "";
+
+    const riotId =
+        document.querySelector(
+            "#riotId"
+        )?.value.trim() || "";
+
+    return {
+        playerId,
+        serverId,
+        uid,
+        characterId,
+        riotId
+    };
+
+}
+
+
+/* =========================================================
+   FIND SELECTED PRODUCT
+========================================================= */
+
+function getSelectedProduct() {
+
+    const selected =
+        document.querySelector(
+            ".price-card.selected"
+        );
+
+    if (!selected) {
+        return null;
+    }
+
+    return {
+
+        product:
+            selected.dataset.product ||
+            selected.querySelector(
+                ".price-card-main strong"
+            )?.textContent ||
+            "",
+
+        price:
+            selected.dataset.price ||
+            "",
+
+        group:
+            selected.dataset.group ||
+            ""
+
+    };
+
+}
+
+
+/* =========================================================
+   WHATSAPP ORDER BUILDER
+========================================================= */
+
+function createWhatsAppOrder(options = {}) {
+
+    const game =
+        options.game ||
+        "Gaming Product";
+
+    const customer =
+        getCustomerData();
+
+    const selected =
+        getSelectedProduct();
+
+    if (!selected) {
+
+        alert(
+            "Please select a package first."
+        );
+
+        return;
+
+    }
+
+    const lines = [];
+
+    lines.push(
+        "🎮 Pantheos Global Store Order"
+    );
+
+    lines.push("");
+
+    lines.push(
+        `Game: ${game}`
+    );
+
+    if (customer.playerId) {
+
+        lines.push(
+            `Player ID: ${customer.playerId}`
+        );
+
+    }
+
+    if (customer.serverId) {
+
+        lines.push(
+            `Server ID: ${customer.serverId}`
+        );
+
+    }
+
+    if (customer.uid) {
+
+        lines.push(
+            `UID: ${customer.uid}`
+        );
+
+    }
+
+    if (customer.characterId) {
+
+        lines.push(
+            `Character ID: ${customer.characterId}`
+        );
+
+    }
+
+    if (customer.riotId) {
+
+        lines.push(
+            `Riot ID: ${customer.riotId}`
+        );
+
+    }
+
+    lines.push("");
+
+    lines.push(
+        `Package: ${selected.product}`
+    );
+
+    lines.push(
+        `Price: ₹${selected.price}`
+    );
+
+    lines.push(
+        "Payment Status: Pending"
+    );
+
+    lines.push("");
+
+    lines.push(
+        "Please send payment screenshot after payment."
+    );
+
+    lines.push("");
+
+    lines.push(
+        "Fast • Secure • Trusted"
+    );
+
+    const message =
+        encodeURIComponent(
+            lines.join("\n")
+        );
+
+    const phone =
+        "919310651934";
+
+    const url =
+        `https://wa.me/${phone}?text=${message}`;
+
+    window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
     );
 
 }
+
+
+/* =========================================================
+   GLOBAL WHATSAPP BUTTON
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                "[data-whatsapp-order]"
+            );
+
+        if (!button) {
+            return;
+        }
+
+        event.preventDefault();
+
+        createWhatsAppOrder({
+            game:
+                button.dataset.game ||
+                document.body.dataset.game ||
+                "Gaming Product"
+        });
+
+    }
+);
+
+
+/* =========================================================
+   PRODUCT PAGE VALIDATION
+========================================================= */
+
+function validateProductPage() {
+
+    const requiredInputs =
+        document.querySelectorAll(
+            "[data-required]"
+        );
+
+    let valid = true;
+
+    requiredInputs.forEach(input => {
+
+        const value =
+            input.value.trim();
+
+        if (!value) {
+
+            input.classList.add(
+                "input-invalid"
+            );
+
+            valid = false;
+
+        } else {
+
+            input.classList.remove(
+                "input-invalid"
+            );
+
+        }
+
+    });
+
+    return valid;
+
+}
+
+
+/* =========================================================
+   ORDER BUTTON VALIDATION
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                "#orderButton"
+            );
+
+        if (!button) {
+            return;
+        }
+
+        if (button.disabled) {
+            return;
+        }
+
+        if (!validateProductPage()) {
+
+            alert(
+                "Please enter your required player information first."
+            );
+
+            return;
+
+        }
+
+        createWhatsAppOrder({
+            game:
+                document.body.dataset.game ||
+                "Gaming Product"
+        });
+
+    }
+);
+
+
+/* =========================================================
+   LIVE ORDER NOTIFICATION
+========================================================= */
+
+function startLiveNotifications() {
+
+    const container =
+        document.querySelector(
+            "#liveNotification"
+        );
+
+    if (!container) {
+        return;
+    }
+
+    const notifications = [
+
+        "A customer just placed an order ⚡",
+
+        "Gaming top-up order received 🎮",
+
+        "Instant delivery order completed ✓",
+
+        "New Pantheos customer joined 🔥",
+
+        "Someone just purchased a package 💎"
+
+    ];
+
+    let index = 0;
+
+    const showNotification = () => {
+
+        container.textContent =
+            notifications[index];
+
+        container.classList.add(
+            "show"
+        );
+
+        setTimeout(() => {
+
+            container.classList.remove(
+                "show"
+            );
+
+        }, 3500);
+
+        index =
+            (index + 1) %
+            notifications.length;
+
+    };
+
+    showNotification();
+
+    setInterval(
+        showNotification,
+        10000
+    );
+
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    startLiveNotifications
+);
+
+
+/* =========================================================
+   IMAGE HOVER EFFECT
+========================================================= */
+
+document.addEventListener(
+    "mousemove",
+    event => {
+
+        const card =
+            event.target.closest(
+                ".game-card, .service-card"
+            );
+
+        if (!card) {
+            return;
+        }
+
+        const rect =
+            card.getBoundingClientRect();
+
+        const x =
+            event.clientX -
+            rect.left;
+
+        const y =
+            event.clientY -
+            rect.top;
+
+        const rotateX =
+            ((y / rect.height) - .5) * -4;
+
+        const rotateY =
+            ((x / rect.width) - .5) * 4;
+
+        card.style.transform =
+            `perspective(800px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-3px)`;
+
+    }
+);
+
+
+document.addEventListener(
+    "mouseout",
+    event => {
+
+        const card =
+            event.target.closest(
+                ".game-card, .service-card"
+            );
+
+        if (!card) {
+            return;
+        }
+
+        card.style.transform = "";
+
+    }
+);
+
+
+/* =========================================================
+   COPY TO CLIPBOARD
+========================================================= */
+
+document.addEventListener(
+    "click",
+    async event => {
+
+        const button =
+            event.target.closest(
+                "[data-copy]"
+            );
+
+        if (!button) {
+            return;
+        }
+
+        const text =
+            button.dataset.copy;
+
+        if (!text) {
+            return;
+        }
+
+        try {
+
+            await navigator.clipboard.writeText(
+                text
+            );
+
+            const original =
+                button.textContent;
+
+            button.textContent =
+                "Copied ✓";
+
+            setTimeout(() => {
+
+                button.textContent =
+                    original;
+
+            }, 1500);
+
+        } catch {
+
+            alert(
+                "Unable to copy."
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   GLOBAL SEARCH SHORTCUT
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            (event.ctrlKey || event.metaKey) &&
+            event.key.toLowerCase() === "k"
+        ) {
+
+            event.preventDefault();
+
+            const search =
+                document.querySelector(
+                    "#globalSearch"
+                );
+
+            if (search) {
+
+                search.focus();
+
+            }
+
+        }
+
+    }
+);
