@@ -1,83 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="theme-color" content="#050711">
+    <meta
+        name="theme-color"
+        content="#05050b"
+    >
 
-    <meta name="description"
-          content="Pantheos Global Store — Fast, Secure and Trusted gaming top-ups, digital products, gift cards, OTT services and social media services.">
+    <meta
+        name="description"
+        content="Pantheos Global Store — Fast, Secure & Trusted gaming top-ups, gift cards, OTT services and social media services."
+    >
 
-    <title>Pantheos Global Store — Fast • Secure • Trusted</title>
+    <meta
+        name="keywords"
+        content="Pantheos Global Store, MLBB diamonds, BGMI UC, Free Fire diamonds, CODM CP, Valorant VP, Genshin Genesis Crystals, gaming top up India"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <meta
+        name="author"
+        content="Pantheos Global Store"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <title>
+        Pantheos Global Store | Fast • Secure • Trusted
+    </title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap"
-          rel="stylesheet">
+    <link
+        rel="icon"
+        href="assets/pantheos-logo.PNG"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
 
-<body>
 
-<!-- =========================================================
-     LOADER
-========================================================= -->
+<body data-game="Pantheos Global Store">
 
-<div id="pageLoader" class="page-loader">
+
+<!-- =====================================================
+     PREMIUM LOADER
+===================================================== -->
+
+<div class="page-loader">
 
     <div class="loader-content">
 
-        <div class="loader-logo">
-            <img src="assets/pantheos-logo.PNG"
-                 alt="Pantheos Global Store">
-        </div>
+        <img
+            src="assets/pantheos-logo.PNG"
+            alt="Pantheos Global Store"
+            class="loader-logo"
+        >
 
-        <div class="loader-brand">
-            PANTHEOS
-        </div>
+        <div class="loader-spinner"></div>
 
-        <div class="loader-subtitle">
-            GLOBAL STORE
-        </div>
-
-        <div class="loader-progress">
-            <div id="loaderProgress"></div>
-        </div>
-
-        <div class="loader-text">
-            INITIALIZING STORE...
-        </div>
+        <p>
+            Preparing your gaming experience...
+        </p>
 
     </div>
 
 </div>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header class="site-header">
 
     <div class="container nav-container">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="Pantheos Global Store Home"
+        >
 
-            <img src="assets/pantheos-logo.PNG"
-                 alt="Pantheos Global Store">
+            <img
+                src="assets/pantheos-logo.PNG"
+                alt="Pantheos Global Store Logo"
+            >
 
             <div class="brand-text">
-                <strong>PANTHEOS</strong>
-                <span>GLOBAL STORE</span>
+
+                <strong>
+                    PANTHEOS
+                </strong>
+
+                <span>
+                    GLOBAL STORE
+                </span>
+
             </div>
 
         </a>
@@ -85,23 +111,26 @@
 
         <nav class="desktop-nav">
 
-            <a href="#home" class="nav-link active">
+            <a
+                href="index.html"
+                class="active"
+            >
                 Home
             </a>
 
-            <a href="#games" class="nav-link">
+            <a href="#games">
                 Games
             </a>
 
-            <a href="#services" class="nav-link">
+            <a href="#services">
                 Services
             </a>
 
-            <a href="#community" class="nav-link">
+            <a href="#community">
                 Community
             </a>
 
-            <a href="#support" class="nav-link">
+            <a href="#support">
                 Support
             </a>
 
@@ -110,42 +139,40 @@
 
         <div class="nav-actions">
 
-            <a href="https://wa.me/919310651934"
-               target="_blank"
-               class="nav-whatsapp">
-
+            <a
+                href="https://wa.me/919310651934"
+                target="_blank"
+                rel="noopener"
+                class="nav-whatsapp"
+            >
                 WhatsApp
-
             </a>
 
-            <a href="#games"
-               class="nav-topup">
-
-                TOP UP NOW
-
+            <a
+                href="#games"
+                class="nav-topup"
+            >
+                Top Up Now
             </a>
 
         </div>
 
 
-        <button class="mobile-menu-btn"
-                id="mobileMenuBtn"
-                aria-label="Open menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            ☰
         </button>
 
     </div>
 
 
-    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
 
-    <div class="mobile-menu" id="mobileMenu">
-
-        <a href="#home">
+        <a href="index.html">
             Home
         </a>
 
@@ -165,12 +192,12 @@
             Support
         </a>
 
-        <a href="https://wa.me/919310651934"
-           target="_blank"
-           class="mobile-whatsapp">
-
+        <a
+            href="https://wa.me/919310651934"
+            target="_blank"
+            rel="noopener"
+        >
             WhatsApp Support
-
         </a>
 
     </div>
@@ -181,61 +208,154 @@
 <main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
-<section class="hero-section" id="home">
+<section
+    class="home-hero"
+    style="
+        position:relative;
+        min-height:620px;
+        display:flex;
+        align-items:center;
+        background:
+        linear-gradient(
+            90deg,
+            rgba(5,5,11,.98) 0%,
+            rgba(5,5,11,.78) 40%,
+            rgba(5,5,11,.25) 100%
+        ),
+        url('assets/hero-banner.jpg') center/cover no-repeat;
+        overflow:hidden;
+    "
+>
 
-    <div class="hero-background"></div>
+    <div
+        style="
+            position:absolute;
+            inset:0;
+            background:
+            radial-gradient(
+                circle at 70% 50%,
+                rgba(139,92,246,.25),
+                transparent 35%
+            );
+            pointer-events:none;
+        "
+    ></div>
 
-    <div class="hero-grid"></div>
 
-    <div class="container hero-container">
+    <div class="container">
 
-        <div class="hero-content">
+        <div
+            class="hero-home-content reveal"
+            style="
+                position:relative;
+                z-index:2;
+                max-width:760px;
+                padding:90px 0;
+            "
+        >
 
-            <div class="hero-badge">
-                <span class="live-dot"></span>
-                PANTHEOS GLOBAL STORE
+            <div
+                class="product-category"
+            >
+                PANTHEOS GLOBAL STORE • V11
             </div>
 
 
-            <h1>
+            <h1
+                style="
+                    font-size:clamp(2.7rem,7vw,5.8rem);
+                    line-height:.95;
+                    letter-spacing:-.055em;
+                    margin-bottom:25px;
+                "
+            >
 
                 FAST & SECURE
 
-                <span>
+                <br>
+
+                <span
+                    style="
+                        background:
+                        linear-gradient(
+                            90deg,
+                            #a855f7,
+                            #22d3ee
+                        );
+                        -webkit-background-clip:text;
+                        background-clip:text;
+                        color:transparent;
+                    "
+                >
                     GAMING TOP-UPS
                 </span>
 
             </h1>
 
 
-            <p class="hero-description">
+            <p
+                style="
+                    max-width:650px;
+                    color:#c5c8d4;
+                    font-size:1rem;
+                    line-height:1.8;
+                "
+            >
 
                 Recharge Mobile Legends, BGMI, Free Fire,
-                COD Mobile, Valorant and more with fast delivery,
-                secure payments and trusted support.
+                COD Mobile, Valorant, Genshin Impact and more
+                with fast delivery and trusted support.
 
             </p>
 
 
-            <div class="hero-buttons">
+            <div
+                style="
+                    display:flex;
+                    flex-wrap:wrap;
+                    gap:12px;
+                    margin-top:30px;
+                "
+            >
 
-                <a href="#games"
-                   class="btn btn-primary">
-
-                    <span>TOP UP NOW</span>
-                    <span>→</span>
-
+                <a
+                    href="#games"
+                    style="
+                        padding:14px 22px;
+                        border-radius:12px;
+                        background:
+                        linear-gradient(
+                            135deg,
+                            #8b5cf6,
+                            #3b82f6
+                        );
+                        font-size:.8rem;
+                        font-weight:800;
+                        box-shadow:
+                        0 15px 40px
+                        rgba(99,102,241,.25);
+                    "
+                >
+                    ⚡ TOP UP NOW
                 </a>
 
-                <a href="#community"
-                   class="btn btn-secondary">
 
+                <a
+                    href="#community"
+                    style="
+                        padding:14px 22px;
+                        border-radius:12px;
+                        border:1px solid rgba(255,255,255,.12);
+                        background:rgba(255,255,255,.04);
+                        font-size:.8rem;
+                        font-weight:800;
+                    "
+                >
                     JOIN COMMUNITY
-
                 </a>
 
             </div>
@@ -243,77 +363,25 @@
 
             <div class="hero-trust">
 
-                <div class="trust-item">
-                    <span>✓</span>
-                    Instant Delivery
-                </div>
-
-                <div class="trust-item">
-                    <span>✓</span>
-                    Secure Payments
-                </div>
-
-                <div class="trust-item">
-                    <span>✓</span>
-                    Trusted Store
-                </div>
-
-                <div class="trust-item">
-                    <span>✓</span>
-                    24/7 Support
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="hero-image-frame">
-
-                <img src="assets/hero-banner.jpg"
-                     alt="Pantheos Gaming">
-
-                <div class="hero-image-overlay"></div>
-
-            </div>
-
-
-            <div class="floating-card floating-card-one">
-
-                <span class="floating-icon">
-                    ⚡
+                <span>
+                    ✓ Instant Delivery
                 </span>
 
-                <div>
-                    <strong>
-                        FAST DELIVERY
-                    </strong>
-
-                    <small>
-                        Orders processed quickly
-                    </small>
-                </div>
-
-            </div>
-
-
-            <div class="floating-card floating-card-two">
-
-                <span class="floating-icon">
-                    🛡️
+                <span>
+                    ✓ Secure Payments
                 </span>
 
-                <div>
-                    <strong>
-                        TRUSTED
-                    </strong>
+                <span>
+                    ✓ Trusted Store
+                </span>
 
-                    <small>
-                        Secure ordering
-                    </small>
-                </div>
+                <span>
+                    ✓ 24/7 Support
+                </span>
+
+                <span>
+                    ✓ Thousands Of Orders
+                </span>
 
             </div>
 
@@ -324,224 +392,189 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      SEARCH
-========================================================= -->
+===================================================== -->
 
-<section class="search-section">
+<section
+    style="
+        position:relative;
+        margin-top:-35px;
+        z-index:5;
+    "
+>
 
     <div class="container">
 
-        <div class="search-box">
+        <div
+            style="
+                padding:18px;
+                border:1px solid rgba(255,255,255,.09);
+                border-radius:20px;
+                background:rgba(13,14,27,.88);
+                backdrop-filter:blur(20px);
+                box-shadow:0 25px 70px rgba(0,0,0,.3);
+            "
+        >
 
-            <span class="search-icon">
-                ⌕
-            </span>
-
-            <input
-                type="search"
-                id="globalSearch"
-                placeholder="Search games, gift cards, OTT, boosting..."
-                autocomplete="off"
+            <div
+                class="input-wrapper"
+                style="
+                    height:56px;
+                "
             >
 
-            <kbd>
-                /
-            </kbd>
-
-        </div>
-
-        <div id="searchResults"
-             class="search-results">
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     QUICK CATEGORIES
-========================================================= -->
-
-<section class="quick-categories">
-
-    <div class="container">
-
-        <div class="section-heading compact-heading">
-
-            <div>
-                <span class="eyebrow">
-                    EXPLORE
+                <span
+                    class="input-icon"
+                    style="font-size:1.2rem;"
+                >
+                    🔎
                 </span>
 
-                <h2>
-                    What are you looking for?
-                </h2>
+                <input
+                    type="search"
+                    id="globalSearch"
+                    placeholder="Search games, gift cards, OTT, boosting..."
+                    autocomplete="off"
+                >
+
+                <span
+                    style="
+                        color:#596073;
+                        font-size:.65rem;
+                        white-space:nowrap;
+                    "
+                >
+                    CTRL + K
+                </span>
+
             </div>
 
         </div>
 
-
-        <div class="category-grid">
-
-            <a href="#games"
-               class="category-card">
-
-                <div class="category-icon">
-                    🎮
-                </div>
-
-                <strong>
-                    Game Top-Ups
-                </strong>
-
-                <span>
-                    Diamonds • UC • CP • VP
-                </span>
-
-            </a>
-
-
-            <a href="giftcards.html"
-               class="category-card">
-
-                <div class="category-icon">
-                    🎁
-                </div>
-
-                <strong>
-                    Gift Cards
-                </strong>
-
-                <span>
-                    Digital gift cards
-                </span>
-
-            </a>
-
-
-            <a href="ott.html"
-               class="category-card">
-
-                <div class="category-icon">
-                    📺
-                </div>
-
-                <strong>
-                    OTT Services
-                </strong>
-
-                <span>
-                    Streaming subscriptions
-                </span>
-
-            </a>
-
-
-            <a href="boosting.html"
-               class="category-card">
-
-                <div class="category-icon">
-                    🚀
-                </div>
-
-                <strong>
-                    Social Boosting
-                </strong>
-
-                <span>
-                    Followers • Likes • Views
-                </span>
-
-            </a>
-
-        </div>
-
     </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      GAMES
-========================================================= -->
+===================================================== -->
 
-<section class="section games-section"
-         id="games">
+<section
+    id="games"
+    style="
+        padding:90px 0 50px;
+    "
+>
 
     <div class="container">
 
-        <div class="section-heading">
+
+        <div class="section-heading reveal">
+
+            <div class="section-number">
+                01
+            </div>
 
             <div>
 
                 <span class="eyebrow">
-                    GAME ZONE
+                    CHOOSE YOUR GAME
                 </span>
 
                 <h2>
-                    Choose Your Game
+                    Featured Games
                 </h2>
 
-                <p>
-                    Select a game and continue to its premium
-                    top-up page.
-                </p>
-
             </div>
-
-            <a href="#games"
-               class="section-link">
-
-                VIEW ALL →
-
-            </a>
 
         </div>
 
 
-        <div class="games-grid">
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(auto-fit,minmax(250px,1fr));
+                gap:16px;
+            "
+        >
 
 
             <!-- MLBB -->
 
-            <a href="mlbb.html"
-               class="game-card">
+            <a
+                href="mlbb.html"
+                class="game-card reveal"
+                data-search="mobile legends mlbb diamonds"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/mlbb-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(139,92,246,.08),
+                            rgba(0,0,0,.88)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/mlbb-banner.jpg"
-                         alt="Mobile Legends">
 
-                    <div class="game-banner-overlay"></div>
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <span class="game-status">
-                        INSTANT
-                    </span>
+                    <img
+                        src="assets/mlbb-logo.jpg"
+                        alt="Mobile Legends"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                </div>
+                    <h3
+                        style="font-size:1rem;"
+                    >
+                        Mobile Legends
+                    </h3>
 
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/mlbb-logo.jpg"
-                         alt="MLBB">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Mobile Legends
-                        </h3>
-
-                        <span>
-                            Diamonds & Passes
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        Diamonds • Passes
                     </span>
 
                 </div>
@@ -551,42 +584,74 @@
 
             <!-- BGMI -->
 
-            <a href="bgmi.html"
-               class="game-card">
+            <a
+                href="bgmi.html"
+                class="game-card reveal"
+                data-search="bgmi pubg uc"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/bgmi-banner.PNG')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(59,130,246,.08),
+                            rgba(0,0,0,.88)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/bgmi-banner.PNG"
-                         alt="BGMI">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/bgmi-logo.jpg"
+                        alt="BGMI"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        UC
-                    </span>
+                    <h3>
+                        BGMI
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/bgmi-logo.jpg"
-                         alt="BGMI">
-
-                    <div class="game-name">
-
-                        <h3>
-                            BGMI
-                        </h3>
-
-                        <span>
-                            UC Recharge
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        UC • Bonus Packs
                     </span>
 
                 </div>
@@ -596,42 +661,74 @@
 
             <!-- FREE FIRE -->
 
-            <a href="freefire.html"
-               class="game-card">
+            <a
+                href="freefire.html"
+                class="game-card reveal"
+                data-search="free fire garena diamonds"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/freefire-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(236,72,153,.08),
+                            rgba(0,0,0,.9)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/freefire-banner.jpg"
-                         alt="Free Fire">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/freefire-logo.jpg"
+                        alt="Free Fire"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        HOT
-                    </span>
+                    <h3>
+                        Free Fire
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/freefire-logo.jpg"
-                         alt="Free Fire">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Free Fire
-                        </h3>
-
-                        <span>
-                            Diamonds & Membership
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        Diamonds • Memberships
                     </span>
 
                 </div>
@@ -641,42 +738,74 @@
 
             <!-- CODM -->
 
-            <a href="codm.html"
-               class="game-card">
+            <a
+                href="codm.html"
+                class="game-card reveal"
+                data-search="call of duty mobile codm cp"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/codm-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(34,211,238,.06),
+                            rgba(0,0,0,.9)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/codm-banner.jpg"
-                         alt="COD Mobile">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/codm-logo.jpg"
+                        alt="COD Mobile"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        CP
-                    </span>
+                    <h3>
+                        COD Mobile
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/codm-logo.jpg"
-                         alt="COD Mobile">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Call of Duty Mobile
-                        </h3>
-
-                        <span>
-                            COD Points
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        CP • Battle Pass
                     </span>
 
                 </div>
@@ -686,42 +815,74 @@
 
             <!-- VALORANT -->
 
-            <a href="valorant.html"
-               class="game-card">
+            <a
+                href="valorant.html"
+                class="game-card reveal"
+                data-search="valorant vp riot points"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/valorant-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(236,72,153,.06),
+                            rgba(0,0,0,.9)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/valorant-banner.jpg"
-                         alt="Valorant">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/valorant-logo.jpg"
+                        alt="Valorant"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        VP
-                    </span>
+                    <h3>
+                        Valorant
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/valorant-logo.jpg"
-                         alt="Valorant">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Valorant
-                        </h3>
-
-                        <span>
-                            Valorant Points
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        VP • Riot ID
                     </span>
 
                 </div>
@@ -731,42 +892,74 @@
 
             <!-- GENSHIN -->
 
-            <a href="genshin.html"
-               class="game-card">
+            <a
+                href="genshin.html"
+                class="game-card reveal"
+                data-search="genshin impact genesis crystals"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/genshin-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(34,211,238,.06),
+                            rgba(0,0,0,.9)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/genshin-banner.jpg"
-                         alt="Genshin Impact">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/genshin-logo.jpg"
+                        alt="Genshin Impact"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        CRYSTALS
-                    </span>
+                    <h3>
+                        Genshin Impact
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/genshin-logo.jpg"
-                         alt="Genshin">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Genshin Impact
-                        </h3>
-
-                        <span>
-                            Genesis Crystals
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        Genesis Crystals
                     </span>
 
                 </div>
@@ -776,48 +969,79 @@
 
             <!-- HSR -->
 
-            <a href="hsr.html"
-               class="game-card">
+            <a
+                href="hsr.html"
+                class="game-card reveal"
+                data-search="honkai star rail hsr oneiric shards"
+                style="
+                    position:relative;
+                    min-height:250px;
+                    overflow:hidden;
+                    border-radius:20px;
+                    border:1px solid rgba(255,255,255,.08);
+                    background:
+                    linear-gradient(
+                        180deg,
+                        transparent 30%,
+                        rgba(0,0,0,.95)
+                    ),
+                    url('assets/hsr-banner.jpg')
+                    center/cover;
+                    transition:.25s ease;
+                "
+            >
 
-                <div class="game-banner">
+                <div
+                    style="
+                        position:absolute;
+                        inset:0;
+                        background:
+                        linear-gradient(
+                            180deg,
+                            rgba(139,92,246,.07),
+                            rgba(0,0,0,.9)
+                        );
+                    "
+                ></div>
 
-                    <img src="assets/hsr-banner.jpg"
-                         alt="Honkai Star Rail">
+                <div
+                    style="
+                        position:absolute;
+                        left:18px;
+                        right:18px;
+                        bottom:18px;
+                        z-index:2;
+                    "
+                >
 
-                    <div class="game-banner-overlay"></div>
+                    <img
+                        src="assets/hsr-logo.jpg"
+                        alt="Honkai Star Rail"
+                        style="
+                            width:48px;
+                            height:48px;
+                            object-fit:cover;
+                            border-radius:12px;
+                            margin-bottom:10px;
+                        "
+                    >
 
-                    <span class="game-status">
-                        SHARDS
-                    </span>
+                    <h3>
+                        Honkai: Star Rail
+                    </h3>
 
-                </div>
-
-                <div class="game-info">
-
-                    <img class="game-logo"
-                         src="assets/hsr-logo.jpg"
-                         alt="HSR">
-
-                    <div class="game-name">
-
-                        <h3>
-                            Honkai: Star Rail
-                        </h3>
-
-                        <span>
-                            Oneiric Shards
-                        </span>
-
-                    </div>
-
-                    <span class="game-arrow">
-                        →
+                    <span
+                        style="
+                            color:#9ca3af;
+                            font-size:.68rem;
+                        "
+                    >
+                        Oneiric Shards
                     </span>
 
                 </div>
 
             </a>
-
 
         </div>
 
@@ -826,119 +1050,142 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      TRENDING
-========================================================= -->
+===================================================== -->
 
-<section class="section trending-section">
+<section
+    style="
+        padding:45px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
+
+            <div class="section-number">
+                02
+            </div>
 
             <div>
 
                 <span class="eyebrow">
-                    TRENDING NOW
+                    WHAT'S HOT
                 </span>
 
                 <h2>
-                    Popular Products
+                    Trending Products
                 </h2>
-
-                <p>
-                    Fast-moving products from Pantheos Global Store.
-                </p>
 
             </div>
 
         </div>
 
 
-        <div class="trending-grid">
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(auto-fit,minmax(220px,1fr));
+                gap:14px;
+            "
+        >
 
-            <a href="mlbb.html"
-               class="trend-card">
+            <div
+                class="notice-card reveal"
+                data-search="best sellers"
+            >
 
-                <div class="trend-icon">
-                    💎
+                <div class="notice-icon">
+                    🔥
                 </div>
 
                 <div>
 
-                    <span>
-                        BEST SELLER
-                    </span>
-
                     <h3>
-                        MLBB Diamonds
+                        Best Sellers
                     </h3>
 
                     <p>
-                        Starting from ₹13
+                        Popular products selected by the community.
                     </p>
 
                 </div>
 
-                <b>→</b>
-
-            </a>
+            </div>
 
 
-            <a href="bgmi.html"
-               class="trend-card">
+            <div
+                class="notice-card reveal"
+                data-search="popular products"
+            >
 
-                <div class="trend-icon">
-                    🎯
+                <div class="notice-icon">
+                    ⭐
                 </div>
 
                 <div>
 
-                    <span>
-                        INSTANT DELIVERY
-                    </span>
-
                     <h3>
-                        BGMI UC
+                        Popular Products
                     </h3>
 
                     <p>
-                        Starting from ₹75
+                        Discover what customers are ordering now.
                     </p>
 
                 </div>
 
-                <b>→</b>
-
-            </a>
+            </div>
 
 
-            <a href="boosting.html"
-               class="trend-card">
+            <div
+                class="notice-card reveal"
+                data-search="instant delivery"
+            >
 
-                <div class="trend-icon">
-                    🚀
+                <div class="notice-icon">
+                    ⚡
                 </div>
 
                 <div>
 
-                    <span>
-                        POPULAR
-                    </span>
-
                     <h3>
-                        Instagram Boosting
+                        Instant Delivery
                     </h3>
 
                     <p>
-                        Followers • Likes • Views
+                        Fast processing for supported products.
                     </p>
 
                 </div>
 
-                <b>→</b>
+            </div>
 
-            </a>
+
+            <div
+                class="notice-card reveal"
+                data-search="community favorites"
+            >
+
+                <div class="notice-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <h3>
+                        Community Favorites
+                    </h3>
+
+                    <p>
+                        Trusted products from Pantheos customers.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -947,62 +1194,151 @@
 </section>
 
 
-<!-- =========================================================
-     STATS
-========================================================= -->
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
 
-<section class="stats-section">
+<section
+    style="
+        padding:55px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="stats-grid">
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(4,1fr);
+                border:1px solid rgba(255,255,255,.08);
+                border-radius:22px;
+                background:rgba(255,255,255,.025);
+                overflow:hidden;
+            "
+        >
 
-            <div class="stat-card">
+            <div
+                class="reveal"
+                style="
+                    padding:30px 20px;
+                    text-align:center;
+                    border-right:1px solid rgba(255,255,255,.06);
+                "
+            >
 
-                <strong data-counter="10000">
-                    0+
+                <strong
+                    data-counter="10000"
+                    data-suffix="+"
+                    style="
+                        display:block;
+                        font-size:1.8rem;
+                        color:#22d3ee;
+                    "
+                >
+                    0
                 </strong>
 
-                <span>
+                <span
+                    style="
+                        color:#9ca3af;
+                        font-size:.7rem;
+                    "
+                >
                     Orders
                 </span>
 
             </div>
 
 
-            <div class="stat-card">
+            <div
+                class="reveal"
+                style="
+                    padding:30px 20px;
+                    text-align:center;
+                    border-right:1px solid rgba(255,255,255,.06);
+                "
+            >
 
-                <strong data-counter="5000">
-                    0+
+                <strong
+                    data-counter="5000"
+                    data-suffix="+"
+                    style="
+                        display:block;
+                        font-size:1.8rem;
+                        color:#a855f7;
+                    "
+                >
+                    0
                 </strong>
 
-                <span>
+                <span
+                    style="
+                        color:#9ca3af;
+                        font-size:.7rem;
+                    "
+                >
                     Customers
                 </span>
 
             </div>
 
 
-            <div class="stat-card">
+            <div
+                class="reveal"
+                style="
+                    padding:30px 20px;
+                    text-align:center;
+                    border-right:1px solid rgba(255,255,255,.06);
+                "
+            >
 
-                <strong>
+                <strong
+                    style="
+                        display:block;
+                        font-size:1.8rem;
+                        color:#22c55e;
+                    "
+                >
                     24/7
                 </strong>
 
-                <span>
+                <span
+                    style="
+                        color:#9ca3af;
+                        font-size:.7rem;
+                    "
+                >
                     Support
                 </span>
 
             </div>
 
 
-            <div class="stat-card">
+            <div
+                class="reveal"
+                style="
+                    padding:30px 20px;
+                    text-align:center;
+                "
+            >
 
-                <strong>
+                <strong
+                    style="
+                        display:block;
+                        font-size:1.8rem;
+                        color:#facc15;
+                    "
+                >
                     100%
                 </strong>
 
-                <span>
+                <span
+                    style="
+                        color:#9ca3af;
+                        font-size:.7rem;
+                    "
+                >
                     Secure Payments
                 </span>
 
@@ -1015,164 +1351,241 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      SERVICES
-========================================================= -->
+===================================================== -->
 
-<section class="section services-section"
-         id="services">
+<section
+    id="services"
+    style="
+        padding:65px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
+
+            <div class="section-number">
+                03
+            </div>
 
             <div>
 
                 <span class="eyebrow">
-                    MORE SERVICES
+                    MORE THAN TOP-UPS
                 </span>
 
                 <h2>
                     Digital Services
                 </h2>
 
-                <p>
-                    Everything you need, all in one place.
-                </p>
-
             </div>
 
         </div>
 
 
-        <div class="services-grid">
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(auto-fit,minmax(220px,1fr));
+                gap:14px;
+            "
+        >
 
 
-            <a href="boosting.html"
-               class="service-card">
+            <a
+                href="boosting.html"
+                class="notice-card reveal"
+                data-search="social media boosting instagram followers likes views youtube subscribers"
+            >
 
-                <div class="service-icon">
-                    🚀
+                <div class="notice-icon">
+                    📈
                 </div>
 
-                <h3>
-                    Social Media Boosting
-                </h3>
+                <div>
 
-                <p>
-                    Followers, likes and views.
-                </p>
+                    <h3>
+                        Social Media Boosting
+                    </h3>
 
-                <span>
-                    Explore →
-                </span>
+                    <p>
+                        Instagram, YouTube and social growth services.
+                    </p>
+
+                </div>
 
             </a>
 
 
-            <a href="giftcards.html"
-               class="service-card">
+            <a
+                href="giftcards.html"
+                class="notice-card reveal"
+                data-search="gift cards google play steam apple amazon"
+            >
 
-                <div class="service-icon">
+                <div class="notice-icon">
                     🎁
                 </div>
 
-                <h3>
-                    Gift Cards
-                </h3>
+                <div>
 
-                <p>
-                    Popular digital gift cards.
-                </p>
+                    <h3>
+                        Gift Cards
+                    </h3>
 
-                <span>
-                    Explore →
-                </span>
+                    <p>
+                        Popular digital gift cards and vouchers.
+                    </p>
+
+                </div>
 
             </a>
 
 
-            <a href="ott.html"
-               class="service-card">
+            <a
+                href="ott.html"
+                class="notice-card reveal"
+                data-search="ott netflix prime youtube premium crunchyroll canva"
+            >
 
-                <div class="service-icon">
+                <div class="notice-icon">
                     📺
                 </div>
 
-                <h3>
-                    OTT Services
-                </h3>
+                <div>
 
-                <p>
-                    Netflix, Prime, YouTube and more.
-                </p>
+                    <h3>
+                        OTT Services
+                    </h3>
 
-                <span>
-                    Explore →
-                </span>
+                    <p>
+                        Entertainment and subscription services.
+                    </p>
+
+                </div>
 
             </a>
 
 
-            <div class="service-card">
+            <div
+                class="notice-card reveal"
+                data-search="tournament services"
+            >
 
-                <div class="service-icon">
+                <div class="notice-icon">
                     🏆
                 </div>
 
-                <h3>
-                    Tournament Services
-                </h3>
+                <div>
 
-                <p>
-                    Gaming community services.
-                </p>
+                    <h3>
+                        Tournament Services
+                    </h3>
 
-                <span>
-                    Coming Soon
-                </span>
+                    <p>
+                        Gaming community and tournament services.
+                    </p>
+
+                </div>
 
             </div>
 
 
-            <div class="service-card">
+            <div
+                class="notice-card reveal"
+                data-search="gaming services"
+            >
 
-                <div class="service-icon">
+                <div class="notice-icon">
                     🎮
                 </div>
 
-                <h3>
-                    Gaming Services
-                </h3>
+                <div>
 
-                <p>
-                    Premium gaming assistance.
-                </p>
+                    <h3>
+                        Gaming Services
+                    </h3>
 
-                <span>
-                    Coming Soon
-                </span>
+                    <p>
+                        Gaming-focused digital services.
+                    </p>
+
+                </div>
 
             </div>
 
 
-            <div class="service-card">
+            <div
+                class="notice-card reveal"
+                data-search="discord services"
+            >
 
-                <div class="service-icon">
+                <div class="notice-icon">
                     💬
                 </div>
 
-                <h3>
-                    Discord Services
-                </h3>
+                <div>
 
-                <p>
-                    Community growth services.
-                </p>
+                    <h3>
+                        Discord Services
+                    </h3>
 
-                <span>
-                    Coming Soon
-                </span>
+                    <p>
+                        Community and Discord-related services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+                data-search="leaderboard services"
+            >
+
+                <div class="notice-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <h3>
+                        Leaderboard Services
+                    </h3>
+
+                    <p>
+                        Community ranking and gaming services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+                data-search="account services"
+            >
+
+                <div class="notice-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <h3>
+                        Account Services
+                    </h3>
+
+                    <p>
+                        Digital account-related services.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -1183,47 +1596,359 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PROMOTIONS
-========================================================= -->
+===================================================== -->
 
-<section class="section promotion-section">
+<section
+    style="
+        padding:60px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="promotion-box">
+        <div class="section-heading reveal">
 
-            <div class="promotion-content">
+            <div class="section-number">
+                04
+            </div>
+
+            <div>
 
                 <span class="eyebrow">
-                    PANTHEOS OFFERS
+                    SPECIAL OFFERS
                 </span>
 
                 <h2>
-                    Special Deals Are Coming
+                    Promotions & Deals
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(auto-fit,minmax(220px,1fr));
+                gap:14px;
+            "
+        >
+
+            <div
+                class="notice-card reveal"
+            >
+
+                <div class="notice-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h3>
+                        Flash Sales
+                    </h3>
+
+                    <p>
+                        Limited-time special offers.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+            >
+
+                <div class="notice-icon">
+                    🎉
+                </div>
+
+                <div>
+
+                    <h3>
+                        Festival Offers
+                    </h3>
+
+                    <p>
+                        Seasonal gaming deals.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+            >
+
+                <div class="notice-icon">
+                    💎
+                </div>
+
+                <div>
+
+                    <h3>
+                        Bonus Diamonds
+                    </h3>
+
+                    <p>
+                        Special bonus offers when available.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+            >
+
+                <div class="notice-icon">
+                    🎁
+                </div>
+
+                <div>
+
+                    <h3>
+                        Giveaway Events
+                    </h3>
+
+                    <p>
+                        Follow our community for announcements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section
+    style="
+        padding:65px 0;
+    "
+>
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-number">
+                05
+            </div>
+
+            <div>
+
+                <span class="eyebrow">
+                    CUSTOMER EXPERIENCE
+                </span>
+
+                <h2>
+                    Community Reviews
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                repeat(auto-fit,minmax(250px,1fr));
+                gap:14px;
+            "
+        >
+
+            <div
+                class="notice-card reveal"
+                style="display:block;"
+            >
+
+                <div
+                    style="
+                        color:#facc15;
+                        letter-spacing:3px;
+                        margin-bottom:10px;
+                    "
+                >
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Fast service and smooth ordering.
+                    Pantheos made my top-up really easy.”
+                </p>
+
+                <small
+                    style="
+                        display:block;
+                        color:#6b7280;
+                        margin-top:12px;
+                    "
+                >
+                    — Pantheos Customer
+                </small>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+                style="display:block;"
+            >
+
+                <div
+                    style="
+                        color:#facc15;
+                        letter-spacing:3px;
+                        margin-bottom:10px;
+                    "
+                >
+                    ★★★★★
+                </div>
+
+                <p>
+                    “The package selection is simple and
+                    the WhatsApp ordering system is convenient.”
+                </p>
+
+                <small
+                    style="
+                        display:block;
+                        color:#6b7280;
+                        margin-top:12px;
+                    "
+                >
+                    — Pantheos Customer
+                </small>
+
+            </div>
+
+
+            <div
+                class="notice-card reveal"
+                style="display:block;"
+            >
+
+                <div
+                    style="
+                        color:#facc15;
+                        letter-spacing:3px;
+                        margin-bottom:10px;
+                    "
+                >
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Reliable support and a clean gaming store.
+                    Highly recommended.”
+                </p>
+
+                <small
+                    style="
+                        display:block;
+                        color:#6b7280;
+                        margin-top:12px;
+                    "
+                >
+                    — Pantheos Customer
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMMUNITY
+===================================================== -->
+
+<section
+    id="community"
+    style="
+        padding:70px 0;
+    "
+>
+
+    <div class="container">
+
+        <div
+            class="support-card reveal"
+        >
+
+            <div>
+
+                <span class="eyebrow">
+                    JOIN THE COMMUNITY
+                </span>
+
+                <h2>
+                    Stay Connected With Pantheos
                 </h2>
 
                 <p>
-                    Keep an eye on Pantheos Global Store for
-                    weekly deals, special discounts, giveaways
-                    and bonus rewards.
+                    Get offers, announcements, giveaways,
+                    support and new product updates.
                 </p>
 
-                <a href="https://wa.me/919310651934"
-                   target="_blank"
-                   class="btn btn-primary">
+            </div>
 
-                    CONTACT US →
 
+            <div class="support-actions">
+
+                <a
+                    href="https://instagram.com/pantheosglobalstore"
+                    target="_blank"
+                    rel="noopener"
+                    class="support-btn secondary"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://t.me/pantheosglobal"
+                    target="_blank"
+                    rel="noopener"
+                    class="support-btn secondary"
+                >
+                    Telegram
+                </a>
+
+                <a
+                    href="https://wa.me/919310651934"
+                    target="_blank"
+                    rel="noopener"
+                    class="support-btn"
+                >
+                    WhatsApp
                 </a>
 
             </div>
 
-
-            <div class="promotion-orb">
-                ⚡
-            </div>
-
         </div>
 
     </div>
@@ -1231,179 +1956,145 @@
 </section>
 
 
-<!-- =========================================================
-     COMMUNITY
-========================================================= -->
-
-<section class="section community-section"
-         id="community">
-
-    <div class="container">
-
-        <div class="section-heading centered">
-
-            <span class="eyebrow">
-                JOIN THE COMMUNITY
-            </span>
-
-            <h2>
-                Stay Connected With Pantheos
-            </h2>
-
-            <p>
-                Follow us for updates, offers, announcements
-                and support.
-            </p>
-
-        </div>
-
-
-        <div class="community-grid">
-
-
-            <a href="https://instagram.com/pantheosglobalstore"
-               target="_blank"
-               class="community-card">
-
-                <img src="assets/instagram-icon.PNG"
-                     alt="Instagram">
-
-                <div>
-
-                    <strong>
-                        Instagram
-                    </strong>
-
-                    <span>
-                        @pantheosglobalstore
-                    </span>
-
-                </div>
-
-                <b>
-                    →
-                </b>
-
-            </a>
-
-
-            <a href="https://t.me/pantheosglobal"
-               target="_blank"
-               class="community-card">
-
-                <img src="assets/telegram-icon.jpg"
-                     alt="Telegram">
-
-                <div>
-
-                    <strong>
-                        Telegram
-                    </strong>
-
-                    <span>
-                        @pantheosglobal
-                    </span>
-
-                </div>
-
-                <b>
-                    →
-                </b>
-
-            </a>
-
-
-            <a href="https://wa.me/919310651934"
-               target="_blank"
-               class="community-card">
-
-                <img src="assets/whatsapp-icon.jpg"
-                     alt="WhatsApp">
-
-                <div>
-
-                    <strong>
-                        WhatsApp
-                    </strong>
-
-                    <span>
-                        Direct Support
-                    </span>
-
-                </div>
-
-                <b>
-                    →
-                </b>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      QR PAYMENT
-========================================================= -->
+===================================================== -->
 
-<section class="section payment-section">
+<section
+    style="
+        padding:65px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="payment-card">
+        <div
+            style="
+                display:grid;
+                grid-template-columns:
+                300px 1fr;
+                gap:35px;
+                align-items:center;
+                padding:30px;
+                border-radius:25px;
+                border:1px solid rgba(255,255,255,.08);
+                background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,92,246,.09),
+                    rgba(34,211,238,.035)
+                );
+            "
+        >
 
-            <div class="payment-image">
+            <div
+                style="
+                    display:flex;
+                    justify-content:center;
+                "
+            >
 
-                <img src="assets/qr-payment.jpg"
-                     alt="Pantheos QR Payment">
+                <div
+                    style="
+                        padding:12px;
+                        border-radius:18px;
+                        background:white;
+                        box-shadow:
+                        0 20px 50px
+                        rgba(0,0,0,.3);
+                    "
+                >
+
+                    <img
+                        src="assets/qr-payment.jpg"
+                        alt="Pantheos Global Store QR Payment"
+                        style="
+                            width:240px;
+                            height:240px;
+                            object-fit:contain;
+                        "
+                    >
+
+                </div>
 
             </div>
 
 
-            <div class="payment-content">
+            <div>
 
                 <span class="eyebrow">
                     SECURE PAYMENT
                 </span>
 
-                <h2>
-                    Pay Easily With QR
+                <h2
+                    style="
+                        font-size:2rem;
+                        margin:7px 0 15px;
+                    "
+                >
+                    Pay & Send Screenshot
                 </h2>
 
-                <p>
-                    Scan the QR code using your preferred
-                    supported payment app and complete your payment.
+                <p
+                    style="
+                        color:#9ca3af;
+                        max-width:600px;
+                        font-size:.82rem;
+                    "
+                >
+                    Scan the QR code to make your payment.
+                    After completing the payment, send the
+                    payment screenshot through WhatsApp so
+                    we can process your order.
                 </p>
 
 
-                <div class="security-points">
+                <div
+                    style="
+                        display:grid;
+                        gap:9px;
+                        margin-top:20px;
+                    "
+                >
 
-                    <div>
-                        ✓ Verify the payment amount
+                    <div
+                        style="
+                            padding:12px 14px;
+                            border-radius:11px;
+                            background:rgba(255,255,255,.035);
+                            border:1px solid rgba(255,255,255,.06);
+                            font-size:.72rem;
+                        "
+                    >
+                        ✓ Verify the amount before payment
                     </div>
 
-                    <div>
+                    <div
+                        style="
+                            padding:12px 14px;
+                            border-radius:11px;
+                            background:rgba(255,255,255,.035);
+                            border:1px solid rgba(255,255,255,.06);
+                            font-size:.72rem;
+                        "
+                    >
                         ✓ Keep your payment screenshot
                     </div>
 
-                    <div>
-                        ✓ Send proof after placing your order
+                    <div
+                        style="
+                            padding:12px 14px;
+                            border-radius:11px;
+                            background:rgba(255,255,255,.035);
+                            border:1px solid rgba(255,255,255,.06);
+                            font-size:.72rem;
+                        "
+                    >
+                        ✓ Contact official Pantheos support only
                     </div>
 
                 </div>
 
-
-                <a href="https://wa.me/919310651934"
-                   target="_blank"
-                   class="btn btn-primary">
-
-                    NEED PAYMENT HELP?
-
-                </a>
-
             </div>
 
         </div>
@@ -1413,174 +2104,23 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FAQ
-========================================================= -->
+===================================================== -->
 
-<section class="section faq-section" id="faq">
+<section
+    style="
+        padding:70px 0;
+    "
+>
 
     <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading reveal">
 
-            <span class="eyebrow">
-                FAQ
-            </span>
-
-            <h2>
-                Frequently Asked Questions
-            </h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    How long does delivery take?
-
-                    <span>
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Orders are processed as quickly as possible.
-                        Delivery time can vary depending on the
-                        selected product and service.
-                    </p>
-
-                </div>
-
+            <div class="section-number">
+                06
             </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    How do I order?
-
-                    <span>
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Select your game or service, choose your
-                        package, enter the required information,
-                        and follow the order instructions.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    What payment methods are accepted?
-
-                    <span>
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Payment instructions are provided during
-                        the ordering process. Contact support if
-                        you need assistance.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    How do refunds work?
-
-                    <span>
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Refund eligibility depends on the product
-                        and whether the order has already been
-                        processed. Contact support before ordering
-                        if you have questions.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    How can I contact support?
-
-                    <span>
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Pantheos Global Store support is available
-                        through WhatsApp, Telegram and Instagram.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SUPPORT
-========================================================= -->
-
-<section class="support-section"
-         id="support">
-
-    <div class="container">
-
-        <div class="support-card">
-
-            <img src="assets/support-icon.PNG"
-                 alt="Support">
 
             <div>
 
@@ -1589,32 +2129,300 @@
                 </span>
 
                 <h2>
-                    Pantheos Support
+                    Frequently Asked Questions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            style="
+                max-width:850px;
+                margin:auto;
+                display:grid;
+                gap:10px;
+            "
+        >
+
+            <div class="faq-item notice-card reveal">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    style="
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        background:none;
+                        border:0;
+                        color:white;
+                        text-align:left;
+                    "
+                >
+
+                    <strong>
+                        How long does delivery take?
+                    </strong>
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+                <div
+                    class="faq-answer"
+                    style="
+                        display:none;
+                        padding-top:12px;
+                        color:#9ca3af;
+                        font-size:.75rem;
+                    "
+                >
+                    Delivery time depends on the product.
+                    Supported gaming top-ups are normally
+                    processed as quickly as possible after
+                    payment verification.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item notice-card reveal">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    style="
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        background:none;
+                        border:0;
+                        color:white;
+                        text-align:left;
+                    "
+                >
+
+                    <strong>
+                        How do I order?
+                    </strong>
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+                <div
+                    class="faq-answer"
+                    style="
+                        display:none;
+                        padding-top:12px;
+                        color:#9ca3af;
+                        font-size:.75rem;
+                    "
+                >
+                    Select your game, enter the required
+                    player information, select a package,
+                    and use the WhatsApp order button.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item notice-card reveal">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    style="
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        background:none;
+                        border:0;
+                        color:white;
+                        text-align:left;
+                    "
+                >
+
+                    <strong>
+                        What payment methods are accepted?
+                    </strong>
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+                <div
+                    class="faq-answer"
+                    style="
+                        display:none;
+                        padding-top:12px;
+                        color:#9ca3af;
+                        font-size:.75rem;
+                    "
+                >
+                    Payment instructions are provided during
+                    the order process. Always verify the payment
+                    details with official Pantheos support.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item notice-card reveal">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    style="
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        background:none;
+                        border:0;
+                        color:white;
+                        text-align:left;
+                    "
+                >
+
+                    <strong>
+                        How do refunds work?
+                    </strong>
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+                <div
+                    class="faq-answer"
+                    style="
+                        display:none;
+                        padding-top:12px;
+                        color:#9ca3af;
+                        font-size:.75rem;
+                    "
+                >
+                    Refund eligibility depends on the product
+                    and whether the order has already been
+                    delivered. Contact support before placing
+                    an order if you need clarification.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item notice-card reveal">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    style="
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        background:none;
+                        border:0;
+                        color:white;
+                        text-align:left;
+                    "
+                >
+
+                    <strong>
+                        How can I contact support?
+                    </strong>
+
+                    <span>
+                        +
+                    </span>
+
+                </button>
+
+                <div
+                    class="faq-answer"
+                    style="
+                        display:none;
+                        padding-top:12px;
+                        color:#9ca3af;
+                        font-size:.75rem;
+                    "
+                >
+                    Contact Pantheos through WhatsApp,
+                    Telegram or Instagram using the official
+                    links on this website.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SUPPORT
+===================================================== -->
+
+<section
+    id="support"
+    class="product-support"
+>
+
+    <div class="container">
+
+        <div class="support-card reveal">
+
+            <div>
+
+                <span class="eyebrow">
+                    24/7 SUPPORT
+                </span>
+
+                <h2>
+                    Need Help With Your Order?
                 </h2>
 
                 <p>
-                    Our support channels are available 24/7.
+                    Our support channels are available for
+                    order assistance and product questions.
                 </p>
 
             </div>
 
 
-            <div class="support-buttons">
+            <div class="support-actions">
 
-                <a href="https://wa.me/919310651934"
-                   target="_blank"
-                   class="btn btn-primary">
-
+                <a
+                    href="https://wa.me/919310651934"
+                    target="_blank"
+                    rel="noopener"
+                    class="support-btn"
+                >
                     WhatsApp
-
                 </a>
 
-                <a href="https://t.me/pantheosglobal"
-                   target="_blank"
-                   class="btn btn-secondary">
-
+                <a
+                    href="https://t.me/pantheosglobal"
+                    target="_blank"
+                    rel="noopener"
+                    class="support-btn secondary"
+                >
                     Telegram
-
                 </a>
 
             </div>
@@ -1629,9 +2437,9 @@
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer class="site-footer">
 
@@ -1642,68 +2450,39 @@
 
             <div class="footer-brand">
 
-                <a href="index.html"
-                   class="brand">
+                <img
+                    src="assets/pantheos-logo.PNG"
+                    alt="Pantheos Global Store"
+                >
 
-                    <img src="assets/pantheos-logo.PNG"
-                         alt="Pantheos">
-
-                    <div class="brand-text">
-
-                        <strong>
-                            PANTHEOS
-                        </strong>
-
-                        <span>
-                            GLOBAL STORE
-                        </span>
-
-                    </div>
-
-                </a>
+                <h3>
+                    Pantheos Global Store
+                </h3>
 
                 <p>
                     Fast • Secure • Trusted
                 </p>
 
-                <span>
-                    Gaming top-ups and digital services
-                    made simple.
-                </span>
+                <p
+                    style="
+                        color:#6b7280;
+                        max-width:320px;
+                        margin-top:12px;
+                        line-height:1.7;
+                    "
+                >
+                    Premium gaming top-ups and digital
+                    services built for the gaming community.
+                </p>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h3>
-                    Store
-                </h3>
-
-                <a href="#games">
+                <h4>
                     Games
-                </a>
-
-                <a href="giftcards.html">
-                    Gift Cards
-                </a>
-
-                <a href="ott.html">
-                    OTT
-                </a>
-
-                <a href="boosting.html">
-                    Boosting
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Games
-                </h3>
+                </h4>
 
                 <a href="mlbb.html">
                     Mobile Legends
@@ -1721,46 +2500,78 @@
                     COD Mobile
                 </a>
 
+                <a href="valorant.html">
+                    Valorant
+                </a>
+
+                <a href="genshin.html">
+                    Genshin Impact
+                </a>
+
+                <a href="hsr.html">
+                    Honkai: Star Rail
+                </a>
+
             </div>
 
 
             <div class="footer-column">
 
-                <h3>
-                    Community
-                </h3>
+                <h4>
+                    Services
+                </h4>
 
-                <a href="https://instagram.com/pantheosglobalstore"
-                   target="_blank">
+                <a href="giftcards.html">
+                    Gift Cards
+                </a>
+
+                <a href="ott.html">
+                    OTT Services
+                </a>
+
+                <a href="boosting.html">
+                    Social Boosting
+                </a>
+
+                <a href="#services">
+                    Gaming Services
+                </a>
+
+                <a href="#support">
+                    Support
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Community
+                </h4>
+
+                <a
+                    href="https://instagram.com/pantheosglobalstore"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Instagram
                 </a>
 
-                <a href="https://t.me/pantheosglobal"
-                   target="_blank">
+                <a
+                    href="https://t.me/pantheosglobal"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Telegram
                 </a>
 
-                <a href="https://wa.me/919310651934"
-                   target="_blank">
+                <a
+                    href="https://wa.me/919310651934"
+                    target="_blank"
+                    rel="noopener"
+                >
                     WhatsApp
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Support
-                </h3>
-
-                <a href="https://wa.me/919310651934"
-                   target="_blank">
-                    Contact Us
-                </a>
-
-                <a href="#faq">
-                    FAQ
                 </a>
 
                 <a href="#support">
@@ -1789,35 +2600,45 @@
 </footer>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FLOATING WHATSAPP
-========================================================= -->
+===================================================== -->
 
-<a href="https://wa.me/919310651934"
-   target="_blank"
-   class="floating-whatsapp"
-   aria-label="WhatsApp">
+<a
+    href="https://wa.me/919310651934"
+    target="_blank"
+    rel="noopener"
+    class="floating-whatsapp"
+    aria-label="Contact Pantheos on WhatsApp"
+>
 
-    <img src="assets/whatsapp-icon.jpg"
-         alt="WhatsApp">
+    <img
+        src="assets/whatsapp-icon.jpg"
+        alt="WhatsApp"
+    >
 
 </a>
 
 
-<!-- =========================================================
+<!-- =====================================================
      BACK TO TOP
-========================================================= -->
+===================================================== -->
 
-<button id="backToTop"
-        class="back-to-top"
-        aria-label="Back to top">
-
+<button
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+>
     ↑
-
 </button>
 
 
-<script src="app.js"></script>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/main.js"></script>
 
 </body>
+
 </html>
