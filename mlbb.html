@@ -1,1 +1,2411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Mobile Legends Top Up | Pantheos Global Store</title>
+
+    <meta
+        name="description"
+        content="Fast and secure Mobile Legends diamond top-up from Pantheos Global Store."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================================
+           MLBB V11 PRODUCT PAGE
+        ========================================================= */
+
+        :root {
+            --bg: #05070d;
+            --panel: #0b1020;
+            --panel-2: #0f1629;
+            --purple: #9b5cff;
+            --cyan: #24d9ff;
+            --text: #ffffff;
+            --muted: #9ca8bd;
+            --border: rgba(255,255,255,.09);
+            --success: #4ade80;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background:
+                radial-gradient(
+                    circle at 20% 0%,
+                    rgba(111, 55, 255, .14),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(0, 217, 255, .08),
+                    transparent 30%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            font-family: Inter, Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .mlbb-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(5,7,13,.78);
+            backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 15px;
+        }
+
+        .brand-text small {
+            display: block;
+            color: var(--muted);
+            font-size: 10px;
+            margin-top: 2px;
+        }
+
+        .back-btn {
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: #dbe4f5;
+            background: rgba(255,255,255,.04);
+            transition: .25s;
+        }
+
+        .back-btn:hover {
+            border-color: rgba(155,92,255,.6);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .mlbb-hero {
+            width: min(1200px, 92%);
+            margin: 28px auto 0;
+
+            position: relative;
+            min-height: 300px;
+
+            border-radius: 28px;
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,5,12,.96) 0%,
+                    rgba(3,5,12,.78) 42%,
+                    rgba(3,5,12,.15) 100%
+                ),
+                url("assets/mlbb-banner.jpg") center/cover no-repeat;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,.4),
+                0 0 60px rgba(100,60,255,.08);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            min-height: 300px;
+            padding: 40px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            max-width: 650px;
+        }
+
+        .game-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            width: fit-content;
+
+            padding: 7px 12px;
+            margin-bottom: 15px;
+
+            border-radius: 999px;
+
+            background: rgba(155,92,255,.12);
+            border: 1px solid rgba(155,92,255,.35);
+
+            color: #d8c4ff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(32px, 6vw, 62px);
+            line-height: 1;
+
+            margin-bottom: 15px;
+
+            letter-spacing: -2px;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(
+                90deg,
+                #fff,
+                #b88aff,
+                #45ddff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            color: #c4cede;
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 22px;
+        }
+
+        .trust-item {
+            padding: 8px 12px;
+
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.08);
+
+            border-radius: 10px;
+
+            font-size: 11px;
+            color: #dce5f5;
+        }
+
+        /* =========================================================
+           MAIN LAYOUT
+        ========================================================= */
+
+        .mlbb-layout {
+            width: min(1200px, 92%);
+            margin: 30px auto 80px;
+
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 340px;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .section-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(17,24,43,.95),
+                    rgba(8,12,24,.96)
+                );
+
+            border: 1px solid var(--border);
+            border-radius: 22px;
+
+            padding: 22px;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.18);
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 15px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-heading h2 {
+            font-size: 20px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 9px;
+
+            background: linear-gradient(
+                135deg,
+                var(--purple),
+                var(--cyan)
+            );
+
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        /* =========================================================
+           INPUTS
+        ========================================================= */
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .field label {
+            display: block;
+            color: #dbe4f3;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap span {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            color: #77849b;
+            font-size: 14px;
+        }
+
+        .input-wrap input {
+            width: 100%;
+
+            padding: 14px 14px 14px 39px;
+
+            border-radius: 13px;
+
+            border: 1px solid rgba(255,255,255,.09);
+
+            outline: none;
+
+            color: white;
+            background: rgba(255,255,255,.045);
+
+            transition: .25s;
+        }
+
+        .input-wrap input:focus {
+            border-color: rgba(155,92,255,.7);
+
+            box-shadow:
+                0 0 0 3px rgba(155,92,255,.1),
+                0 0 25px rgba(155,92,255,.08);
+        }
+
+        /* =========================================================
+           PRODUCT CARDS
+        ========================================================= */
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .product-card {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 17px 18px;
+
+            min-height: 82px;
+
+            border-radius: 17px;
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(255,255,255,.035),
+                    rgba(255,255,255,.015)
+                );
+
+            cursor: pointer;
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateX(4px);
+
+            border-color: rgba(155,92,255,.55);
+
+            box-shadow:
+                0 0 25px rgba(155,92,255,.1);
+        }
+
+        .product-card.selected {
+            border-color: var(--purple);
+
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(155,92,255,.15),
+                    rgba(36,217,255,.055)
+                );
+
+            box-shadow:
+                0 0 0 1px rgba(155,92,255,.2),
+                0 0 35px rgba(155,92,255,.14);
+        }
+
+        .product-card.selected::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 15px;
+            bottom: 15px;
+
+            width: 3px;
+
+            border-radius: 10px;
+
+            background: linear-gradient(
+                var(--purple),
+                var(--cyan)
+            );
+        }
+
+        .product-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-width: 0;
+        }
+
+        .diamond-icon {
+            width: 48px;
+            height: 48px;
+
+            flex: 0 0 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 14px;
+
+            background:
+                radial-gradient(
+                    circle at 30% 25%,
+                    rgba(255,255,255,.22),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    rgba(36,217,255,.2),
+                    rgba(155,92,255,.25)
+                );
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            font-size: 22px;
+        }
+
+        .product-info {
+            min-width: 0;
+        }
+
+        .product-info h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .product-info p {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .product-price {
+            flex: 0 0 auto;
+            text-align: right;
+        }
+
+        .product-price strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .product-price small {
+            color: #65748e;
+            font-size: 10px;
+        }
+
+        .selected-check {
+            width: 25px;
+            height: 25px;
+
+            border-radius: 50%;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            color: transparent;
+
+            font-size: 12px;
+        }
+
+        .product-card.selected .selected-check {
+            color: white;
+
+            border-color: transparent;
+
+            background: linear-gradient(
+                135deg,
+                var(--purple),
+                var(--cyan)
+            );
+        }
+
+        /* =========================================================
+           SPECIAL PASSES
+        ========================================================= */
+
+        .pass-list {
+            display: flex;
+            gap: 14px;
+
+            overflow-x: auto;
+
+            padding: 5px 3px 12px;
+
+            scrollbar-width: thin;
+        }
+
+        .pass-card {
+            position: relative;
+
+            flex: 0 0 230px;
+
+            min-height: 155px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(255,255,255,.09);
+
+            background: #080d1a;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .pass-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(155,92,255,.65);
+        }
+
+        .pass-card.selected {
+            border-color: var(--cyan);
+
+            box-shadow:
+                0 0 30px rgba(36,217,255,.12);
+        }
+
+        .pass-card img {
+            width: 100%;
+            height: 92px;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+        .pass-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    transparent 35%,
+                    rgba(4,7,15,.96) 75%
+                );
+        }
+
+        .pass-info {
+            position: absolute;
+            left: 13px;
+            right: 13px;
+            bottom: 11px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .pass-info h3 {
+            font-size: 13px;
+        }
+
+        .pass-info p {
+            color: #aeb9cc;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .pass-price {
+            color: #fff;
+            font-weight: 900;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           SUMMARY
+        ========================================================= */
+
+        .summary {
+            position: sticky;
+            top: 95px;
+        }
+
+        .summary-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-logo {
+            width: 44px;
+            height: 44px;
+
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .summary-top h2 {
+            font-size: 18px;
+        }
+
+        .summary-top p {
+            color: var(--muted);
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+        .summary-details {
+            padding: 17px 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+
+            color: #aeb9cc;
+            font-size: 12px;
+        }
+
+        .summary-row strong {
+            color: white;
+            text-align: right;
+            max-width: 170px;
+            word-break: break-word;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 16px 0;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .summary-total span {
+            color: #b2bed1;
+            font-size: 12px;
+        }
+
+        .summary-total strong {
+            font-size: 27px;
+
+            background: linear-gradient(
+                90deg,
+                #fff,
+                #9c7cff,
+                #49ddff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .payment-status {
+            padding: 11px 13px;
+
+            border-radius: 11px;
+
+            background: rgba(250,180,60,.07);
+            border: 1px solid rgba(250,180,60,.16);
+
+            color: #f5c76a;
+
+            font-size: 11px;
+            line-height: 1.5;
+
+            margin-bottom: 12px;
+        }
+
+        .order-button {
+            width: 100%;
+
+            border: 0;
+
+            padding: 15px;
+
+            border-radius: 13px;
+
+            color: white;
+
+            font-weight: 900;
+            font-size: 13px;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #7b3fff,
+                    #a451ff,
+                    #20cfff
+                );
+
+            box-shadow:
+                0 12px 35px rgba(124,63,255,.25);
+
+            transition: .25s;
+        }
+
+        .order-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 15px 45px rgba(124,63,255,.35);
+        }
+
+        .order-button:disabled {
+            cursor: not-allowed;
+            opacity: .45;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .secure-note {
+            text-align: center;
+
+            color: #65748d;
+
+            font-size: 10px;
+
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           NOTICE
+        ========================================================= */
+
+        .notice {
+            margin-top: 18px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background: rgba(36,217,255,.045);
+
+            border: 1px solid rgba(36,217,255,.1);
+
+            color: #9eafc7;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+        .notice strong {
+            color: white;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .mlbb-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                position: relative;
+                top: auto;
+            }
+
+            .summary {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .header-inner {
+                min-height: 64px;
+            }
+
+            .brand-text {
+                display: none;
+            }
+
+            .back-btn {
+                font-size: 11px;
+                padding: 9px 12px;
+            }
+
+            .mlbb-hero {
+                min-height: 390px;
+                border-radius: 20px;
+
+                background-position: 60% center;
+
+                background:
+                    linear-gradient(
+                        0deg,
+                        rgba(3,5,12,.98) 0%,
+                        rgba(3,5,12,.52) 60%,
+                        rgba(3,5,12,.15) 100%
+                    ),
+                    url("assets/mlbb-banner.jpg") center/cover no-repeat;
+            }
+
+            .hero-content {
+                min-height: 390px;
+                padding: 25px 20px;
+                justify-content: flex-end;
+            }
+
+            .hero-content h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-content p {
+                font-size: 13px;
+            }
+
+            .mlbb-layout {
+                width: 94%;
+                margin-top: 18px;
+            }
+
+            .section-card {
+                padding: 16px;
+                border-radius: 18px;
+            }
+
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                min-width: 0;
+                padding: 14px;
+            }
+
+            .diamond-icon {
+                width: 42px;
+                height: 42px;
+                flex-basis: 42px;
+            }
+
+            .product-info h3 {
+                font-size: 13px;
+            }
+
+            .product-price strong {
+                font-size: 16px;
+            }
+
+            .selected-check {
+                display: none;
+            }
+
+            .pass-card {
+                flex-basis: 215px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="mlbb-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <img
+                src="assets/pantheos-logo.PNG"
+                alt="Pantheos Global Store"
+            >
+
+            <div class="brand-text">
+                <span>Pantheos Global Store</span>
+                <small>FAST • SECURE • TRUSTED</small>
+            </div>
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Store
+        </a>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="mlbb-hero">
+
+    <div class="hero-content">
+
+        <div class="game-badge">
+            💎 MOBILE LEGENDS
+        </div>
+
+        <h1>
+            MLBB <span>TOP UP</span>
+        </h1>
+
+        <p>
+            Recharge your Mobile Legends account with fast,
+            secure and trusted delivery from Pantheos Global Store.
+        </p>
+
+        <div class="trust-row">
+
+            <div class="trust-item">
+                ⚡ Fast Delivery
+            </div>
+
+            <div class="trust-item">
+                🔐 Secure Order
+            </div>
+
+            <div class="trust-item">
+                💎 Best Prices
+            </div>
+
+            <div class="trust-item">
+                🛡️ Trusted Support
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main class="mlbb-layout">
+
+    <div>
+
+        <!-- =====================================================
+             PLAYER INFORMATION
+        ====================================================== -->
+
+        <section class="section-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Player Information</h2>
+
+                    <p>
+                        Enter your Mobile Legends account details.
+                    </p>
+                </div>
+
+                <div class="step-number">
+                    01
+                </div>
+
+            </div>
+
+            <div class="input-grid">
+
+                <div class="field">
+
+                    <label for="playerId">
+                        Player ID
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <span>👤</span>
+
+                        <input
+                            type="text"
+                            id="playerId"
+                            placeholder="Enter Player ID"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="serverId">
+                        Server ID
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <span>🌐</span>
+
+                        <input
+                            type="text"
+                            id="serverId"
+                            placeholder="Enter Server ID"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="notice">
+
+                <strong>🔐 Your information is safe.</strong><br>
+
+                Please make sure your Player ID and Server ID
+                are correct before placing the order.
+                Pantheos Global Store is not responsible for
+                incorrect account details.
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SPECIAL PASSES
+        ====================================================== -->
+
+        <section class="section-card" style="margin-top:20px;">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>🎟️ Special Passes</h2>
+
+                    <p>
+                        Select a pass and continue to checkout.
+                    </p>
+                </div>
+
+                <div class="step-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="pass-list">
+
+                <article
+                    class="pass-card"
+                    data-product="Weekly Pass"
+                    data-price="155"
+                >
+
+                    <img
+                        src="assets/weekly-pass.jpg"
+                        alt="Weekly Pass"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Weekly Pass ×1</h3>
+                            <p>Mobile Legends</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹155
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Weekly Pass ×2"
+                    data-price="310"
+                >
+
+                    <img
+                        src="assets/weekly-pass.jpg"
+                        alt="Weekly Pass"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Weekly Pass ×2</h3>
+                            <p>2 Passes</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹310
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Weekly Pass ×3"
+                    data-price="465"
+                >
+
+                    <img
+                        src="assets/weekly-pass.jpg"
+                        alt="Weekly Pass"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Weekly Pass ×3</h3>
+                            <p>3 Passes</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹465
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Weekly Pass ×5"
+                    data-price="775"
+                >
+
+                    <img
+                        src="assets/weekly-pass.jpg"
+                        alt="Weekly Pass"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Weekly Pass ×5</h3>
+                            <p>5 Passes</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹775
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Starlight Normal"
+                    data-price="249"
+                >
+
+                    <img
+                        src="assets/starlight-normal.jpg"
+                        alt="Starlight Normal"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Starlight Normal</h3>
+                            <p>Premium Pass</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹249
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Starlight Premium"
+                    data-price="499"
+                >
+
+                    <img
+                        src="assets/starlight-premium.jpg"
+                        alt="Starlight Premium"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Starlight Premium</h3>
+                            <p>Premium Pass</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹499
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="pass-card"
+                    data-product="Twilight Pass"
+                    data-price="849"
+                >
+
+                    <img
+                        src="assets/twilight-pass.jpg"
+                        alt="Twilight Pass"
+                    >
+
+                    <div class="pass-overlay"></div>
+
+                    <div class="pass-info">
+
+                        <div>
+                            <h3>Twilight Pass</h3>
+                            <p>Special Pass</p>
+                        </div>
+
+                        <div class="pass-price">
+                            ₹849
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DIAMONDS
+        ====================================================== -->
+
+        <section class="section-card" style="margin-top:20px;">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>💎 Diamond Packages</h2>
+
+                    <p>
+                        Choose your diamond package.
+                    </p>
+                </div>
+
+                <div class="step-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="product-list" id="diamondList">
+
+
+                <article class="product-card"
+                    data-product="5 Diamonds"
+                    data-price="13">
+
+                    <div class="product-left">
+
+                        <div class="diamond-icon">
+                            💎
+                        </div>
+
+                        <div class="product-info">
+                            <h3>5 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹13</strong>
+                        <small>5 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="11 Diamonds"
+                    data-price="23">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>11 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹23</strong>
+                        <small>11 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="14 Diamonds"
+                    data-price="34">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>14 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹34</strong>
+                        <small>14 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="22 Diamonds"
+                    data-price="44">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>22 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹44</strong>
+                        <small>22 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="28 Diamonds"
+                    data-price="59">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>28 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹59</strong>
+                        <small>28 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="55 Diamonds"
+                    data-price="89">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>55 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹89</strong>
+                        <small>55 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="86 Diamonds"
+                    data-price="129">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>86 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹129</strong>
+                        <small>86 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="110 Diamonds"
+                    data-price="169">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>110 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹169</strong>
+                        <small>110 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="172 Diamonds"
+                    data-price="259">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>172 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹259</strong>
+                        <small>172 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="257 Diamonds"
+                    data-price="379">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>257 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹379</strong>
+                        <small>257 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="275 Diamonds"
+                    data-price="399">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>275 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹399</strong>
+                        <small>275 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="312 Diamonds"
+                    data-price="469">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>312 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹469</strong>
+                        <small>312 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="361 Diamonds"
+                    data-price="529">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>361 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹529</strong>
+                        <small>361 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="429 Diamonds"
+                    data-price="634">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>429 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹634</strong>
+                        <small>429 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="451 Diamonds"
+                    data-price="689">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>451 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹689</strong>
+                        <small>451 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="514 Diamonds"
+                    data-price="749">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>514 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹749</strong>
+                        <small>514 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="565 Diamonds"
+                    data-price="819">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>565 Diamonds</h3>
+                            <p>Instant Diamond Recharge</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹819</strong>
+                        <small>565 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="706 Diamonds"
+                    data-price="1029">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>706 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1029</strong>
+                        <small>706 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="720 Diamonds"
+                    data-price="1059">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>720 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1059</strong>
+                        <small>720 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="803 Diamonds"
+                    data-price="1179">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>803 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1179</strong>
+                        <small>803 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="900 Diamonds"
+                    data-price="1329">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>900 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1329</strong>
+                        <small>900 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="1049 Diamonds"
+                    data-price="1539">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>1049 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1539</strong>
+                        <small>1049 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="1130 Diamonds"
+                    data-price="1649">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>1130 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹1649</strong>
+                        <small>1130 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="1412 Diamonds"
+                    data-price="2059">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>1412 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹2059</strong>
+                        <small>1412 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="1503 Diamonds"
+                    data-price="2199">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>1503 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹2199</strong>
+                        <small>1503 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="2195 Diamonds"
+                    data-price="3089">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>2195 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹3089</strong>
+                        <small>2195 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="3688 Diamonds"
+                    data-price="5139">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>3688 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹5139</strong>
+                        <small>3688 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="5532 Diamonds"
+                    data-price="7649">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>5532 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹7649</strong>
+                        <small>5532 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="6046 Diamonds"
+                    data-price="8399">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>6046 Diamonds</h3>
+                            <p>Large Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹8399</strong>
+                        <small>6046 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+
+                <article class="product-card"
+                    data-product="9288 Diamonds"
+                    data-price="12899">
+
+                    <div class="product-left">
+                        <div class="diamond-icon">💎</div>
+                        <div class="product-info">
+                            <h3>9288 Diamonds</h3>
+                            <p>Ultimate Diamond Pack</p>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <strong>₹12899</strong>
+                        <small>9288 💎</small>
+                    </div>
+
+                    <div class="selected-check">✓</div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         ORDER SUMMARY
+    ========================================================== -->
+
+    <aside class="section-card summary">
+
+        <div class="summary-top">
+
+            <img
+                class="summary-logo"
+                src="assets/mlbb-logo.jpg"
+                alt="Mobile Legends"
+            >
+
+            <div>
+                <h2>Order Summary</h2>
+
+                <p>
+                    Pantheos Global Store
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="summary-details">
+
+            <div class="summary-row">
+                <span>Player ID</span>
+                <strong id="summaryPlayer">—</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Server ID</span>
+                <strong id="summaryServer">—</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Product</span>
+                <strong id="summaryProduct">
+                    Not selected
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-total">
+
+            <span>Total</span>
+
+            <strong id="summaryPrice">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="payment-status">
+
+            🟡 <strong>Payment Status: Pending</strong><br>
+
+            After placing the order, send your payment
+            screenshot through WhatsApp.
+
+        </div>
+
+
+        <button
+            class="order-button"
+            id="orderButton"
+            disabled
+        >
+            ORDER VIA WHATSAPP →
+        </button>
+
+
+        <div class="secure-note">
+
+            🔒 Secure order process<br>
+            ⚡ Fast • Safe • Trusted<br>
+            📞 24/7 Support
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+<script>
+
+    /* =========================================================
+       MLBB V11 ORDER SYSTEM
+    ========================================================= */
+
+    const playerIdInput =
+        document.getElementById("playerId");
+
+    const serverIdInput =
+        document.getElementById("serverId");
+
+    const summaryPlayer =
+        document.getElementById("summaryPlayer");
+
+    const summaryServer =
+        document.getElementById("summaryServer");
+
+    const summaryProduct =
+        document.getElementById("summaryProduct");
+
+    const summaryPrice =
+        document.getElementById("summaryPrice");
+
+    const orderButton =
+        document.getElementById("orderButton");
+
+
+    let selectedProduct = null;
+    let selectedPrice = 0;
+
+
+    /* =========================================================
+       UPDATE PLAYER INFORMATION
+    ========================================================= */
+
+    function updatePlayerInfo() {
+
+        summaryPlayer.textContent =
+            playerIdInput.value.trim() || "—";
+
+        summaryServer.textContent =
+            serverIdInput.value.trim() || "—";
+
+        updateButton();
+
+    }
+
+
+    playerIdInput.addEventListener(
+        "input",
+        updatePlayerInfo
+    );
+
+
+    serverIdInput.addEventListener(
+        "input",
+        updatePlayerInfo
+    );
+
+
+    /* =========================================================
+       SELECT NORMAL PRODUCTS
+    ========================================================= */
+
+    const productCards =
+        document.querySelectorAll(
+            ".product-card"
+        );
+
+
+    productCards.forEach(card => {
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                productCards.forEach(item => {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+                document
+                    .querySelectorAll(".pass-card")
+                    .forEach(item => {
+
+                        item.classList.remove(
+                            "selected"
+                        );
+
+                    });
+
+
+                card.classList.add("selected");
+
+
+                selectedProduct =
+                    card.dataset.product;
+
+                selectedPrice =
+                    Number(card.dataset.price);
+
+
+                updateSummary();
+
+            }
+        );
+
+    });
+
+
+    /* =========================================================
+       SELECT SPECIAL PASSES
+    ========================================================= */
+
+    const passCards =
+        document.querySelectorAll(
+            ".pass-card"
+        );
+
+
+    passCards.forEach(card => {
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                passCards.forEach(item => {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+                productCards.forEach(item => {
+
+                    item.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+
+                card.classList.add("selected");
+
+
+                selectedProduct =
+                    card.dataset.product;
+
+                selectedPrice =
+                    Number(card.dataset.price);
+
+
+                updateSummary();
+
+            }
+        );
+
+    });
+
+
+    /* =========================================================
+       SUMMARY
+    ========================================================= */
+
+    function updateSummary() {
+
+        summaryProduct.textContent =
+            selectedProduct || "Not selected";
+
+        summaryPrice.textContent =
+            "₹" +
+            selectedPrice.toLocaleString("en-IN");
+
+        updateButton();
+
+    }
+
+
+    /* =========================================================
+       BUTTON VALIDATION
+    ========================================================= */
+
+    function updateButton() {
+
+        const player =
+            playerIdInput.value.trim();
+
+        const server =
+            serverIdInput.value.trim();
+
+
+        if (
+            player &&
+            server &&
+            selectedProduct &&
+            selectedPrice > 0
+        ) {
+
+            orderButton.disabled = false;
+
+        } else {
+
+            orderButton.disabled = true;
+
+        }
+
+    }
+
+
+    /* =========================================================
+       WHATSAPP ORDER
+    ========================================================= */
+
+    orderButton.addEventListener(
+        "click",
+        () => {
+
+            const player =
+                playerIdInput.value.trim();
+
+            const server =
+                serverIdInput.value.trim();
+
+
+            if (
+                !player ||
+                !server ||
+                !selectedProduct
+            ) {
+
+                alert(
+                    "Please enter your Player ID, Server ID and select a package."
+                );
+
+                return;
+
+            }
+
+
+            const message =
+
+`🎮 Pantheos Global Store Order
+
+━━━━━━━━━━━━━━━━━━
+
+🎮 Game: Mobile Legends
+
+👤 Player ID:
+${player}
+
+🌐 Server ID:
+${server}
+
+💎 Package:
+${selectedProduct}
+
+💰 Price:
+₹${selectedPrice.toLocaleString("en-IN")}
+
+💳 Payment Status:
+Pending
+
+━━━━━━━━━━━━━━━━━━
+
+📸 Please send payment screenshot after payment.
+
+⚡ Fast • Safe • Trusted
+
+Thank you for choosing Pantheos Global Store.`;
+
+
+            const whatsappNumber =
+                "919310651934";
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
