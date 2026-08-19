@@ -1,294 +1,442 @@
 /* =========================================================
    PANTHEOS GLOBAL STORE V11
    MAIN JAVASCRIPT
-========================================================= */
+   Version: 11.0
+   ========================================================= */
+
+"use strict";
+
+/* =========================================================
+   GLOBAL CONFIG
+   ========================================================= */
+
+const PANTHEOS = {
+    storeName: "Pantheos Global Store",
+
+    whatsapp: "919310651934",
+
+    instagram:
+        "https://instagram.com/pantheosglobalstore",
+
+    telegram:
+        "https://t.me/pantheosglobal",
+
+    whatsappLink:
+        "https://wa.me/919310651934",
+
+    support:
+        "24/7",
+
+    currency: "₹"
+};
+
+
+/* =========================================================
+   DOM READY
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================================
-       01. PREMIUM LOADER
-    ===================================================== */
+    initLoader();
 
-    const loader = document.querySelector(".page-loader");
+    initMobileMenu();
 
-    if (loader) {
-        window.addEventListener("load", () => {
+    initStickyHeader();
 
-            setTimeout(() => {
-                loader.classList.add("hidden");
-            }, 500);
+    initSmoothScroll();
 
-        });
+    initSearch();
+
+    initScrollReveal();
+
+    initCounters();
+
+    initFAQ();
+
+    initBackToTop();
+
+    initFloatingWhatsApp();
+
+    initCommunityLinks();
+
+    initGameCards();
+
+    initLiveNotifications();
+
+    initImageEffects();
+
+    initActiveNavigation();
+
+});
+
+
+/* =========================================================
+   PREMIUM LOADER
+   ========================================================= */
+
+function initLoader() {
+
+    const loader =
+        document.querySelector(".loader") ||
+        document.querySelector("#loader") ||
+        document.querySelector(".page-loader");
+
+    if (!loader) return;
+
+    const progress =
+        loader.querySelector(".loader-progress") ||
+        loader.querySelector(".progress-bar") ||
+        loader.querySelector("[data-loader-progress]");
+
+    let value = 0;
+
+    if (progress) {
+
+        const interval = setInterval(() => {
+
+            value += Math.floor(Math.random() * 8) + 4;
+
+            if (value >= 100) {
+
+                value = 100;
+
+                clearInterval(interval);
+
+                setTimeout(() => {
+                    loader.classList.add("loaded");
+                }, 350);
+
+            }
+
+            progress.style.width = `${value}%`;
+
+        }, 80);
+
+    } else {
+
+        setTimeout(() => {
+            loader.classList.add("loaded");
+        }, 1200);
+
     }
 
+    setTimeout(() => {
+        loader.classList.add("loaded");
+    }, 3000);
+}
 
-    /* =====================================================
-       02. STICKY HEADER
-    ===================================================== */
 
-    const header = document.querySelector(".site-header");
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-    const handleHeader = () => {
+function initMobileMenu() {
 
-        if (!header) return;
+    const menuButton =
+        document.querySelector(".menu-toggle") ||
+        document.querySelector("#menuToggle") ||
+        document.querySelector("[data-menu-toggle]");
+
+    const mobileMenu =
+        document.querySelector(".mobile-menu") ||
+        document.querySelector("#mobileMenu") ||
+        document.querySelector("[data-mobile-menu]");
+
+    if (!menuButton || !mobileMenu) return;
+
+    menuButton.addEventListener("click", () => {
+
+        menuButton.classList.toggle("active");
+
+        mobileMenu.classList.toggle("active");
+
+        document.body.classList.toggle("menu-open");
+
+    });
+
+    mobileMenu
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                menuButton.classList.remove("active");
+
+                mobileMenu.classList.remove("active");
+
+                document.body.classList.remove("menu-open");
+
+            });
+
+        });
+
+}
+
+
+/* =========================================================
+   STICKY HEADER
+   ========================================================= */
+
+function initStickyHeader() {
+
+    const header =
+        document.querySelector("header") ||
+        document.querySelector(".header") ||
+        document.querySelector(".navbar");
+
+    if (!header) return;
+
+    const updateHeader = () => {
 
         if (window.scrollY > 30) {
+
             header.classList.add("scrolled");
+
         } else {
+
             header.classList.remove("scrolled");
+
         }
 
     };
 
-    handleHeader();
+    updateHeader();
 
-    window.addEventListener("scroll", handleHeader, {
-        passive: true
-    });
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+    );
 
-
-    /* =====================================================
-       03. MOBILE MENU
-    ===================================================== */
-
-    const mobileButton =
-        document.querySelector(".mobile-menu-btn");
-
-    const mobileMenu =
-        document.querySelector(".mobile-menu");
-
-    if (mobileButton && mobileMenu) {
-
-        mobileButton.addEventListener("click", () => {
-
-            const opened =
-                mobileMenu.classList.toggle("open");
-
-            mobileButton.setAttribute(
-                "aria-expanded",
-                opened ? "true" : "false"
-            );
-
-            mobileButton.innerHTML =
-                opened ? "✕" : "☰";
-
-        });
+}
 
 
-        mobileMenu.querySelectorAll("a")
-            .forEach(link => {
+/* =========================================================
+   SMOOTH SCROLL
+   ========================================================= */
 
-                link.addEventListener("click", () => {
+function initSmoothScroll() {
 
-                    mobileMenu.classList.remove("open");
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
 
-                    mobileButton.innerHTML = "☰";
+            anchor.addEventListener("click", event => {
 
-                    mobileButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                const targetId =
+                    anchor.getAttribute("href");
 
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) return;
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
 
             });
 
+        });
+
+}
+
+
+/* =========================================================
+   SEARCH SYSTEM
+   ========================================================= */
+
+function initSearch() {
+
+    const searchInputs =
+        document.querySelectorAll(
+            ".search-input, #searchInput, [data-search]"
+        );
+
+    if (!searchInputs.length) return;
+
+    searchInputs.forEach(input => {
+
+        input.addEventListener(
+            "input",
+            () => {
+
+                const query =
+                    input.value
+                        .trim()
+                        .toLowerCase();
+
+                performSearch(query);
+
+            }
+        );
+
+        input.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    input.value = "";
+
+                    performSearch("");
+
+                }
+
+            }
+        );
+
+    });
+
+}
+
+
+function performSearch(query) {
+
+    const searchableItems =
+        document.querySelectorAll(
+            "[data-search-item], " +
+            ".game-card, " +
+            ".service-card, " +
+            ".product-card, " +
+            ".gift-card, " +
+            ".ott-card"
+        );
+
+    searchableItems.forEach(item => {
+
+        const text =
+            item.textContent
+                .toLowerCase();
+
+        if (!query || text.includes(query)) {
+
+            item.style.display = "";
+
+            item.classList.remove(
+                "search-hidden"
+            );
+
+        } else {
+
+            item.style.display = "none";
+
+            item.classList.add(
+                "search-hidden"
+            );
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+function initScrollReveal() {
+
+    const elements =
+        document.querySelectorAll(
+            ".reveal, " +
+            ".scroll-reveal, " +
+            "[data-reveal]"
+        );
+
+    if (!elements.length) return;
+
+    if (
+        !("IntersectionObserver" in window)
+    ) {
+
+        elements.forEach(element => {
+            element.classList.add("visible");
+        });
+
+        return;
     }
 
+    const observer =
+        new IntersectionObserver(
+            entries => {
 
-    /* =====================================================
-       04. SCROLL REVEAL
-    ===================================================== */
+                entries.forEach(entry => {
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-    if (revealElements.length) {
-
-        const revealObserver =
-            new IntersectionObserver(
-                (entries, observer) => {
-
-                    entries.forEach(entry => {
-
-                        if (!entry.isIntersecting) return;
-
-                        entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
                         observer.unobserve(
                             entry.target
                         );
 
-                    });
+                    }
 
-                },
-                {
-                    threshold: 0.12
-                }
-            );
-
-        revealElements.forEach(element => {
-
-            revealObserver.observe(element);
-
-        });
-
-    }
-
-
-    /* =====================================================
-       05. BACK TO TOP
-    ===================================================== */
-
-    const backToTop =
-        document.querySelector(".back-to-top");
-
-    if (backToTop) {
-
-        const updateBackToTop = () => {
-
-            if (window.scrollY > 500) {
-
-                backToTop.classList.add("visible");
-
-            } else {
-
-                backToTop.classList.remove("visible");
-
-            }
-
-        };
-
-        updateBackToTop();
-
-        window.addEventListener(
-            "scroll",
-            updateBackToTop,
-            { passive: true }
-        );
-
-        backToTop.addEventListener(
-            "click",
-            () => {
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
                 });
 
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -40px 0px"
             }
         );
 
-    }
-
-
-    /* =====================================================
-       06. SMOOTH INTERNAL LINKS
-    ===================================================== */
-
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(link => {
-
-        link.addEventListener("click", event => {
-
-            const targetId =
-                link.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                return;
-            }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            const headerHeight =
-                header
-                    ? header.offsetHeight
-                    : 0;
-
-            const targetPosition =
-                target.getBoundingClientRect().top
-                +
-                window.scrollY
-                -
-                headerHeight
-                -
-                15;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-
-        });
-
+    elements.forEach(element => {
+        observer.observe(element);
     });
 
-
-    /* =====================================================
-       07. ACTIVE NAVIGATION
-    ===================================================== */
-
-    const currentPage =
-        window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase();
-
-    document.querySelectorAll(
-        ".desktop-nav a, .mobile-menu a"
-    ).forEach(link => {
-
-        const href =
-            link.getAttribute("href");
-
-        if (!href) return;
-
-        const cleanHref =
-            href
-                .split("?")[0]
-                .split("#")[0]
-                .split("/")
-                .pop()
-                .toLowerCase();
-
-        if (
-            cleanHref &&
-            cleanHref === currentPage
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
+}
 
 
-    /* =====================================================
-       08. ANIMATED COUNTERS
-    ===================================================== */
+/* =========================================================
+   ANIMATED STATISTICS
+   ========================================================= */
+
+function initCounters() {
 
     const counters =
         document.querySelectorAll(
             "[data-counter]"
         );
 
-    if (counters.length) {
+    if (!counters.length) return;
 
-        const counterObserver =
-            new IntersectionObserver(
-                (entries, observer) => {
+    if (
+        !("IntersectionObserver" in window)
+    ) {
 
-                    entries.forEach(entry => {
+        counters.forEach(counter => {
+            animateCounter(counter);
+        });
 
-                        if (!entry.isIntersecting) {
-                            return;
-                        }
+        return;
+    }
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
 
                         animateCounter(
                             entry.target
@@ -298,139 +446,51 @@ document.addEventListener("DOMContentLoaded", () => {
                             entry.target
                         );
 
-                    });
+                    }
 
-                },
-                {
-                    threshold: 0.5
-                }
-            );
+                });
 
-        counters.forEach(counter => {
-
-            counterObserver.observe(counter);
-
-        });
-
-    }
-
-
-    /* =====================================================
-       09. PRICE CARD SELECTION
-    ===================================================== */
-
-    setupPriceCards();
-
-
-    /* =====================================================
-       10. PRODUCT SEARCH
-    ===================================================== */
-
-    setupSearch();
-
-
-    /* =====================================================
-       11. FAQ ACCORDION
-    ===================================================== */
-
-    setupFAQ();
-
-
-    /* =====================================================
-       12. IMAGE ERROR PROTECTION
-    ===================================================== */
-
-    document.querySelectorAll("img")
-        .forEach(img => {
-
-            img.addEventListener(
-                "error",
-                () => {
-
-                    img.classList.add(
-                        "image-error"
-                    );
-
-                }
-            );
-
-        });
-
-
-    /* =====================================================
-       13. ESCAPE KEY
-    ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (event.key !== "Escape") {
-                return;
+            },
+            {
+                threshold: 0.5
             }
+        );
 
-            if (
-                mobileMenu &&
-                mobileMenu.classList.contains("open")
-            ) {
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
 
-                mobileMenu.classList.remove(
-                    "open"
-                );
+}
 
-                if (mobileButton) {
-
-                    mobileButton.innerHTML =
-                        "☰";
-
-                    mobileButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-            }
-
-        }
-    );
-
-});
-
-
-/* =========================================================
-   COUNTER FUNCTION
-========================================================= */
 
 function animateCounter(element) {
 
+    if (
+        element.dataset.counterStarted === "true"
+    ) {
+        return;
+    }
+
+    element.dataset.counterStarted = "true";
+
     const target =
-        Number(
-            element.dataset.counter || 0
+        parseInt(
+            element.dataset.counter,
+            10
         );
 
-    const duration =
-        Number(
-            element.dataset.duration || 1600
-        );
+    if (
+        Number.isNaN(target)
+    ) {
+        return;
+    }
 
-    const suffix =
-        element.dataset.suffix || "";
-
-    const prefix =
-        element.dataset.prefix || "";
+    const duration = 1800;
 
     const startTime =
         performance.now();
 
-    const formatNumber = value => {
-
-        return Math.floor(value)
-            .toLocaleString("en-IN");
-
-    };
-
-    const update = currentTime => {
+    function update(currentTime) {
 
         const elapsed =
             currentTime - startTime;
@@ -448,13 +508,13 @@ function animateCounter(element) {
                 3
             );
 
-        const value =
-            target * eased;
+        const current =
+            Math.floor(
+                target * eased
+            );
 
         element.textContent =
-            prefix +
-            formatNumber(value) +
-            suffix;
+            formatNumber(current);
 
         if (progress < 1) {
 
@@ -463,63 +523,120 @@ function animateCounter(element) {
         } else {
 
             element.textContent =
-                prefix +
-                formatNumber(target) +
-                suffix;
+                formatNumber(target);
 
         }
 
-    };
+    }
 
     requestAnimationFrame(update);
 
 }
 
 
+function formatNumber(number) {
+
+    return new Intl.NumberFormat(
+        "en-IN"
+    ).format(number);
+
+}
+
+
 /* =========================================================
-   PRICE CARD SYSTEM
-========================================================= */
+   FAQ ACCORDION
+   ========================================================= */
 
-function setupPriceCards() {
+function initFAQ() {
 
-    const cards =
+    const questions =
         document.querySelectorAll(
-            ".price-card[data-price]"
+            ".faq-question, " +
+            ".faq-header, " +
+            "[data-faq-question]"
         );
 
-    if (!cards.length) {
-        return;
-    }
+    if (!questions.length) return;
 
-    cards.forEach(card => {
+    questions.forEach(question => {
 
-        card.addEventListener(
+        question.addEventListener(
             "click",
             () => {
 
-                const group =
-                    card.dataset.group ||
-                    "default";
+                const item =
+                    question.closest(
+                        ".faq-item"
+                    );
+
+                if (!item) return;
+
+                const answer =
+                    item.querySelector(
+                        ".faq-answer"
+                    );
+
+                const isActive =
+                    item.classList.contains(
+                        "active"
+                    );
 
                 document
                     .querySelectorAll(
-                        `.price-card[data-group="${group}"]`
+                        ".faq-item.active"
                     )
-                    .forEach(item => {
+                    .forEach(activeItem => {
 
-                        item.classList.remove(
-                            "selected"
-                        );
+                        if (
+                            activeItem !== item
+                        ) {
+
+                            activeItem.classList.remove(
+                                "active"
+                            );
+
+                            const activeAnswer =
+                                activeItem.querySelector(
+                                    ".faq-answer"
+                                );
+
+                            if (activeAnswer) {
+
+                                activeAnswer.style.maxHeight =
+                                    null;
+
+                            }
+
+                        }
 
                     });
 
-                card.classList.add(
-                    "selected"
-                );
+                if (isActive) {
 
-                updateOrderSummary(
-                    card
-                );
+                    item.classList.remove(
+                        "active"
+                    );
+
+                    if (answer) {
+                        answer.style.maxHeight =
+                            null;
+                    }
+
+                } else {
+
+                    item.classList.add(
+                        "active"
+                    );
+
+                    if (answer) {
+
+                        answer.style.maxHeight =
+                            answer.scrollHeight +
+                            "px";
+
+                    }
+
+                }
 
             }
         );
@@ -530,141 +647,55 @@ function setupPriceCards() {
 
 
 /* =========================================================
-   ORDER SUMMARY UPDATE
-========================================================= */
+   BACK TO TOP
+   ========================================================= */
 
-function updateOrderSummary(card) {
+function initBackToTop() {
 
-    const price =
-        card.dataset.price || "";
-
-    const product =
-        card.dataset.product ||
-        card.querySelector(
-            ".price-card-main strong"
-        )?.textContent ||
-        "Selected Product";
-
-    const priceElement =
+    const button =
         document.querySelector(
-            "#summaryPrice"
-        );
-
-    const productElement =
+            ".back-to-top"
+        ) ||
         document.querySelector(
-            "#summaryProduct"
-        );
-
-    const messageElement =
+            "#backToTop"
+        ) ||
         document.querySelector(
-            "#selectionMessage"
+            "[data-back-top]"
         );
 
-    const orderButton =
-        document.querySelector(
-            "#orderButton"
-        );
+    if (!button) return;
 
-    if (priceElement) {
+    const update = () => {
 
-        priceElement.textContent =
-            `₹${price}`;
+        if (window.scrollY > 500) {
 
-    }
+            button.classList.add(
+                "visible"
+            );
 
-    if (productElement) {
+        } else {
 
-        productElement.textContent =
-            product;
+            button.classList.remove(
+                "visible"
+            );
 
-    }
+        }
 
-    if (messageElement) {
+    };
 
-        messageElement.textContent =
-            `Selected: ${product}`;
-
-        messageElement.classList.add(
-            "ready"
-        );
-
-    }
-
-    if (orderButton) {
-
-        orderButton.disabled = false;
-
-        orderButton.dataset.price =
-            price;
-
-        orderButton.dataset.product =
-            product;
-
-    }
-
-    document.dispatchEvent(
-        new CustomEvent(
-            "pantheos:productSelected",
-            {
-                detail: {
-                    product,
-                    price,
-                    card
-                }
-            }
-        )
+    window.addEventListener(
+        "scroll",
+        update,
+        { passive: true }
     );
 
-}
-
-
-/* =========================================================
-   SEARCH SYSTEM
-========================================================= */
-
-function setupSearch() {
-
-    const searchInput =
-        document.querySelector(
-            "#globalSearch"
-        );
-
-    if (!searchInput) {
-        return;
-    }
-
-    const searchableItems =
-        document.querySelectorAll(
-            "[data-search]"
-        );
-
-    searchInput.addEventListener(
-        "input",
+    button.addEventListener(
+        "click",
         () => {
 
-            const query =
-                searchInput.value
-                    .trim()
-                    .toLowerCase();
-
-            searchableItems.forEach(item => {
-
-                const searchableText =
-                    (
-                        item.dataset.search ||
-                        item.textContent ||
-                        ""
-                    ).toLowerCase();
-
-                const match =
-                    !query ||
-                    searchableText.includes(
-                        query
-                    );
-
-                item.style.display =
-                    match ? "" : "none";
-
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
             });
 
         }
@@ -674,54 +705,134 @@ function setupSearch() {
 
 
 /* =========================================================
-   FAQ ACCORDION
-========================================================= */
+   FLOATING WHATSAPP
+   ========================================================= */
 
-function setupFAQ() {
+function initFloatingWhatsApp() {
 
-    const faqItems =
+    const buttons =
         document.querySelectorAll(
-            ".faq-item"
+            ".whatsapp-btn, " +
+            ".floating-whatsapp, " +
+            "[data-whatsapp]"
         );
 
-    if (!faqItems.length) {
-        return;
-    }
+    if (!buttons.length) return;
 
-    faqItems.forEach(item => {
+    buttons.forEach(button => {
 
-        const question =
-            item.querySelector(
-                ".faq-question"
-            );
+        if (
+            button.tagName.toLowerCase() === "a"
+        ) {
 
-        if (!question) {
+            if (
+                !button.getAttribute("href")
+            ) {
+
+                button.href =
+                    PANTHEOS.whatsappLink;
+
+            }
+
             return;
         }
 
-        question.addEventListener(
+        button.addEventListener(
             "click",
             () => {
 
-                const wasOpen =
-                    item.classList.contains(
-                        "open"
-                    );
+                openWhatsApp(
+                    "Hello Pantheos Global Store! I need assistance."
+                );
 
-                faqItems.forEach(other => {
+            }
+        );
 
-                    other.classList.remove(
-                        "open"
-                    );
+    });
 
-                });
+}
 
-                if (!wasOpen) {
 
-                    item.classList.add(
-                        "open"
-                    );
+/* =========================================================
+   COMMUNITY LINKS
+   ========================================================= */
 
+function initCommunityLinks() {
+
+    document
+        .querySelectorAll(
+            "[data-instagram]"
+        )
+        .forEach(link => {
+
+            link.setAttribute(
+                "href",
+                PANTHEOS.instagram
+            );
+
+        });
+
+    document
+        .querySelectorAll(
+            "[data-telegram]"
+        )
+        .forEach(link => {
+
+            link.setAttribute(
+                "href",
+                PANTHEOS.telegram
+            );
+
+        });
+
+    document
+        .querySelectorAll(
+            "[data-whatsapp-link]"
+        )
+        .forEach(link => {
+
+            link.setAttribute(
+                "href",
+                PANTHEOS.whatsappLink
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   GAME CARD NAVIGATION
+   ========================================================= */
+
+function initGameCards() {
+
+    const cards =
+        document.querySelectorAll(
+            "[data-game-page]"
+        );
+
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+
+        card.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target.closest("a") ||
+                    event.target.closest("button")
+                ) {
+                    return;
+                }
+
+                const page =
+                    card.dataset.gamePage;
+
+                if (page) {
+                    window.location.href =
+                        page;
                 }
 
             }
@@ -733,198 +844,179 @@ function setupFAQ() {
 
 
 /* =========================================================
-   GET CUSTOMER DATA
-========================================================= */
+   LIVE ORDER NOTIFICATIONS
+   ========================================================= */
 
-function getCustomerData() {
+function initLiveNotifications() {
 
-    const playerId =
+    const container =
         document.querySelector(
-            "#playerId"
-        )?.value.trim() || "";
-
-    const serverId =
+            ".live-notification"
+        ) ||
         document.querySelector(
-            "#serverId"
-        )?.value.trim() || "";
-
-    const uid =
+            "#liveNotification"
+        ) ||
         document.querySelector(
-            "#uid"
-        )?.value.trim() || "";
+            "[data-live-notification]"
+        );
 
-    const characterId =
-        document.querySelector(
-            "#characterId"
-        )?.value.trim() || "";
+    if (!container) return;
 
-    const riotId =
-        document.querySelector(
-            "#riotId"
-        )?.value.trim() || "";
+    const notifications = [
 
-    return {
-        playerId,
-        serverId,
-        uid,
-        characterId,
-        riotId
-    };
+        "⚡ A customer just placed an order",
+
+        "💎 MLBB Diamonds order received",
+
+        "🔥 Popular package purchased",
+
+        "🎮 Gaming top-up order confirmed",
+
+        "🚀 New order processed",
+
+        "⭐ Customer order received",
+
+        "💳 New digital product order"
+
+    ];
+
+    let index = 0;
+
+    function showNotification() {
+
+        container.classList.remove(
+            "show"
+        );
+
+        setTimeout(() => {
+
+            container.textContent =
+                notifications[index];
+
+            container.classList.add(
+                "show"
+            );
+
+            index =
+                (index + 1) %
+                notifications.length;
+
+        }, 300);
+
+    }
+
+    showNotification();
+
+    setInterval(
+        showNotification,
+        6000
+    );
 
 }
 
 
 /* =========================================================
-   FIND SELECTED PRODUCT
-========================================================= */
+   IMAGE HOVER EFFECTS
+   ========================================================= */
 
-function getSelectedProduct() {
+function initImageEffects() {
 
-    const selected =
-        document.querySelector(
-            ".price-card.selected"
+    const images =
+        document.querySelectorAll(
+            ".game-card img, " +
+            ".product-card img, " +
+            ".service-card img"
         );
 
-    if (!selected) {
-        return null;
-    }
+    images.forEach(image => {
 
-    return {
+        image.addEventListener(
+            "mouseenter",
+            () => {
 
-        product:
-            selected.dataset.product ||
-            selected.querySelector(
-                ".price-card-main strong"
-            )?.textContent ||
-            "",
+                image.classList.add(
+                    "image-hover"
+                );
 
-        price:
-            selected.dataset.price ||
-            "",
+            }
+        );
 
-        group:
-            selected.dataset.group ||
-            ""
+        image.addEventListener(
+            "mouseleave",
+            () => {
 
-    };
+                image.classList.remove(
+                    "image-hover"
+                );
+
+            }
+        );
+
+    });
 
 }
 
 
 /* =========================================================
-   WHATSAPP ORDER BUILDER
-========================================================= */
+   ACTIVE NAVIGATION
+   ========================================================= */
 
-function createWhatsAppOrder(options = {}) {
+function initActiveNavigation() {
 
-    const game =
-        options.game ||
-        "Gaming Product";
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
 
-    const customer =
-        getCustomerData();
-
-    const selected =
-        getSelectedProduct();
-
-    if (!selected) {
-
-        alert(
-            "Please select a package first."
+    const links =
+        document.querySelectorAll(
+            "nav a, " +
+            ".nav-links a, " +
+            ".mobile-menu a"
         );
 
-        return;
+    links.forEach(link => {
 
-    }
+        const href =
+            link.getAttribute("href");
 
-    const lines = [];
+        if (!href) return;
 
-    lines.push(
-        "🎮 Pantheos Global Store Order"
-    );
+        const linkPage =
+            href
+                .split("/")
+                .pop()
+                .split("?")[0]
+                .toLowerCase();
 
-    lines.push("");
+        if (
+            linkPage &&
+            linkPage === currentPage
+        ) {
 
-    lines.push(
-        `Game: ${game}`
-    );
+            link.classList.add(
+                "active"
+            );
 
-    if (customer.playerId) {
+        }
 
-        lines.push(
-            `Player ID: ${customer.playerId}`
-        );
+    });
 
-    }
+}
 
-    if (customer.serverId) {
 
-        lines.push(
-            `Server ID: ${customer.serverId}`
-        );
+/* =========================================================
+   WHATSAPP ORDER SYSTEM
+   ========================================================= */
 
-    }
+function openWhatsApp(message) {
 
-    if (customer.uid) {
-
-        lines.push(
-            `UID: ${customer.uid}`
-        );
-
-    }
-
-    if (customer.characterId) {
-
-        lines.push(
-            `Character ID: ${customer.characterId}`
-        );
-
-    }
-
-    if (customer.riotId) {
-
-        lines.push(
-            `Riot ID: ${customer.riotId}`
-        );
-
-    }
-
-    lines.push("");
-
-    lines.push(
-        `Package: ${selected.product}`
-    );
-
-    lines.push(
-        `Price: ₹${selected.price}`
-    );
-
-    lines.push(
-        "Payment Status: Pending"
-    );
-
-    lines.push("");
-
-    lines.push(
-        "Please send payment screenshot after payment."
-    );
-
-    lines.push("");
-
-    lines.push(
-        "Fast • Secure • Trusted"
-    );
-
-    const message =
-        encodeURIComponent(
-            lines.join("\n")
-        );
-
-    const phone =
-        "919310651934";
+    const encoded =
+        encodeURIComponent(message);
 
     const url =
-        `https://wa.me/${phone}?text=${message}`;
+        `https://wa.me/${PANTHEOS.whatsapp}?text=${encoded}`;
 
     window.open(
         url,
@@ -936,49 +1028,161 @@ function createWhatsAppOrder(options = {}) {
 
 
 /* =========================================================
-   GLOBAL WHATSAPP BUTTON
-========================================================= */
+   GENERATE STANDARD ORDER MESSAGE
+   ========================================================= */
 
-document.addEventListener(
-    "click",
-    event => {
+function generateOrderMessage({
 
-        const button =
-            event.target.closest(
-                "[data-whatsapp-order]"
-            );
+    game = "Gaming Top-Up",
 
-        if (!button) {
-            return;
-        }
+    playerId = "",
 
-        event.preventDefault();
+    serverId = "",
 
-        createWhatsAppOrder({
-            game:
-                button.dataset.game ||
-                document.body.dataset.game ||
-                "Gaming Product"
-        });
+    packageName = "",
+
+    price = "",
+
+    paymentStatus = "Pending"
+
+} = {}) {
+
+    let message =
+`🎮 Pantheos Global Store Order
+
+Game: ${game}
+
+`;
+
+    if (playerId) {
+
+        message +=
+`Player ID:
+${playerId}
+
+`;
 
     }
-);
+
+    if (serverId) {
+
+        message +=
+`Server ID:
+${serverId}
+
+`;
+
+    }
+
+    message +=
+`Package:
+${packageName}
+
+Price:
+${price}
+
+Payment Status:
+${paymentStatus}
+
+Please send payment screenshot after payment.`;
+
+    return message;
+
+}
 
 
 /* =========================================================
-   PRODUCT PAGE VALIDATION
-========================================================= */
+   GENERIC ORDER BUTTON
+   ========================================================= */
 
-function validateProductPage() {
+function initGenericOrderButtons() {
 
-    const requiredInputs =
-        document.querySelectorAll(
-            "[data-required]"
+    document
+        .querySelectorAll(
+            "[data-order-button]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const game =
+                        button.dataset.game ||
+                        "Gaming Top-Up";
+
+                    const packageName =
+                        button.dataset.package ||
+                        "Selected Package";
+
+                    const price =
+                        button.dataset.price ||
+                        "₹0";
+
+                    const playerInput =
+                        document.querySelector(
+                            "[data-player-id]"
+                        );
+
+                    const serverInput =
+                        document.querySelector(
+                            "[data-server-id]"
+                        );
+
+                    const playerId =
+                        playerInput
+                            ? playerInput.value.trim()
+                            : "";
+
+                    const serverId =
+                        serverInput
+                            ? serverInput.value.trim()
+                            : "";
+
+                    const message =
+                        generateOrderMessage({
+
+                            game,
+
+                            playerId,
+
+                            serverId,
+
+                            packageName,
+
+                            price,
+
+                            paymentStatus:
+                                "Pending"
+
+                        });
+
+                    openWhatsApp(message);
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   FORM VALIDATION
+   ========================================================= */
+
+function validateRequiredInputs(
+    container = document
+) {
+
+    const required =
+        container.querySelectorAll(
+            "[required]"
         );
 
     let valid = true;
 
-    requiredInputs.forEach(input => {
+    required.forEach(input => {
 
         const value =
             input.value.trim();
@@ -986,7 +1190,7 @@ function validateProductPage() {
         if (!value) {
 
             input.classList.add(
-                "input-invalid"
+                "input-error"
             );
 
             valid = false;
@@ -994,7 +1198,7 @@ function validateProductPage() {
         } else {
 
             input.classList.remove(
-                "input-invalid"
+                "input-error"
             );
 
         }
@@ -1007,260 +1211,262 @@ function validateProductPage() {
 
 
 /* =========================================================
-   ORDER BUTTON VALIDATION
-========================================================= */
+   PLAYER ID VALIDATION
+   ========================================================= */
 
-document.addEventListener(
-    "click",
-    event => {
+function validatePlayerId(value) {
 
-        const button =
-            event.target.closest(
-                "#orderButton"
-            );
-
-        if (!button) {
-            return;
-        }
-
-        if (button.disabled) {
-            return;
-        }
-
-        if (!validateProductPage()) {
-
-            alert(
-                "Please enter your required player information first."
-            );
-
-            return;
-
-        }
-
-        createWhatsAppOrder({
-            game:
-                document.body.dataset.game ||
-                "Gaming Product"
-        });
-
-    }
-);
-
-
-/* =========================================================
-   LIVE ORDER NOTIFICATION
-========================================================= */
-
-function startLiveNotifications() {
-
-    const container =
-        document.querySelector(
-            "#liveNotification"
-        );
-
-    if (!container) {
-        return;
+    if (!value) {
+        return false;
     }
 
-    const notifications = [
-
-        "A customer just placed an order ⚡",
-
-        "Gaming top-up order received 🎮",
-
-        "Instant delivery order completed ✓",
-
-        "New Pantheos customer joined 🔥",
-
-        "Someone just purchased a package 💎"
-
-    ];
-
-    let index = 0;
-
-    const showNotification = () => {
-
-        container.textContent =
-            notifications[index];
-
-        container.classList.add(
-            "show"
-        );
-
-        setTimeout(() => {
-
-            container.classList.remove(
-                "show"
-            );
-
-        }, 3500);
-
-        index =
-            (index + 1) %
-            notifications.length;
-
-    };
-
-    showNotification();
-
-    setInterval(
-        showNotification,
-        10000
+    return /^[0-9]{4,20}$/.test(
+        value
     );
 
 }
 
-document.addEventListener(
-    "DOMContentLoaded",
-    startLiveNotifications
-);
+
+/* =========================================================
+   SERVER ID VALIDATION
+   ========================================================= */
+
+function validateServerId(value) {
+
+    if (!value) {
+        return false;
+    }
+
+    return /^[0-9]{2,10}$/.test(
+        value
+    );
+
+}
 
 
 /* =========================================================
-   IMAGE HOVER EFFECT
-========================================================= */
+   GENERIC PACKAGE SELECTION
+   ========================================================= */
 
-document.addEventListener(
-    "mousemove",
-    event => {
+function initPackageSelection() {
 
-        const card =
-            event.target.closest(
-                ".game-card, .service-card"
-            );
+    const packages =
+        document.querySelectorAll(
+            "[data-package]"
+        );
 
-        if (!card) {
-            return;
-        }
+    packages.forEach(packageCard => {
 
-        const rect =
-            card.getBoundingClientRect();
+        packageCard.addEventListener(
+            "click",
+            () => {
 
-        const x =
-            event.clientX -
-            rect.left;
+                packages.forEach(card => {
 
-        const y =
-            event.clientY -
-            rect.top;
+                    card.classList.remove(
+                        "selected"
+                    );
 
-        const rotateX =
-            ((y / rect.height) - .5) * -4;
+                    card.setAttribute(
+                        "aria-selected",
+                        "false"
+                    );
 
-        const rotateY =
-            ((x / rect.width) - .5) * 4;
+                });
 
-        card.style.transform =
-            `perspective(800px)
-             rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             translateY(-3px)`;
+                packageCard.classList.add(
+                    "selected"
+                );
 
-    }
-);
+                packageCard.setAttribute(
+                    "aria-selected",
+                    "true"
+                );
 
+                updateOrderSummary(
+                    packageCard
+                );
 
-document.addEventListener(
-    "mouseout",
-    event => {
+            }
+        );
 
-        const card =
-            event.target.closest(
-                ".game-card, .service-card"
-            );
+    });
 
-        if (!card) {
-            return;
-        }
-
-        card.style.transform = "";
-
-    }
-);
+}
 
 
 /* =========================================================
-   COPY TO CLIPBOARD
-========================================================= */
+   ORDER SUMMARY
+   ========================================================= */
 
-document.addEventListener(
-    "click",
-    async event => {
+function updateOrderSummary(
+    selectedCard
+) {
 
-        const button =
-            event.target.closest(
-                "[data-copy]"
-            );
+    if (!selectedCard) return;
 
-        if (!button) {
-            return;
-        }
+    const packageName =
+        selectedCard.dataset.package ||
+        selectedCard
+            .querySelector(
+                "[data-package-name]"
+            )
+            ?.textContent
+            ?.trim() ||
+        "Selected Package";
 
-        const text =
-            button.dataset.copy;
+    const price =
+        selectedCard.dataset.price ||
+        selectedCard
+            .querySelector(
+                "[data-price]"
+            )
+            ?.textContent
+            ?.trim() ||
+        "₹0";
 
-        if (!text) {
-            return;
-        }
+    const summaryPackage =
+        document.querySelector(
+            "[data-summary-package]"
+        );
 
-        try {
+    const summaryPrice =
+        document.querySelector(
+            "[data-summary-price]"
+        );
 
-            await navigator.clipboard.writeText(
-                text
-            );
+    if (summaryPackage) {
 
-            const original =
-                button.textContent;
-
-            button.textContent =
-                "Copied ✓";
-
-            setTimeout(() => {
-
-                button.textContent =
-                    original;
-
-            }, 1500);
-
-        } catch {
-
-            alert(
-                "Unable to copy."
-            );
-
-        }
+        summaryPackage.textContent =
+            packageName;
 
     }
-);
+
+    if (summaryPrice) {
+
+        summaryPrice.textContent =
+            price;
+
+    }
+
+}
 
 
 /* =========================================================
-   GLOBAL SEARCH SHORTCUT
-========================================================= */
+   INITIALIZE ORDER HELPERS
+   ========================================================= */
+
+initGenericOrderButtons();
+
+initPackageSelection();
+
+
+/* =========================================================
+   GLOBAL ESCAPE KEY
+   ========================================================= */
 
 document.addEventListener(
     "keydown",
     event => {
 
-        if (
-            (event.ctrlKey || event.metaKey) &&
-            event.key.toLowerCase() === "k"
-        ) {
+        if (event.key !== "Escape") {
+            return;
+        }
 
-            event.preventDefault();
+        document.body.classList.remove(
+            "menu-open"
+        );
 
-            const search =
-                document.querySelector(
-                    "#globalSearch"
+        document
+            .querySelectorAll(
+                ".mobile-menu.active"
+            )
+            .forEach(menu => {
+
+                menu.classList.remove(
+                    "active"
                 );
 
-            if (search) {
+            });
 
-                search.focus();
+        document
+            .querySelectorAll(
+                ".menu-toggle.active"
+            )
+            .forEach(button => {
 
-            }
+                button.classList.remove(
+                    "active"
+                );
+
+            });
+
+    }
+);
+
+
+/* =========================================================
+   PAGE VISIBILITY
+   ========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (
+            document.visibilityState ===
+            "visible"
+        ) {
+
+            document.body.classList.add(
+                "page-visible"
+            );
 
         }
 
     }
+);
+
+
+/* =========================================================
+   ERROR PROTECTION
+   ========================================================= */
+
+window.addEventListener(
+    "error",
+    event => {
+
+        console.warn(
+            "Pantheos V11:",
+            event.message
+        );
+
+    }
+);
+
+
+/* =========================================================
+   EXPORT GLOBAL FUNCTIONS
+   ========================================================= */
+
+window.Pantheos = {
+
+    config: PANTHEOS,
+
+    openWhatsApp,
+
+    generateOrderMessage,
+
+    validateRequiredInputs,
+
+    validatePlayerId,
+
+    validateServerId,
+
+    updateOrderSummary
+
+};
+
+console.log(
+    "🎮 Pantheos Global Store V11 loaded successfully."
 );
