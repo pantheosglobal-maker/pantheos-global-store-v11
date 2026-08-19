@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Pantheos Global Store premium OTT subscriptions and digital services.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050711"
+    >
+
+    <meta
+        name="description"
+        content="Premium OTT subscriptions from Pantheos Global Store."
+    >
 
     <title>OTT Services | Pantheos Global Store</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 </head>
 
-<body class="product-page">
+<body>
 
 <!-- =====================================================
      LOADER
 ===================================================== -->
 
-<div id="pageLoader" class="page-loader">
+<div class="page-loader" id="loader">
 
     <div class="loader-content">
 
@@ -28,9 +43,21 @@
             class="loader-logo"
         >
 
-        <div class="loader-spinner"></div>
+        <div class="loader-title">
+            PANTHEOS
+        </div>
 
-        <p>Loading Pantheos Global Store...</p>
+        <div class="loader-subtitle">
+            FAST • SECURE • TRUSTED
+        </div>
+
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading OTT Services...
+        </div>
 
     </div>
 
@@ -41,11 +68,14 @@
      HEADER
 ===================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header class="site-header">
 
-    <div class="container nav-container">
+    <div class="header-container">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+        >
 
             <img
                 src="assets/pantheos-logo.PNG"
@@ -53,68 +83,113 @@
             >
 
             <div class="brand-text">
-                <strong>Pantheos</strong>
-                <span>GLOBAL STORE</span>
+
+                <strong>
+                    PANTHEOS
+                </strong>
+
+                <span>
+                    GLOBAL STORE
+                </span>
+
             </div>
 
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="nav-links">
 
-            <a href="index.html">Home</a>
-            <a href="index.html#games">Games</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#community">Community</a>
-            <a href="index.html#support">Support</a>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#games">
+                Games
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+            <a href="index.html#support">
+                Support
+            </a>
 
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
             <a
                 href="https://wa.me/919310651934"
                 target="_blank"
-                class="nav-whatsapp"
+                rel="noopener"
+                class="whatsapp-btn"
             >
                 WhatsApp
             </a>
 
             <a
-                href="#ottProducts"
-                class="nav-topup"
+                href="#products"
+                class="primary-btn"
             >
-                Shop Now
+                SHOP NOW
             </a>
 
         </div>
 
 
         <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
             aria-label="Open menu"
         >
-            ☰
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
 
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
 
-        <a href="index.html">Home</a>
-        <a href="index.html#games">Games</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#community">Community</a>
-        <a href="index.html#support">Support</a>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#games">
+            Games
+        </a>
+
+        <a href="index.html#services">
+            Services
+        </a>
+
+        <a href="index.html#community">
+            Community
+        </a>
+
+        <a href="index.html#support">
+            Support
+        </a>
 
         <a
             href="https://wa.me/919310651934"
             target="_blank"
+            rel="noopener"
         >
-            WhatsApp
+            WhatsApp Support
         </a>
 
     </div>
@@ -126,45 +201,70 @@
      HERO
 ===================================================== -->
 
-<section
-    class="product-hero"
-    style="background-image:url('assets/hero-banner.jpg');"
->
+<main>
 
-    <div class="product-hero-overlay"></div>
+<section class="game-hero">
 
-    <div class="container product-hero-content">
+    <div class="game-hero-background">
 
-        <div class="product-game-logo">
+        <img
+            src="assets/hero-banner.jpg"
+            alt="OTT Services"
+        >
 
-            <div class="service-hero-icon">
-                📺
-            </div>
+    </div>
+
+    <div class="game-hero-overlay"></div>
+
+
+    <div class="container game-hero-content">
+
+        <div class="game-logo-wrapper">
+
+            <img
+                src="assets/pantheos-logo.PNG"
+                alt="Pantheos Global Store"
+                class="game-logo"
+            >
 
         </div>
 
 
-        <div class="product-hero-info">
+        <div class="game-hero-info">
 
-            <span class="product-category">
+            <div class="eyebrow">
                 PREMIUM DIGITAL SERVICES
-            </span>
+            </div>
 
             <h1>
-                OTT & SUBSCRIPTIONS
+                ENTERTAINMENT
+                <span>WITHOUT LIMITS</span>
             </h1>
 
             <p>
-                Enjoy premium entertainment and digital
-                subscriptions at competitive Pantheos prices.
+                Premium OTT subscriptions and digital
+                entertainment services at competitive
+                Pantheos prices.
             </p>
 
-            <div class="hero-trust">
 
-                <span>⚡ Fast Delivery</span>
-                <span>🔒 Secure Ordering</span>
-                <span>✓ Trusted Store</span>
-                <span>🛡️ 24/7 Support</span>
+            <div class="hero-trust-row">
+
+                <span>
+                    ⚡ Fast Delivery
+                </span>
+
+                <span>
+                    🔒 Secure
+                </span>
+
+                <span>
+                    ⭐ Trusted
+                </span>
+
+                <span>
+                    🛡️ 24/7 Support
+                </span>
 
             </div>
 
@@ -176,1148 +276,1101 @@
 
 
 <!-- =====================================================
-     MAIN
+     PRODUCTS
 ===================================================== -->
 
-<main
-    class="product-main"
-    id="ottProducts"
+<section
+    class="topup-section"
+    id="products"
 >
 
-    <div class="container product-layout">
+<div class="container">
 
 
-        <!-- =================================================
-             LEFT
-        ================================================= -->
+    <div class="section-heading">
 
-        <div class="product-left">
+        <span class="section-label">
+            OTT MARKETPLACE
+        </span>
+
+        <h2>
+            Choose Your Subscription
+        </h2>
+
+        <p>
+            Select a service and package.
+            Your selected product will appear
+            in the order summary.
+        </p>
+
+    </div>
 
 
-            <!-- =================================================
-                 NETFLIX
-            ================================================= -->
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
 
-            <section class="order-section reveal">
+    <div class="gift-search-wrapper">
 
-                <div class="section-heading">
+        <input
+            type="search"
+            id="ottSearch"
+            placeholder="Search Netflix, Prime, YouTube..."
+            autocomplete="off"
+        >
 
-                    <span class="section-number">
-                        01
-                    </span>
+    </div>
 
-                    <div>
 
-                        <span class="eyebrow">
-                            STREAMING
-                        </span>
+    <!-- =================================================
+         OTT PRODUCTS
+    ================================================== -->
 
-                        <h2>
-                            Netflix Premium
-                        </h2>
+    <div
+        class="premium-horizontal-list"
+        id="ottProductList"
+    >
 
-                    </div>
 
+        <!-- =============================================
+             NETFLIX
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Netflix Premium 4K Shared"
+            data-package="Netflix Premium 4K • 1 Month • 1 Device • Shared Profile"
+            data-price="₹125"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    N
                 </div>
 
+            </div>
 
-                <div class="premium-price-list">
 
+            <div class="product-content">
 
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Netflix Premium 4K - 1 Month / 1 Device / Shared Profile"
-                        data-price="125"
-                    >
+                <span class="product-category">
+                    NETFLIX
+                </span>
 
-                        <div class="price-card-icon">
-                            🎬
-                        </div>
+                <h3>
+                    Netflix Premium
+                </h3>
 
-                        <div class="price-card-main">
+                <p>
+                    4K Quality • 1 Month •
+                    1 Device • Shared Profile
+                </p>
 
-                            <strong>
-                                Netflix Premium
-                            </strong>
 
-                            <span>
-                                4K Quality • 1 Month • 1 Device • Shared Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹125
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Netflix Premium 4K HD - 1 Month / 4 Devices / Own Mail"
-                        data-price="399"
-                    >
-
-                        <div class="price-card-icon">
-                            🎬
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Netflix Premium
-                            </strong>
-
-                            <span>
-                                4K HD • 1 Month • 4 Devices • Own Mail
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹399
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Netflix Premium 4K - 1 Year / 1 Device / Private Profile"
-                        data-price="2160"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Netflix Premium
-                            </strong>
-
-                            <span>
-                                4K Quality • 1 Year • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹2,160
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Netflix Premium 4K - 1 Day"
-                        data-price="30"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Netflix Premium
-                            </strong>
-
-                            <span>
-                                4K Quality • 1 Day
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹30
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 SPOTIFY
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            MUSIC
-                        </span>
-
-                        <h2>
-                            Spotify Premium
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Spotify Premium - 1 Month / 1 Device / Private Profile"
-                        data-price="60"
-                    >
-
-                        <div class="price-card-icon">
-                            🎵
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Spotify Premium
-                            </strong>
-
-                            <span>
-                                1 Month • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹60
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Spotify Premium - 3 Months / 1 Device / Private Profile"
-                        data-price="160"
-                    >
-
-                        <div class="price-card-icon">
-                            🎵
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Spotify Premium
-                            </strong>
-
-                            <span>
-                                3 Months • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹160
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Spotify Premium - 6 Months / 1 Device / Private Profile"
-                        data-price="300"
-                    >
-
-                        <div class="price-card-icon">
-                            🎵
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Spotify Premium
-                            </strong>
-
-                            <span>
-                                6 Months • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹300
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-
-                <div class="notice-card">
-
-                    <div class="notice-icon">
-                        🔐
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Login required
-                        </h3>
-
-                        <p>
-                            Please have your account/login details
-                            ready where required for the selected
-                            subscription.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 YOUTUBE
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            VIDEO
-                        </span>
-
-                        <h2>
-                            YouTube Premium
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="YouTube Premium - 1 Month / Via Invite"
-                        data-price="35"
-                    >
-
-                        <div class="price-card-icon">
-                            ▶️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                YouTube Premium
-                            </strong>
-
-                            <span>
-                                1 Month • Via Invite
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹35
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 PRIME VIDEO
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        04
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            STREAMING
-                        </span>
-
-                        <h2>
-                            Prime Video
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Prime Video - 1 Month / 1 Device / Private Profile"
-                        data-price="60"
-                    >
-
-                        <div class="price-card-icon">
-                            📺
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Prime Video
-                            </strong>
-
-                            <span>
-                                1 Month • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹60
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Prime Video - 3 Months / 1 Device / Private Profile"
-                        data-price="160"
-                    >
-
-                        <div class="price-card-icon">
-                            📺
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Prime Video
-                            </strong>
-
-                            <span>
-                                3 Months • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹160
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Prime Video - 6 Months / 1 Device / Private Profile"
-                        data-price="300"
-                    >
-
-                        <div class="price-card-icon">
-                            📺
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Prime Video
-                            </strong>
-
-                            <span>
-                                6 Months • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹300
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 CRUNCHYROLL
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        05
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            ANIME
-                        </span>
-
-                        <h2>
-                            Crunchyroll
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Crunchyroll - 1 Month / 1 Device / Private Profile"
-                        data-price="65"
-                    >
-
-                        <div class="price-card-icon">
-                            🍥
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Crunchyroll
-                            </strong>
-
-                            <span>
-                                1 Month • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹65
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Crunchyroll - 6 Months / 1 Device / Private Profile"
-                        data-price="190"
-                    >
-
-                        <div class="price-card-icon">
-                            🍥
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Crunchyroll
-                            </strong>
-
-                            <span>
-                                6 Months • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹190
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Crunchyroll - 1 Year / 1 Device / Private Profile"
-                        data-price="350"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Crunchyroll
-                            </strong>
-
-                            <span>
-                                1 Year • 1 Device • Private Profile
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹350
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 CANVA
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        06
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            CREATIVE
-                        </span>
-
-                        <h2>
-                            Canva Premium
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Canva Premium - 1 Year / Own Mail / Via Invite"
-                        data-price="160"
-                    >
-
-                        <div class="price-card-icon">
-                            🎨
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Canva Premium
-                            </strong>
-
-                            <span>
-                                1 Year • Own Mail • Via Invite
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹160
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Canva Premium - Lifetime / Own Mail / Via Invite"
-                        data-price="250"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Canva Premium
-                            </strong>
-
-                            <span>
-                                Lifetime • Own Mail • Via Invite
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹250
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 IMPORTANT NOTICE
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="notice-card">
-
-                    <div class="notice-icon">
-                        ⚠️
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Important Subscription Notice
-                        </h3>
-
-                        <p>
-                            Subscription availability, account type,
-                            profile access, invite method and duration
-                            can vary by product. Please verify the
-                            selected service before payment.
-                        </p>
-
-                        <p>
-                            Pantheos Global Store does not guarantee
-                            uninterrupted service if a third-party
-                            platform changes, suspends or modifies
-                            its subscription policies.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
-
-
-        <!-- =================================================
-             ORDER SUMMARY
-        ================================================= -->
-
-        <aside class="order-summary-container">
-
-            <div class="order-summary">
-
-                <div class="summary-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUR ORDER
-                        </span>
-
-                        <h2>
-                            Order Summary
-                        </h2>
-
-                    </div>
-
-                    <span class="summary-status">
-                        ● READY
-                    </span>
-
-                </div>
-
-
-                <div class="summary-game">
-
-                    <div class="summary-product-icon">
-                        📺
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            OTT Services
-                        </strong>
-
-                        <span>
-                            Digital Subscription
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-details">
-
-                    <div class="summary-row">
-
-                        <span>
-                            Name
-                        </span>
-
-                        <strong id="summaryName">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            WhatsApp
-                        </span>
-
-                        <strong id="summaryContact">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Service
-                        </span>
-
-                        <strong id="summaryProduct">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Price
-                        </span>
-
-                        <strong id="summaryPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="summaryTotal">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div
-                    id="selectionMessage"
-                    class="selection-message"
-                >
-                    Enter your details and select a subscription.
-                </div>
-
-
-                <button
-                    type="button"
-                    id="orderButton"
-                    class="order-button"
-                    disabled
-                >
-
-                    <span>
-                        ORDER VIA WHATSAPP
-                    </span>
+                <div class="product-bottom">
 
                     <strong>
-                        →
+                        ₹125
                     </strong>
 
-                </button>
-
-
-                <div class="payment-note">
-
-                    🔒 Secure ordering
-                    <br>
-                    ⚡ Fast • Safe • Trusted
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
 
                 </div>
 
             </div>
 
-        </aside>
+        </article>
+
+
+        <!-- NETFLIX OWN MAIL -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Netflix Premium 4K Own Mail"
+            data-package="Netflix Premium 4K • 1 Month • 4 Devices • Own Mail"
+            data-price="₹399"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    N
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    NETFLIX
+                </span>
+
+                <h3>
+                    Netflix Premium
+                </h3>
+
+                <p>
+                    4K HD • 1 Month • 4 Devices •
+                    On Your Own Mail
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹399
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- NETFLIX YEAR -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Netflix Premium One Year"
+            data-package="Netflix Premium 4K • 1 Year • 1 Device • Private Profile"
+            data-price="₹2160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    N
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    NETFLIX
+                </span>
+
+                <h3>
+                    Netflix Premium
+                </h3>
+
+                <p>
+                    4K Quality • One Year •
+                    1 Device • Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹2160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- NETFLIX ONE DAY -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Netflix Premium One Day"
+            data-package="Netflix Premium 4K • One Day"
+            data-price="₹30"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    N
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    NETFLIX
+                </span>
+
+                <h3>
+                    Netflix Premium
+                </h3>
+
+                <p>
+                    4K Quality • One Day
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹30
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             SPOTIFY
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Spotify Premium"
+            data-package="Spotify Premium • 1 Month • 1 Device • Private Profile"
+            data-price="₹60"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    S
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SPOTIFY
+                </span>
+
+                <h3>
+                    Spotify Premium
+                </h3>
+
+                <p>
+                    1 Month • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹60
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SPOTIFY 3 MONTHS -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Spotify Premium Three Months"
+            data-package="Spotify Premium • 3 Months • 1 Device • Private Profile"
+            data-price="₹160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    S
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SPOTIFY
+                </span>
+
+                <h3>
+                    Spotify Premium
+                </h3>
+
+                <p>
+                    3 Months • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SPOTIFY 6 MONTHS -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Spotify Premium Six Months"
+            data-package="Spotify Premium • 6 Months • 1 Device • Private Profile"
+            data-price="₹300"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    S
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SPOTIFY
+                </span>
+
+                <h3>
+                    Spotify Premium
+                </h3>
+
+                <p>
+                    6 Months • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹300
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             YOUTUBE
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="YouTube Premium"
+            data-package="YouTube Premium • 1 Month • Via Invite"
+            data-price="₹35"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ▶
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    YOUTUBE
+                </span>
+
+                <h3>
+                    YouTube Premium
+                </h3>
+
+                <p>
+                    1 Month • Via Invite
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹35
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             PRIME VIDEO
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Prime Video One Month"
+            data-package="Prime Video • 1 Month • 1 Device • Private Profile"
+            data-price="₹60"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    P
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    PRIME VIDEO
+                </span>
+
+                <h3>
+                    Prime Video
+                </h3>
+
+                <p>
+                    1 Month • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹60
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRIME 3 MONTHS -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Prime Video Three Months"
+            data-package="Prime Video • 3 Months • 1 Device • Private Profile"
+            data-price="₹160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    P
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    PRIME VIDEO
+                </span>
+
+                <h3>
+                    Prime Video
+                </h3>
+
+                <p>
+                    3 Months • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRIME 6 MONTHS -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Prime Video Six Months"
+            data-package="Prime Video • 6 Months • 1 Device • Private Profile"
+            data-price="₹300"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    P
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    PRIME VIDEO
+                </span>
+
+                <h3>
+                    Prime Video
+                </h3>
+
+                <p>
+                    6 Months • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹300
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             CRUNCHYROLL
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Crunchyroll One Month"
+            data-package="Crunchyroll • 1 Month • 1 Device • Private Profile"
+            data-price="₹65"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    C
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    CRUNCHYROLL
+                </span>
+
+                <h3>
+                    Crunchyroll
+                </h3>
+
+                <p>
+                    1 Month • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹65
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- CRUNCHYROLL 6 -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Crunchyroll Six Months"
+            data-package="Crunchyroll • 6 Months • 1 Device • Private Profile"
+            data-price="₹190"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    C
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    CRUNCHYROLL
+                </span>
+
+                <h3>
+                    Crunchyroll
+                </h3>
+
+                <p>
+                    6 Months • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹190
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- CRUNCHYROLL YEAR -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Crunchyroll One Year"
+            data-package="Crunchyroll • 1 Year • 1 Device • Private Profile"
+            data-price="₹350"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    C
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    CRUNCHYROLL
+                </span>
+
+                <h3>
+                    Crunchyroll
+                </h3>
+
+                <p>
+                    One Year • 1 Device •
+                    Private Profile
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹350
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             CANVA
+        ============================================== -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Canva Pro One Year"
+            data-package="Canva Pro • One Year • Own Mail • Via Invite"
+            data-price="₹160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    C
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    CANVA
+                </span>
+
+                <h3>
+                    Canva Pro
+                </h3>
+
+                <p>
+                    One Year 😯 • Own Mail •
+                    Via Invite
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- CANVA LIFETIME -->
+
+        <article
+            class="premium-product-card ott-card"
+            data-name="Canva Pro Lifetime"
+            data-package="Canva Pro • Lifetime 👑 • Own Mail • Via Invite"
+            data-price="₹250"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    👑
+                </div>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    CANVA
+                </span>
+
+                <h3>
+                    Canva Pro
+                </h3>
+
+                <p>
+                    Lifetime 👑 • Own Mail •
+                    Via Invite
+                </p>
+
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹250
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
-</main>
+
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
+
+    <aside
+        class="order-summary-card"
+        id="orderSummary"
+    >
+
+        <div class="summary-header">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+                <h2>
+                    Order Summary
+                </h2>
+
+            </div>
+
+            <div class="summary-status">
+                Pending
+            </div>
+
+        </div>
+
+
+        <div class="summary-body">
+
+            <div class="summary-row">
+
+                <span>
+                    Service
+                </span>
+
+                <strong id="summaryService">
+                    OTT
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Product
+                </span>
+
+                <strong id="summaryProduct">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Price
+                </span>
+
+                <strong
+                    id="summaryPrice"
+                    class="summary-total"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="payment-status">
+
+                <span>
+                    Payment Status
+                </span>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="order-button"
+                id="orderButton"
+            >
+
+                <span>
+                    ORDER VIA WHATSAPP
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="order-note">
+
+                📩 After placing your order,
+                send your payment screenshot
+                on WhatsApp.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+</div>
+
+</section>
 
 
 <!-- =====================================================
      SUPPORT
 ===================================================== -->
 
-<section class="product-support">
+<section class="support-cta">
 
     <div class="container">
 
-        <div class="support-card">
+        <div class="support-cta-inner">
 
             <div>
 
-                <span class="eyebrow">
+                <span class="section-label">
                     NEED HELP?
                 </span>
 
                 <h2>
-                    Pantheos Support is available 24/7
+                    OTT Support Available 24/7
                 </h2>
 
                 <p>
                     Need help choosing a subscription?
-                    Contact us before payment.
+                    Contact Pantheos Global Store.
                 </p>
 
             </div>
@@ -1328,15 +1381,17 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
-                    class="support-btn"
+                    rel="noopener"
+                    class="primary-btn"
                 >
-                    WhatsApp
+                    WhatsApp Support
                 </a>
 
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
-                    class="support-btn secondary"
+                    rel="noopener"
+                    class="secondary-btn"
                 >
                     Telegram
                 </a>
@@ -1349,6 +1404,8 @@
 
 </section>
 
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -1358,7 +1415,8 @@
 
     <div class="container">
 
-        <div class="footer-main">
+        <div class="footer-grid">
+
 
             <div class="footer-brand">
 
@@ -1372,8 +1430,13 @@
                 </h3>
 
                 <p>
-                    Fast • Secure • Trusted
+                    Fast, secure and trusted gaming
+                    top-ups and digital services.
                 </p>
+
+                <strong>
+                    Fast • Secure • Trusted
+                </strong>
 
             </div>
 
@@ -1430,7 +1493,7 @@
                 </a>
 
                 <a href="boosting.html">
-                    Boosting
+                    Social Boosting
                 </a>
 
             </div>
@@ -1445,6 +1508,7 @@
                 <a
                     href="https://instagram.com/pantheosglobalstore"
                     target="_blank"
+                    rel="noopener"
                 >
                     Instagram
                 </a>
@@ -1452,6 +1516,7 @@
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
+                    rel="noopener"
                 >
                     Telegram
                 </a>
@@ -1459,6 +1524,7 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
+                    rel="noopener"
                 >
                     WhatsApp
                 </a>
@@ -1470,9 +1536,10 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © 2026 Pantheos Global Store
-            </span>
+            <p>
+                © 2026 Pantheos Global Store.
+                All rights reserved.
+            </p>
 
             <span>
                 Fast • Secure • Trusted
@@ -1492,8 +1559,9 @@
 <a
     href="https://wa.me/919310651934"
     target="_blank"
+    rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -1509,8 +1577,9 @@
 ===================================================== -->
 
 <button
-    id="backToTop"
     class="back-to-top"
+    id="backToTop"
+    type="button"
     aria-label="Back to top"
 >
     ↑
@@ -1526,340 +1595,263 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-    const nameInput =
-        document.getElementById("customerName");
-
-    const contactInput =
-        document.getElementById("customerContact");
-
-    /*
-     * The two fields above are created dynamically below.
-     * This keeps the order system compatible with the
-     * existing V11 layout.
-     */
-
-    const productCards =
-        document.querySelectorAll(".price-card");
-
-    const summaryProduct =
-        document.getElementById("summaryProduct");
-
-    const summaryPrice =
-        document.getElementById("summaryPrice");
-
-    const summaryTotal =
-        document.getElementById("summaryTotal");
-
-    const orderButton =
-        document.getElementById("orderButton");
-
-    const selectionMessage =
-        document.getElementById("selectionMessage");
-
-    const summaryName =
-        document.getElementById("summaryName");
-
-    const summaryContact =
-        document.getElementById("summaryContact");
-
-
-    let selectedProduct = "";
-    let selectedPrice = "";
-
-
-    /*
-     * Create customer information inputs
-     * inside the first order section.
-     */
-
-    const firstSection =
-        document.querySelector(".product-left .order-section");
-
-
-    if (firstSection) {
-
-        const customerBox =
-            document.createElement("div");
-
-        customerBox.className =
-            "customer-details-box";
-
-
-        customerBox.innerHTML = `
-
-            <div class="input-card">
-
-                <label for="customerName">
-                    Your Name
-                </label>
-
-                <div class="input-wrapper">
-
-                    <span class="input-icon">
-                        👤
-                    </span>
-
-                    <input
-                        type="text"
-                        id="customerName"
-                        placeholder="Enter your name"
-                        autocomplete="name"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <div class="input-card">
-
-                <label for="customerContact">
-                    WhatsApp Number
-                </label>
-
-                <div class="input-wrapper">
-
-                    <span class="input-icon">
-                        📱
-                    </span>
-
-                    <input
-                        type="tel"
-                        id="customerContact"
-                        placeholder="Enter your WhatsApp number"
-                        inputmode="tel"
-                        autocomplete="tel"
-                    >
-
-                </div>
-
-            </div>
-
-        `;
-
-
-        firstSection
-            .querySelector(".section-heading")
-            .insertAdjacentElement(
-                "afterend",
-                customerBox
+        const cards =
+            document.querySelectorAll(
+                ".ott-card"
             );
 
-    }
+        const search =
+            document.getElementById(
+                "ottSearch"
+            );
+
+        const summaryProduct =
+            document.getElementById(
+                "summaryProduct"
+            );
+
+        const summaryPrice =
+            document.getElementById(
+                "summaryPrice"
+            );
+
+        const orderButton =
+            document.getElementById(
+                "orderButton"
+            );
 
 
-    const nameField =
-        document.getElementById("customerName");
+        let selectedProduct = "";
 
-    const contactField =
-        document.getElementById("customerContact");
+        let selectedPrice = "";
 
 
-    /* ==========================================
-       NAME
-    ========================================== */
+        /* ============================================
+           SELECT PRODUCT
+        ============================================ */
 
-    nameField.addEventListener("input", () => {
+        cards.forEach(
+            card => {
 
-        summaryName.textContent =
-            nameField.value.trim() ||
-            "Not entered";
-
-        updateState();
-
-    });
+                const button =
+                    card.querySelector(
+                        ".select-product"
+                    );
 
 
-    /* ==========================================
-       CONTACT
-    ========================================== */
+                function selectProduct() {
 
-    contactField.addEventListener("input", () => {
+                    cards.forEach(
+                        item => {
 
-        summaryContact.textContent =
-            contactField.value.trim() ||
-            "Not entered";
+                            item.classList.remove(
+                                "selected"
+                            );
 
-        updateState();
-
-    });
+                        }
+                    );
 
 
-    /* ==========================================
-       PRODUCT SELECTION
-    ========================================== */
-
-    productCards.forEach(card => {
-
-        card.addEventListener("click", () => {
-
-            productCards.forEach(item => {
-
-                item.classList.remove("selected");
-
-            });
+                    card.classList.add(
+                        "selected"
+                    );
 
 
-            card.classList.add("selected");
+                    selectedProduct =
+                        card.dataset.package ||
+                        card.dataset.name ||
+                        "";
 
 
-            selectedProduct =
-                card.dataset.product;
-
-            selectedPrice =
-                card.dataset.price;
+                    selectedPrice =
+                        card.dataset.price ||
+                        "";
 
 
-            summaryProduct.textContent =
-                selectedProduct;
+                    summaryProduct.textContent =
+                        selectedProduct;
 
 
-            const formattedPrice =
-                Number(selectedPrice)
-                    .toLocaleString("en-IN");
+                    summaryPrice.textContent =
+                        selectedPrice;
 
 
-            summaryPrice.textContent =
-                "₹" + formattedPrice;
+                    document
+                        .getElementById(
+                            "orderSummary"
+                        )
+                        ?.classList.add(
+                            "summary-active"
+                        );
 
-            summaryTotal.textContent =
-                "₹" + formattedPrice;
-
-
-            updateState();
-
-        });
-
-    });
+                }
 
 
-    /* ==========================================
-       STATE
-    ========================================== */
+                card.addEventListener(
+                    "click",
+                    event => {
 
-    function updateState() {
+                        if (
+                            event.target.closest(
+                                "button"
+                            )
+                        ) {
 
-        const name =
-            nameField.value.trim();
+                            selectProduct();
 
-        const contact =
-            contactField.value.trim();
+                            return;
 
+                        }
 
-        if (
-            name &&
-            contact &&
-            selectedProduct
-        ) {
+                        selectProduct();
 
-            orderButton.disabled = false;
-
-            selectionMessage.textContent =
-                "Your subscription order is ready.";
-
-            selectionMessage.classList.add("ready");
-
-        } else {
-
-            orderButton.disabled = true;
-
-            selectionMessage.classList.remove("ready");
+                    }
+                );
 
 
-            if (!name) {
+                button?.addEventListener(
+                    "click",
+                    event => {
 
-                selectionMessage.textContent =
-                    "Enter your name.";
+                        event.stopPropagation();
 
-            } else if (!contact) {
+                        selectProduct();
 
-                selectionMessage.textContent =
-                    "Enter your WhatsApp number.";
+                    }
+                );
 
-            } else {
 
-                selectionMessage.textContent =
-                    "Select a subscription to continue.";
+                card.addEventListener(
+                    "keydown",
+                    event => {
+
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+
+                            event.preventDefault();
+
+                            selectProduct();
+
+                        }
+
+                    }
+                );
 
             }
-
-        }
-
-    }
+        );
 
 
-    /* ==========================================
-       WHATSAPP
-    ========================================== */
+        /* ============================================
+           SEARCH
+        ============================================ */
 
-    orderButton.addEventListener("click", () => {
+        search?.addEventListener(
+            "input",
+            () => {
 
-        const name =
-            nameField.value.trim();
-
-        const contact =
-            contactField.value.trim();
-
-
-        if (
-            !name ||
-            !contact ||
-            !selectedProduct
-        ) {
-
-            return;
-
-        }
+                const query =
+                    search.value
+                        .trim()
+                        .toLowerCase();
 
 
-        const formattedPrice =
-            Number(selectedPrice)
-                .toLocaleString("en-IN");
+                cards.forEach(
+                    card => {
+
+                        const name =
+                            (
+                                card.dataset.name ||
+                                ""
+                            ).toLowerCase();
 
 
-        const message =
+                        const packageName =
+                            (
+                                card.dataset.package ||
+                                ""
+                            ).toLowerCase();
 
+
+                        const visible =
+                            !query ||
+                            name.includes(query) ||
+                            packageName.includes(query);
+
+
+                        card.style.display =
+                            visible
+                                ? ""
+                                : "none";
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ============================================
+           WHATSAPP ORDER
+        ============================================ */
+
+        orderButton?.addEventListener(
+            "click",
+            () => {
+
+                if (!selectedProduct) {
+
+                    alert(
+                        "Please select an OTT product first."
+                    );
+
+                    return;
+
+                }
+
+
+                const message =
 `📺 Pantheos Global Store Order
 
-Category: OTT / Digital Subscription
+Service: OTT
 
-Customer Name:
-${name}
-
-WhatsApp Number:
-${contact}
-
-Service:
+Product:
 ${selectedProduct}
 
 Price:
-₹${formattedPrice}
+${selectedPrice}
 
 Payment Status:
 Pending
 
-Please contact Pantheos Support for payment instructions.
-
 Please send payment screenshot after payment.
 
-⚡ Fast • Safe • Trusted`;
+⚡ Fast • Secure • Trusted`;
 
 
-        const whatsappURL =
-            "https://wa.me/919310651934?text=" +
-            encodeURIComponent(message);
+                const whatsappURL =
+                    "https://wa.me/919310651934?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            }
         );
 
-    });
-
-});
+    }
+);
 
 </script>
 
