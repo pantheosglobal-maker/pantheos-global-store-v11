@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050711">
 
     <meta
         name="description"
-        content="Genshin Impact Genesis Crystals and Welkin Moon top up from Pantheos Global Store."
+        content="Genshin Impact Genesis Crystals and Welkin Moon at Pantheos Global Store."
     >
 
     <title>Genshin Impact Top Up | Pantheos Global Store</title>
@@ -14,13 +16,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="product-page">
+<body>
 
 <!-- =====================================================
      LOADER
 ===================================================== -->
 
-<div id="pageLoader" class="page-loader">
+<div class="page-loader" id="loader">
 
     <div class="loader-content">
 
@@ -30,9 +32,21 @@
             class="loader-logo"
         >
 
-        <div class="loader-spinner"></div>
+        <div class="loader-title">
+            PANTHEOS
+        </div>
 
-        <p>Loading Pantheos Global Store...</p>
+        <div class="loader-subtitle">
+            FAST • SECURE • TRUSTED
+        </div>
+
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading Genshin Impact...
+        </div>
 
     </div>
 
@@ -43,9 +57,9 @@
      HEADER
 ===================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header class="site-header">
 
-    <div class="container nav-container">
+    <div class="header-container">
 
         <a href="index.html" class="brand">
 
@@ -55,50 +69,70 @@
             >
 
             <div class="brand-text">
-                <strong>Pantheos</strong>
+                <strong>PANTHEOS</strong>
                 <span>GLOBAL STORE</span>
             </div>
 
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="nav-links">
 
-            <a href="index.html">Home</a>
-            <a href="index.html#games">Games</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#community">Community</a>
-            <a href="index.html#support">Support</a>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#games">
+                Games
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+            <a href="index.html#support">
+                Support
+            </a>
 
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
             <a
                 href="https://wa.me/919310651934"
                 target="_blank"
-                class="nav-whatsapp"
+                rel="noopener"
+                class="whatsapp-btn"
             >
                 WhatsApp
             </a>
 
             <a
                 href="#topup"
-                class="nav-topup"
+                class="primary-btn"
             >
-                Top Up Now
+                TOP UP NOW
             </a>
 
         </div>
 
 
         <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
             aria-label="Open menu"
         >
-            ☰
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
@@ -106,17 +140,32 @@
 
     <div class="mobile-menu" id="mobileMenu">
 
-        <a href="index.html">Home</a>
-        <a href="index.html#games">Games</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#community">Community</a>
-        <a href="index.html#support">Support</a>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#games">
+            Games
+        </a>
+
+        <a href="index.html#services">
+            Services
+        </a>
+
+        <a href="index.html#community">
+            Community
+        </a>
+
+        <a href="index.html#support">
+            Support
+        </a>
 
         <a
             href="https://wa.me/919310651934"
             target="_blank"
+            rel="noopener"
         >
-            WhatsApp
+            WhatsApp Support
         </a>
 
     </div>
@@ -125,49 +174,78 @@
 
 
 <!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
      GENSHIN HERO
 ===================================================== -->
 
-<section
-    class="product-hero"
-    style="background-image:url('assets/genshin-banner.jpg');"
->
+<section class="game-hero">
 
-    <div class="product-hero-overlay"></div>
+    <div class="game-hero-background">
 
-    <div class="container product-hero-content">
+        <img
+            src="assets/genshin-banner.jpg"
+            alt="Genshin Impact"
+        >
 
-        <div class="product-game-logo">
+    </div>
+
+    <div class="game-hero-overlay"></div>
+
+
+    <div class="container game-hero-content">
+
+        <div class="game-logo-wrapper">
 
             <img
                 src="assets/genshin-logo.jpg"
-                alt="Genshin Impact"
+                alt="Genshin Impact Logo"
+                class="game-logo"
             >
 
         </div>
 
 
-        <div class="product-hero-info">
+        <div class="game-hero-info">
 
-            <span class="product-category">
+            <div class="eyebrow">
                 GENSHIN IMPACT
-            </span>
+            </div>
 
             <h1>
-                GENESIS CRYSTALS TOP UP
+                GENESIS CRYSTALS
+                <span>TOP UP</span>
             </h1>
 
             <p>
-                Recharge Genesis Crystals and purchase
-                Genshin Impact passes with Pantheos Global Store.
+                Recharge Genesis Crystals, Welkin Moon
+                and other Genshin Impact products
+                quickly and securely.
             </p>
 
-            <div class="hero-trust">
 
-                <span>⚡ Fast Delivery</span>
-                <span>🔒 Secure</span>
-                <span>✓ Trusted</span>
-                <span>🛡️ 24/7 Support</span>
+            <div class="hero-trust-row">
+
+                <span>
+                    ⚡ Fast Delivery
+                </span>
+
+                <span>
+                    🔒 Secure
+                </span>
+
+                <span>
+                    ⭐ Trusted
+                </span>
+
+                <span>
+                    🛡️ 24/7 Support
+                </span>
 
             </div>
 
@@ -179,799 +257,668 @@
 
 
 <!-- =====================================================
-     MAIN ORDER AREA
+     TOP UP SECTION
 ===================================================== -->
 
-<main class="product-main" id="topup">
+<section
+    class="topup-section"
+    id="topup"
+>
 
-    <div class="container product-layout">
+<div class="container">
 
 
-        <!-- =================================================
-             LEFT
-        ================================================= -->
+    <div class="section-heading">
 
-        <div class="product-left">
+        <span class="section-label">
+            GENSHIN IMPACT TOP UP
+        </span>
 
+        <h2>
+            Complete Your Order
+        </h2>
 
-            <!-- PLAYER INFORMATION -->
+        <p>
+            Enter your UID and select your
+            preferred Genesis Crystal package.
+        </p>
 
-            <section class="order-section reveal">
+    </div>
 
-                <div class="section-heading">
 
-                    <span class="section-number">
-                        01
-                    </span>
+    <!-- =================================================
+         PLAYER INFORMATION
+    ================================================== -->
 
-                    <div>
+    <div class="order-step-card">
 
-                        <span class="eyebrow">
-                            PLAYER INFORMATION
-                        </span>
+        <div class="step-heading">
 
-                        <h2>
-                            Enter Your UID
-                        </h2>
+            <div class="step-number">
+                01
+            </div>
 
-                    </div>
+            <div>
 
-                </div>
+                <h3>
+                    Player Information
+                </h3>
 
+                <p>
+                    Enter your Genshin Impact UID.
+                </p>
 
-                <div class="input-card">
-
-                    <label for="playerUid">
-                        Genshin Impact UID
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span class="input-icon">
-                            🎮
-                        </span>
-
-                        <input
-                            type="text"
-                            id="playerUid"
-                            placeholder="Enter your Genshin UID"
-                            inputmode="numeric"
-                            autocomplete="off"
-                        >
-
-                    </div>
-
-                    <small>
-                        Please double-check your UID before placing the order.
-                    </small>
-
-                </div>
-
-
-                <div class="input-card">
-
-                    <label for="server">
-                        Server
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span class="input-icon">
-                            🌐
-                        </span>
-
-                        <select id="server">
-
-                            <option value="">
-                                Select Server
-                            </option>
-
-                            <option value="Asia">
-                                Asia
-                            </option>
-
-                            <option value="America">
-                                America
-                            </option>
-
-                            <option value="Europe">
-                                Europe
-                            </option>
-
-                            <option value="TW / HK / MO">
-                                TW / HK / MO
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 GENESIS CRYSTALS
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            GENESIS CRYSTALS
-                        </span>
-
-                        <h2>
-                            Choose Your Package
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <!-- 60 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="60 Genesis Crystals"
-                        data-price="79"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                60 Genesis Crystals
-                            </strong>
-
-                            <span>
-                                Genesis Crystals
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹79
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 300 + 30 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="300 + 30 Genesis Crystals"
-                        data-price="379"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                300 + 30 Crystals
-                            </strong>
-
-                            <span class="bonus-text">
-                                +30 Bonus • Total 330
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹379
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 980 + 110 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="980 + 110 Genesis Crystals"
-                        data-price="949"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                980 + 110 Crystals
-                            </strong>
-
-                            <span class="bonus-text">
-                                +110 Bonus • Total 1090
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹949
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 1980 + 260 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="1980 + 260 Genesis Crystals"
-                        data-price="1899"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                1980 + 260 Crystals
-                            </strong>
-
-                            <span class="bonus-text">
-                                +260 Bonus • Total 2240
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹1,899
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 3280 + 600 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="3280 + 600 Genesis Crystals"
-                        data-price="3799"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                3280 + 600 Crystals
-                            </strong>
-
-                            <span class="bonus-text">
-                                +600 Bonus • Total 3880
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹3,799
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 6480 + 1600 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="6480 + 1600 Genesis Crystals"
-                        data-price="7499"
-                    >
-
-                        <div class="price-card-icon">
-                            💎
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                6480 + 1600 Crystals
-                            </strong>
-
-                            <span class="bonus-text">
-                                +1600 Bonus • Total 8080
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹7,499
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 WELKIN
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            SPECIAL PASSES
-                        </span>
-
-                        <h2>
-                            Welkin Moon
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Welkin Moon"
-                        data-price="499"
-                    >
-
-                        <div class="price-card-icon">
-                            🌙
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Welkin Moon
-                            </strong>
-
-                            <span>
-                                Blessing of the Welkin Moon
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹499
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Blessing of Welkin Moon ×2"
-                        data-price="999"
-                    >
-
-                        <div class="price-card-icon">
-                            🌙
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Welkin Moon ×2
-                            </strong>
-
-                            <span>
-                                2 × Blessing of Welkin Moon
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹999
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 HOW TO ORDER
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        04
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            SIMPLE PROCESS
-                        </span>
-
-                        <h2>
-                            How To Order
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="steps-grid">
-
-                    <div class="step-card">
-
-                        <span>01</span>
-
-                        <h3>
-                            Enter UID
-                        </h3>
-
-                        <p>
-                            Enter your correct Genshin UID.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>02</span>
-
-                        <h3>
-                            Select Server
-                        </h3>
-
-                        <p>
-                            Choose the server linked to your account.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>03</span>
-
-                        <h3>
-                            Select Product
-                        </h3>
-
-                        <p>
-                            Choose Genesis Crystals or Welkin Moon.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>04</span>
-
-                        <h3>
-                            Complete Payment
-                        </h3>
-
-                        <p>
-                            Send your payment screenshot after payment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
+            </div>
 
         </div>
 
 
-        <!-- =================================================
-             ORDER SUMMARY
-        ================================================= -->
+        <div class="input-grid">
 
-        <aside class="order-summary-container">
+            <div class="input-group">
 
-            <div class="order-summary">
+                <label for="playerId">
+                    UID
+                </label>
 
-                <div class="summary-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUR ORDER
-                        </span>
-
-                        <h2>
-                            Order Summary
-                        </h2>
-
-                    </div>
-
-                    <span class="summary-status">
-                        ● READY
-                    </span>
-
-                </div>
-
-
-                <div class="summary-game">
-
-                    <img
-                        src="assets/genshin-logo.jpg"
-                        alt="Genshin Impact"
-                    >
-
-                    <div>
-
-                        <strong>
-                            Genshin Impact
-                        </strong>
-
-                        <span>
-                            Genesis Crystals
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-details">
-
-                    <div class="summary-row">
-
-                        <span>
-                            UID
-                        </span>
-
-                        <strong id="summaryUid">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Server
-                        </span>
-
-                        <strong id="summaryServer">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Product
-                        </span>
-
-                        <strong id="summaryProduct">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Price
-                        </span>
-
-                        <strong id="summaryPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="summaryTotal">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div
-                    id="selectionMessage"
-                    class="selection-message"
-                >
-                    Enter your UID, select your server and choose a product.
-                </div>
-
-
-                <button
-                    type="button"
-                    id="orderButton"
-                    class="order-button"
-                    disabled
+                <input
+                    type="text"
+                    id="playerId"
+                    placeholder="Enter Genshin Impact UID"
+                    autocomplete="off"
+                    maxlength="20"
+                    inputmode="numeric"
                 >
 
-                    <span>
-                        ORDER VIA WHATSAPP
-                    </span>
-
-                    <strong>
-                        →
-                    </strong>
-
-                </button>
-
-
-                <div class="payment-note">
-
-                    🔒 Secure ordering
-                    <br>
-                    ⚡ Fast • Safe • Trusted
-
-                </div>
+                <small>
+                    Enter the UID of the account receiving
+                    the top up.
+                </small>
 
             </div>
 
-        </aside>
+        </div>
+
+
+        <div
+            class="input-notice"
+            id="playerNotice"
+        >
+            🔒 Never share your account password or OTP.
+        </div>
 
     </div>
 
-</main>
 
+    <!-- =================================================
+         GENESIS CRYSTALS
+    ================================================== -->
 
-<!-- =====================================================
-     SUPPORT
-===================================================== -->
+    <div class="order-step-card">
 
-<section class="product-support">
+        <div class="step-heading">
 
-    <div class="container">
-
-        <div class="support-card">
+            <div class="step-number">
+                02
+            </div>
 
             <div>
 
-                <span class="eyebrow">
+                <h3>
+                    Genesis Crystals
+                </h3>
+
+                <p>
+                    Choose your preferred Genesis Crystal
+                    package.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="diamond-list">
+
+
+            <!-- 60 -->
+
+            <article
+                class="diamond-card"
+                data-package="60 Genesis Crystals"
+                data-price="₹79"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        60 Crystals
+                    </strong>
+
+                    <small>
+                        Instant Top Up
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹79
+                </div>
+
+            </article>
+
+
+            <!-- 300 + 30 -->
+
+            <article
+                class="diamond-card"
+                data-package="300 + 30 Genesis Crystals"
+                data-price="₹379"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        300 + 30
+                    </strong>
+
+                    <small>
+                        30 Bonus Crystals
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹379
+                </div>
+
+            </article>
+
+
+            <!-- 980 + 110 -->
+
+            <article
+                class="diamond-card"
+                data-package="980 + 110 Genesis Crystals"
+                data-price="₹949"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        980 + 110
+                    </strong>
+
+                    <small>
+                        110 Bonus Crystals
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹949
+                </div>
+
+            </article>
+
+
+            <!-- 1980 + 260 -->
+
+            <article
+                class="diamond-card"
+                data-package="1980 + 260 Genesis Crystals"
+                data-price="₹1899"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        1980 + 260
+                    </strong>
+
+                    <small>
+                        260 Bonus Crystals
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹1899
+                </div>
+
+            </article>
+
+
+            <!-- 3280 + 600 -->
+
+            <article
+                class="diamond-card"
+                data-package="3280 + 600 Genesis Crystals"
+                data-price="₹3799"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        3280 + 600
+                    </strong>
+
+                    <small>
+                        600 Bonus Crystals
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹3799
+                </div>
+
+            </article>
+
+
+            <!-- 6480 + 1600 -->
+
+            <article
+                class="diamond-card"
+                data-package="6480 + 1600 Genesis Crystals"
+                data-price="₹7499"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    💎
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        GENESIS CRYSTALS
+                    </span>
+
+                    <strong>
+                        6480 + 1600
+                    </strong>
+
+                    <small>
+                        1600 Bonus Crystals
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹7499
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="horizontal-scroll-hint">
+            ← Swipe horizontally on mobile →
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         WELKIN
+    ================================================== -->
+
+    <div class="order-step-card">
+
+        <div class="step-heading">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Welkin Moon
+                </h3>
+
+                <p>
+                    Select a Blessing of the Welkin Moon
+                    package.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="premium-horizontal-list">
+
+
+            <article
+                class="premium-product-card"
+                data-package="Welkin Moon"
+                data-price="₹499"
+                tabindex="0"
+            >
+
+                <div class="product-image">
+
+                    <div class="product-icon-large">
+                        🌙
+                    </div>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <span class="product-category">
+                        WELKIN MOON
+                    </span>
+
+                    <h3>
+                        Welkin Moon
+                    </h3>
+
+                    <p>
+                        Blessing of the Welkin Moon.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹499
+                        </strong>
+
+                        <button
+                            type="button"
+                            class="select-product"
+                        >
+                            Select
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="premium-product-card"
+                data-package="Blessing of Welkin Moon ×2"
+                data-price="₹999"
+                tabindex="0"
+            >
+
+                <div class="product-image">
+
+                    <div class="product-icon-large">
+                        ✨🌙
+                    </div>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <span class="product-category">
+                        WELKIN MOON
+                    </span>
+
+                    <h3>
+                        Blessing ×2
+                    </h3>
+
+                    <p>
+                        Two Welkin Moon blessings.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+                        <button
+                            type="button"
+                            class="select-product"
+                        >
+                            Select
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
+
+    <aside
+        class="order-summary-card"
+        id="orderSummary"
+    >
+
+        <div class="summary-header">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+                <h2>
+                    Order Summary
+                </h2>
+
+            </div>
+
+            <div class="summary-status">
+                Pending
+            </div>
+
+        </div>
+
+
+        <div class="summary-body">
+
+
+            <div class="summary-row">
+
+                <span>
+                    UID
+                </span>
+
+                <strong id="summaryPlayer">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Selected Product
+                </span>
+
+                <strong id="summaryProduct">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Price
+                </span>
+
+                <strong
+                    id="summaryPrice"
+                    class="summary-total"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="payment-status">
+
+                <span>
+                    Payment Status
+                </span>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="order-button"
+                id="orderButton"
+            >
+
+                <span>
+                    ORDER VIA WHATSAPP
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="order-note">
+
+                📩 After placing your order,
+                send your payment screenshot
+                on WhatsApp.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         SECURITY
+    ================================================== -->
+
+    <div class="security-card">
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <div>
+
+            <h3>
+                Secure Genshin Ordering
+            </h3>
+
+            <p>
+                Pantheos Global Store never asks for
+                your account password or OTP.
+                Only provide the information required
+                for your order.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SUPPORT CTA
+===================================================== -->
+
+<section class="support-cta">
+
+    <div class="container">
+
+        <div class="support-cta-inner">
+
+            <div>
+
+                <span class="section-label">
                     NEED HELP?
                 </span>
 
                 <h2>
-                    Pantheos Support is available 24/7
+                    Genshin Support Available 24/7
                 </h2>
 
                 <p>
-                    Need help with your Genshin Impact order?
-                    Contact us before making payment.
+                    Need help with your UID, Genesis Crystals
+                    or Welkin Moon? Contact us anytime.
                 </p>
 
             </div>
@@ -982,15 +929,17 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
-                    class="support-btn"
+                    rel="noopener"
+                    class="primary-btn"
                 >
-                    WhatsApp
+                    WhatsApp Support
                 </a>
 
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
-                    class="support-btn secondary"
+                    rel="noopener"
+                    class="secondary-btn"
                 >
                     Telegram
                 </a>
@@ -1003,6 +952,8 @@
 
 </section>
 
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -1012,7 +963,8 @@
 
     <div class="container">
 
-        <div class="footer-main">
+        <div class="footer-grid">
+
 
             <div class="footer-brand">
 
@@ -1026,45 +978,85 @@
                 </h3>
 
                 <p>
-                    Fast • Secure • Trusted
+                    Fast, secure and trusted gaming
+                    top-ups and digital services.
                 </p>
 
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Games</h4>
-
-                <a href="mlbb.html">Mobile Legends</a>
-                <a href="bgmi.html">BGMI</a>
-                <a href="freefire.html">Free Fire</a>
-                <a href="codm.html">COD Mobile</a>
-                <a href="valorant.html">Valorant</a>
-                <a href="genshin.html">Genshin Impact</a>
-                <a href="hsr.html">Honkai Star Rail</a>
+                <strong>
+                    Fast • Secure • Trusted
+                </strong>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>Services</h4>
+                <h4>
+                    Games
+                </h4>
 
-                <a href="giftcards.html">Gift Cards</a>
-                <a href="ott.html">OTT Services</a>
-                <a href="boosting.html">Boosting</a>
+                <a href="mlbb.html">
+                    Mobile Legends
+                </a>
+
+                <a href="bgmi.html">
+                    BGMI
+                </a>
+
+                <a href="freefire.html">
+                    Free Fire
+                </a>
+
+                <a href="codm.html">
+                    COD Mobile
+                </a>
+
+                <a href="valorant.html">
+                    Valorant
+                </a>
+
+                <a href="genshin.html">
+                    Genshin Impact
+                </a>
+
+                <a href="hsr.html">
+                    Honkai Star Rail
+                </a>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>Community</h4>
+                <h4>
+                    Services
+                </h4>
+
+                <a href="giftcards.html">
+                    Gift Cards
+                </a>
+
+                <a href="ott.html">
+                    OTT Services
+                </a>
+
+                <a href="boosting.html">
+                    Social Boosting
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Community
+                </h4>
 
                 <a
                     href="https://instagram.com/pantheosglobalstore"
                     target="_blank"
+                    rel="noopener"
                 >
                     Instagram
                 </a>
@@ -1072,6 +1064,7 @@
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
+                    rel="noopener"
                 >
                     Telegram
                 </a>
@@ -1079,6 +1072,7 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
+                    rel="noopener"
                 >
                     WhatsApp
                 </a>
@@ -1090,9 +1084,10 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © 2026 Pantheos Global Store
-            </span>
+            <p>
+                © 2026 Pantheos Global Store.
+                All rights reserved.
+            </p>
 
             <span>
                 Fast • Secure • Trusted
@@ -1112,8 +1107,9 @@
 <a
     href="https://wa.me/919310651934"
     target="_blank"
+    rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -1129,8 +1125,9 @@
 ===================================================== -->
 
 <button
-    id="backToTop"
     class="back-to-top"
+    id="backToTop"
+    type="button"
     aria-label="Back to top"
 >
     ↑
@@ -1146,206 +1143,242 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-    const uidInput =
-        document.getElementById("playerUid");
+        const playerInput =
+            document.getElementById(
+                "playerId"
+            );
 
-    const serverInput =
-        document.getElementById("server");
+        const summaryPlayer =
+            document.getElementById(
+                "summaryPlayer"
+            );
 
-    const uidSummary =
-        document.getElementById("summaryUid");
+        const summaryProduct =
+            document.getElementById(
+                "summaryProduct"
+            );
 
-    const serverSummary =
-        document.getElementById("summaryServer");
+        const summaryPrice =
+            document.getElementById(
+                "summaryPrice"
+            );
 
-    const productSummary =
-        document.getElementById("summaryProduct");
+        const orderButton =
+            document.getElementById(
+                "orderButton"
+            );
 
-    const priceSummary =
-        document.getElementById("summaryPrice");
+        const playerNotice =
+            document.getElementById(
+                "playerNotice"
+            );
 
-    const totalSummary =
-        document.getElementById("summaryTotal");
 
-    const orderButton =
-        document.getElementById("orderButton");
+        let selectedProduct = "";
 
-    const selectionMessage =
-        document.getElementById("selectionMessage");
+        let selectedPrice = "";
 
-    const priceCards =
-        document.querySelectorAll(".price-card");
 
+        /* ============================================
+           UID
+        ============================================ */
 
-    let selectedProduct = "";
-    let selectedPrice = "";
+        playerInput?.addEventListener(
+            "input",
+            () => {
 
+                summaryPlayer.textContent =
+                    playerInput.value.trim() ||
+                    "—";
 
-    /* ==========================================
-       UID
-    ========================================== */
+                playerInput.classList.remove(
+                    "input-error"
+                );
 
-    uidInput.addEventListener("input", () => {
+                if (playerNotice) {
 
-        const value =
-            uidInput.value.trim();
+                    playerNotice.innerHTML =
+                        "🔒 Never share your account password or OTP.";
 
-        uidSummary.textContent =
-            value || "Not entered";
-
-        updateOrderState();
-
-    });
-
-
-    /* ==========================================
-       SERVER
-    ========================================== */
-
-    serverInput.addEventListener("change", () => {
-
-        serverSummary.textContent =
-            serverInput.value || "Not selected";
-
-        updateOrderState();
-
-    });
-
-
-    /* ==========================================
-       PRODUCT SELECTION
-    ========================================== */
-
-    priceCards.forEach(card => {
-
-        card.addEventListener("click", () => {
-
-            priceCards.forEach(item => {
-
-                item.classList.remove("selected");
-
-            });
-
-            card.classList.add("selected");
-
-            selectedProduct =
-                card.dataset.product;
-
-            selectedPrice =
-                card.dataset.price;
-
-
-            productSummary.textContent =
-                selectedProduct;
-
-
-            const formattedPrice =
-                Number(selectedPrice)
-                    .toLocaleString("en-IN");
-
-
-            priceSummary.textContent =
-                "₹" + formattedPrice;
-
-            totalSummary.textContent =
-                "₹" + formattedPrice;
-
-
-            updateOrderState();
-
-        });
-
-    });
-
-
-    /* ==========================================
-       VALIDATION
-    ========================================== */
-
-    function updateOrderState() {
-
-        const uid =
-            uidInput.value.trim();
-
-        const server =
-            serverInput.value;
-
-
-        if (
-            uid &&
-            server &&
-            selectedProduct
-        ) {
-
-            orderButton.disabled = false;
-
-            selectionMessage.textContent =
-                "Your order is ready. Continue through WhatsApp.";
-
-            selectionMessage.classList.add("ready");
-
-        } else {
-
-            orderButton.disabled = true;
-
-            selectionMessage.classList.remove("ready");
-
-
-            if (!uid) {
-
-                selectionMessage.textContent =
-                    "Enter your UID.";
-
-            } else if (!server) {
-
-                selectionMessage.textContent =
-                    "Select your server.";
-
-            } else {
-
-                selectionMessage.textContent =
-                    "Select a product to continue.";
+                }
 
             }
-
-        }
-
-    }
+        );
 
 
-    /* ==========================================
-       WHATSAPP ORDER
-    ========================================== */
+        /* ============================================
+           PRODUCT SELECTION
+        ============================================ */
 
-    orderButton.addEventListener("click", () => {
-
-        const uid =
-            uidInput.value.trim();
-
-        const server =
-            serverInput.value;
+        const products =
+            document.querySelectorAll(
+                ".diamond-card, .premium-product-card"
+            );
 
 
-        if (
-            !uid ||
-            !server ||
-            !selectedProduct
-        ) {
+        products.forEach(
+            card => {
 
-            return;
-
-        }
+                const selectButton =
+                    card.querySelector(
+                        ".select-product"
+                    );
 
 
-        const formattedPrice =
-            Number(selectedPrice)
-                .toLocaleString("en-IN");
+                function selectProduct() {
+
+                    products.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        }
+                    );
 
 
-        const message =
+                    card.classList.add(
+                        "selected"
+                    );
 
+
+                    selectedProduct =
+                        card.dataset.package ||
+                        "";
+
+
+                    selectedPrice =
+                        card.dataset.price ||
+                        "";
+
+
+                    summaryProduct.textContent =
+                        selectedProduct;
+
+
+                    summaryPrice.textContent =
+                        selectedPrice;
+
+
+                    document
+                        .getElementById(
+                            "orderSummary"
+                        )
+                        ?.classList.add(
+                            "summary-active"
+                        );
+
+                }
+
+
+                card.addEventListener(
+                    "click",
+                    event => {
+
+                        if (
+                            event.target.closest(
+                                "button"
+                            )
+                        ) {
+
+                            selectProduct();
+
+                            return;
+
+                        }
+
+                        selectProduct();
+
+                    }
+                );
+
+
+                selectButton?.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                        selectProduct();
+
+                    }
+                );
+
+
+                card.addEventListener(
+                    "keydown",
+                    event => {
+
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+
+                            event.preventDefault();
+
+                            selectProduct();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ============================================
+           WHATSAPP ORDER
+        ============================================ */
+
+        orderButton?.addEventListener(
+            "click",
+            () => {
+
+                const uid =
+                    playerInput
+                        ?.value
+                        ?.trim() ||
+                    "";
+
+
+                if (!uid) {
+
+                    playerInput?.focus();
+
+                    playerInput?.classList.add(
+                        "input-error"
+                    );
+
+                    if (playerNotice) {
+
+                        playerNotice.innerHTML =
+                            "⚠️ Please enter your Genshin Impact UID.";
+
+                    }
+
+                    return;
+
+                }
+
+
+                if (!selectedProduct) {
+
+                    alert(
+                        "Please select a product first."
+                    );
+
+                    return;
+
+                }
+
+
+                const message =
 `🎮 Pantheos Global Store Order
 
 Game: Genshin Impact
@@ -1353,36 +1386,38 @@ Game: Genshin Impact
 UID:
 ${uid}
 
-Server:
-${server}
-
-Product:
+Package:
 ${selectedProduct}
 
 Price:
-₹${formattedPrice}
+${selectedPrice}
 
 Payment Status:
 Pending
 
 Please send payment screenshot after payment.
 
-⚡ Fast • Safe • Trusted`;
+⚡ Fast • Secure • Trusted`;
 
 
-        const whatsappURL =
-            "https://wa.me/919310651934?text=" +
-            encodeURIComponent(message);
+                const whatsappURL =
+                    "https://wa.me/919310651934?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            }
         );
 
-    });
-
-});
+    }
+);
 
 </script>
 
