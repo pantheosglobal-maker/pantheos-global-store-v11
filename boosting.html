@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
     <meta
-        name="description"
-        content="Pantheos Global Store social media boosting services — Instagram followers, likes, views, YouTube subscribers and more."
+        name="theme-color"
+        content="#050711"
     >
 
     <meta
-        name="theme-color"
-        content="#070711"
+        name="description"
+        content="Premium Instagram, YouTube, Telegram and Discord boosting services from Pantheos Global Store."
     >
 
-    <title>
-        Social Media Boosting | Pantheos Global Store
-    </title>
+    <title>Social Boosting | Pantheos Global Store</title>
 
     <link
         rel="stylesheet"
@@ -27,17 +27,13 @@
     >
 </head>
 
-<body class="product-page boosting-page">
-
+<body>
 
 <!-- =====================================================
-     PREMIUM LOADER
+     LOADER
 ===================================================== -->
 
-<div
-    id="pageLoader"
-    class="page-loader"
->
+<div class="page-loader" id="loader">
 
     <div class="loader-content">
 
@@ -47,11 +43,21 @@
             class="loader-logo"
         >
 
-        <div class="loader-spinner"></div>
+        <div class="loader-title">
+            PANTHEOS
+        </div>
 
-        <p>
-            Loading Pantheos Global Store...
-        </p>
+        <div class="loader-subtitle">
+            FAST • SECURE • TRUSTED
+        </div>
+
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading Social Services...
+        </div>
 
     </div>
 
@@ -62,12 +68,9 @@
      HEADER
 ===================================================== -->
 
-<header
-    class="site-header"
-    id="siteHeader"
->
+<header class="site-header">
 
-    <div class="container nav-container">
+    <div class="header-container">
 
         <a
             href="index.html"
@@ -82,7 +85,7 @@
             <div class="brand-text">
 
                 <strong>
-                    Pantheos
+                    PANTHEOS
                 </strong>
 
                 <span>
@@ -94,7 +97,7 @@
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="nav-links">
 
             <a href="index.html">
                 Home
@@ -104,10 +107,7 @@
                 Games
             </a>
 
-            <a
-                href="index.html#services"
-                class="active"
-            >
+            <a href="index.html#services">
                 Services
             </a>
 
@@ -122,39 +122,42 @@
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
             <a
                 href="https://wa.me/919310651934"
                 target="_blank"
                 rel="noopener"
-                class="nav-whatsapp"
+                class="whatsapp-btn"
             >
                 WhatsApp
             </a>
 
             <a
-                href="#boostProducts"
-                class="nav-topup"
+                href="#products"
+                class="primary-btn"
             >
-                Boost Now
+                BOOST NOW
             </a>
 
         </div>
 
 
         <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
-            aria-label="Open navigation menu"
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
         >
-            ☰
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
 
-
-    <!-- MOBILE MENU -->
 
     <div
         class="mobile-menu"
@@ -186,7 +189,7 @@
             target="_blank"
             rel="noopener"
         >
-            WhatsApp
+            WhatsApp Support
         </a>
 
     </div>
@@ -198,43 +201,54 @@
      HERO
 ===================================================== -->
 
-<section
-    class="product-hero boosting-hero"
-    style="background-image:url('assets/hero-banner.jpg');"
->
+<main>
 
-    <div class="product-hero-overlay"></div>
+<section class="game-hero">
+
+    <div class="game-hero-background">
+
+        <img
+            src="assets/hero-banner.jpg"
+            alt="Social Media Boosting"
+        >
+
+    </div>
+
+    <div class="game-hero-overlay"></div>
 
 
-    <div class="container product-hero-content">
+    <div class="container game-hero-content">
 
-        <div class="product-game-logo">
+        <div class="game-logo-wrapper">
 
-            <div class="service-hero-icon">
-                🚀
-            </div>
+            <img
+                src="assets/pantheos-logo.PNG"
+                alt="Pantheos Global Store"
+                class="game-logo"
+            >
 
         </div>
 
 
-        <div class="product-hero-info">
+        <div class="game-hero-info">
 
-            <span class="product-category">
+            <div class="eyebrow">
                 SOCIAL MEDIA SERVICES
-            </span>
+            </div>
 
             <h1>
-                SOCIAL MEDIA BOOSTING
+                BOOST YOUR
+                <span>SOCIAL PRESENCE</span>
             </h1>
 
             <p>
-                Grow your social presence with fast and
-                affordable boosting services from Pantheos
-                Global Store.
+                Premium social media services for
+                Instagram, YouTube, Telegram and Discord.
+                Fast delivery with trusted support.
             </p>
 
 
-            <div class="hero-trust">
+            <div class="hero-trust-row">
 
                 <span>
                     ⚡ Fast Delivery
@@ -245,7 +259,7 @@
                 </span>
 
                 <span>
-                    💎 Affordable Prices
+                    ⭐ Trusted
                 </span>
 
                 <span>
@@ -262,1837 +276,1374 @@
 
 
 <!-- =====================================================
-     MAIN
+     BOOSTING PRODUCTS
 ===================================================== -->
 
-<main
-    class="product-main"
-    id="boostProducts"
+<section
+    class="topup-section"
+    id="products"
 >
 
-    <div class="container product-layout">
+<div class="container">
 
 
-        <!-- =================================================
-             LEFT SIDE
-        ================================================= -->
+    <div class="section-heading">
 
-        <div class="product-left">
+        <span class="section-label">
+            SOCIAL BOOSTING
+        </span>
+
+        <h2>
+            Choose Your Service
+        </h2>
+
+        <p>
+            Select a service and package below.
+            Enter your account or post details during
+            WhatsApp ordering.
+        </p>
+
+    </div>
 
 
-            <!-- =================================================
-                 CUSTOMER DETAILS
-            ================================================= -->
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
 
-            <section class="order-section reveal">
+    <div class="gift-search-wrapper">
 
-                <div class="section-heading">
+        <input
+            type="search"
+            id="boostSearch"
+            placeholder="Search followers, likes, views..."
+            autocomplete="off"
+        >
 
-                    <span class="section-number">
-                        01
-                    </span>
+    </div>
 
-                    <div>
 
-                        <span class="eyebrow">
-                            ORDER DETAILS
-                        </span>
+    <!-- =================================================
+         SERVICE TABS
+    ================================================== -->
 
-                        <h2>
-                            Customer Information
-                        </h2>
+    <div class="service-filter-bar">
 
-                    </div>
+        <button
+            type="button"
+            class="service-filter active"
+            data-filter="all"
+        >
+            All
+        </button>
 
+        <button
+            type="button"
+            class="service-filter"
+            data-filter="instagram"
+        >
+            Instagram
+        </button>
+
+        <button
+            type="button"
+            class="service-filter"
+            data-filter="youtube"
+        >
+            YouTube
+        </button>
+
+        <button
+            type="button"
+            class="service-filter"
+            data-filter="telegram"
+        >
+            Telegram
+        </button>
+
+        <button
+            type="button"
+            class="service-filter"
+            data-filter="discord"
+        >
+            Discord
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         PRODUCTS
+    ================================================== -->
+
+    <div
+        class="premium-horizontal-list"
+        id="boostProductList"
+    >
+
+
+        <!-- =============================================
+             INSTAGRAM FOLLOWERS
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 1000"
+            data-package="Instagram Followers • 1,000"
+            data-price="₹150"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
                 </div>
 
+            </div>
 
-                <div class="customer-details-box">
+            <div class="product-content">
 
-                    <div class="input-card">
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
 
-                        <label for="customerName">
-                            Your Name
-                        </label>
+                <h3>
+                    1,000 Followers
+                </h3>
 
-                        <div class="input-wrapper">
+                <p>
+                    Instagram Followers
+                </p>
 
-                            <span class="input-icon">
-                                👤
-                            </span>
-
-                            <input
-                                type="text"
-                                id="customerName"
-                                placeholder="Enter your name"
-                                autocomplete="name"
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="input-card">
-
-                        <label for="customerContact">
-                            WhatsApp Number
-                        </label>
-
-                        <div class="input-wrapper">
-
-                            <span class="input-icon">
-                                📱
-                            </span>
-
-                            <input
-                                type="tel"
-                                id="customerContact"
-                                placeholder="Enter your WhatsApp number"
-                                inputmode="tel"
-                                autocomplete="tel"
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="input-card full-width">
-
-                        <label for="socialUsername">
-                            Username / Profile / Post Link
-                        </label>
-
-                        <div class="input-wrapper">
-
-                            <span class="input-icon">
-                                🔗
-                            </span>
-
-                            <input
-                                type="text"
-                                id="socialUsername"
-                                placeholder="@username or profile/post link"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 INSTAGRAM
-            ================================================= -->
-
-            <section
-                class="order-section reveal"
-                id="instagram"
-            >
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            INSTAGRAM
-                        </span>
-
-                        <h2>
-                            Instagram Boosting
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FOLLOWERS -->
-
-                <div class="service-subsection">
-
-                    <div class="subsection-title">
-
-                        <span>
-                            🔥
-                        </span>
-
-                        <h3>
-                            Followers
-                        </h3>
-
-                    </div>
-
-
-                    <div class="premium-price-list">
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="1,000 Followers"
-                            data-price="150"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    1,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹150
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="2,000 Followers"
-                            data-price="350"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    2,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹350
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="3,000 Followers"
-                            data-price="550"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    3,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹550
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="4,000 Followers"
-                            data-price="650"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    4,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹650
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="5,000 Followers"
-                            data-price="760"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    5,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹760
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="6,000 Followers"
-                            data-price="900"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    6,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹900
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="7,000 Followers"
-                            data-price="1100"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    7,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹1,100
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="8,000 Followers"
-                            data-price="1300"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    8,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹1,300
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="9,000 Followers"
-                            data-price="1400"
-                        >
-
-                            <div class="price-card-icon">
-                                👥
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    9,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹1,400
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="price-card"
-                            data-service="Instagram Followers"
-                            data-quantity="10,000 Followers"
-                            data-price="1500"
-                        >
-
-                            <div class="price-card-icon">
-                                👑
-                            </div>
-
-                            <div class="price-card-main">
-
-                                <strong>
-                                    10,000 Followers
-                                </strong>
-
-                                <span>
-                                    Instagram Followers
-                                </span>
-
-                            </div>
-
-                            <div class="price-card-price">
-
-                                <small>
-                                    OUR PRICE
-                                </small>
-
-                                <strong>
-                                    ₹1,500
-                                </strong>
-
-                            </div>
-
-                            <div class="price-card-arrow">
-                                →
-                            </div>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- LIKES -->
-
-                <div class="service-subsection">
-
-                    <div class="subsection-title">
-
-                        <span>
-                            ❤️
-                        </span>
-
-                        <h3>
-                            Likes
-                        </h3>
-
-                    </div>
-
-
-                    <div class="premium-price-list">
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="1,000 Likes"
-                            data-price="30">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>1,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹30</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="2,000 Likes"
-                            data-price="50">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>2,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹50</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="3,000 Likes"
-                            data-price="70">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>3,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹70</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="4,000 Likes"
-                            data-price="90">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>4,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹90</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="5,000 Likes"
-                            data-price="110">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>5,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹110</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="6,000 Likes"
-                            data-price="120">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>6,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹120</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="7,000 Likes"
-                            data-price="130">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>7,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹130</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="8,000 Likes"
-                            data-price="140">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>8,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹140</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="9,000 Likes"
-                            data-price="150">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>9,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹150</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Likes"
-                            data-quantity="10,000 Likes"
-                            data-price="160">
-
-                            <div class="price-card-icon">❤️</div>
-
-                            <div class="price-card-main">
-                                <strong>10,000 Likes</strong>
-                                <span>Instagram Likes</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹160</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- VIEWS -->
-
-                <div class="service-subsection">
-
-                    <div class="subsection-title">
-
-                        <span>
-                            👀
-                        </span>
-
-                        <h3>
-                            Views
-                        </h3>
-
-                    </div>
-
-
-                    <div class="premium-price-list">
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="1,000 Views"
-                            data-price="30">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>1,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹30</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="2,000 Views"
-                            data-price="50">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>2,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹50</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="3,000 Views"
-                            data-price="70">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>3,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹70</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="4,000 Views"
-                            data-price="90">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>4,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹90</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="5,000 Views"
-                            data-price="110">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>5,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹110</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="6,000 Views"
-                            data-price="120">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>6,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹120</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="7,000 Views"
-                            data-price="130">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>7,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹130</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="8,000 Views"
-                            data-price="140">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>8,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹140</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="9,000 Views"
-                            data-price="150">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>9,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹150</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-
-                        <button type="button" class="price-card"
-                            data-service="Instagram Views"
-                            data-quantity="10,000 Views"
-                            data-price="160">
-
-                            <div class="price-card-icon">👀</div>
-
-                            <div class="price-card-main">
-                                <strong>10,000 Views</strong>
-                                <span>Instagram Views</span>
-                            </div>
-
-                            <div class="price-card-price">
-                                <small>OUR PRICE</small>
-                                <strong>₹160</strong>
-                            </div>
-
-                            <div class="price-card-arrow">→</div>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 YOUTUBE
-            ================================================= -->
-
-            <section
-                class="order-section reveal"
-                id="youtube"
-            >
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUTUBE
-                        </span>
-
-                        <h2>
-                            YouTube Services
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="YouTube Subscribers"
-                        data-quantity="1,000 Subscribers"
-                        data-price="150"
-                    >
-
-                        <div class="price-card-icon">
-                            ▶️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                1,000 Subscribers
-                            </strong>
-
-                            <span>
-                                YouTube Subscribers
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹150
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="YouTube Subscribers"
-                        data-quantity="5,000 Subscribers"
-                        data-price="650"
-                    >
-
-                        <div class="price-card-icon">
-                            ▶️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                5,000 Subscribers
-                            </strong>
-
-                            <span>
-                                YouTube Subscribers
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹650
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="YouTube Subscribers"
-                        data-quantity="10,000 Subscribers"
-                        data-price="1500"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                10,000 Subscribers
-                            </strong>
-
-                            <span>
-                                YouTube Subscribers
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                OUR PRICE
-                            </small>
-
-                            <strong>
-                                ₹1,500
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 TELEGRAM
-            ================================================= -->
-
-            <section
-                class="order-section reveal"
-                id="telegram"
-            >
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        04
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            TELEGRAM
-                        </span>
-
-                        <h2>
-                            Telegram Members
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Telegram Members"
-                        data-quantity="1,000 Members"
-                        data-price="150"
-                    >
-
-                        <div class="price-card-icon">
-                            ✈️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                1,000 Members
-                            </strong>
-
-                            <span>
-                                Telegram Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹150
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Telegram Members"
-                        data-quantity="5,000 Members"
-                        data-price="650"
-                    >
-
-                        <div class="price-card-icon">
-                            ✈️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                5,000 Members
-                            </strong>
-
-                            <span>
-                                Telegram Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹650
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Telegram Members"
-                        data-quantity="10,000 Members"
-                        data-price="1200"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                10,000 Members
-                            </strong>
-
-                            <span>
-                                Telegram Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹1,200
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 DISCORD
-            ================================================= -->
-
-            <section
-                class="order-section reveal"
-                id="discord"
-            >
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        05
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            DISCORD
-                        </span>
-
-                        <h2>
-                            Discord Members
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Discord Members"
-                        data-quantity="1,000 Members"
-                        data-price="150"
-                    >
-
-                        <div class="price-card-icon">
-                            💬
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                1,000 Members
-                            </strong>
-
-                            <span>
-                                Discord Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹150
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Discord Members"
-                        data-quantity="5,000 Members"
-                        data-price="650"
-                    >
-
-                        <div class="price-card-icon">
-                            💬
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                5,000 Members
-                            </strong>
-
-                            <span>
-                                Discord Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹650
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-service="Discord Members"
-                        data-quantity="10,000 Members"
-                        data-price="1200"
-                    >
-
-                        <div class="price-card-icon">
-                            👑
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                10,000 Members
-                            </strong>
-
-                            <span>
-                                Discord Members
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>
-                                STARTING FROM
-                            </small>
-
-                            <strong>
-                                ₹1,200
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 ORDER NOTICE
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="notice-card">
-
-                    <div class="notice-icon">
-                        ⚠️
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Important Boosting Notice
-                        </h3>
-
-                        <p>
-                            Please provide the correct profile,
-                            post or channel link before ordering.
-                            Never share your password or OTP with
-                            anyone.
-                        </p>
-
-                        <p>
-                            Delivery time may vary depending on the
-                            selected service and platform conditions.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
-
-
-        <!-- =================================================
-             ORDER SUMMARY
-        ================================================= -->
-
-        <aside class="order-summary-container">
-
-            <div class="order-summary">
-
-                <div class="summary-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUR ORDER
-                        </span>
-
-                        <h2>
-                            Order Summary
-                        </h2>
-
-                    </div>
-
-                    <span class="summary-status">
-                        ● READY
-                    </span>
-
-                </div>
-
-
-                <div class="summary-game">
-
-                    <div class="summary-product-icon">
-                        🚀
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Social Boosting
-                        </strong>
-
-                        <span>
-                            Digital Service
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-details">
-
-                    <div class="summary-row">
-
-                        <span>
-                            Name
-                        </span>
-
-                        <strong id="summaryName">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            WhatsApp
-                        </span>
-
-                        <strong id="summaryContact">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Service
-                        </span>
-
-                        <strong id="summaryService">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Quantity
-                        </span>
-
-                        <strong id="summaryQuantity">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Link
-                        </span>
-
-                        <strong
-                            id="summaryLink"
-                            class="summary-link"
-                        >
-                            Not entered
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="summaryTotal">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div
-                    id="selectionMessage"
-                    class="selection-message"
-                >
-                    Enter your details and select a service.
-                </div>
-
-
-                <button
-                    type="button"
-                    id="orderButton"
-                    class="order-button"
-                    disabled
-                >
-
-                    <span>
-                        ORDER VIA WHATSAPP
-                    </span>
+                <div class="product-bottom">
 
                     <strong>
-                        →
+                        ₹150
                     </strong>
 
-                </button>
-
-
-                <div class="payment-note">
-
-                    🔒 Secure ordering
-                    <br>
-
-                    ⚡ Fast • Safe • Trusted
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
 
                 </div>
 
             </div>
 
-        </aside>
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 2000"
+            data-package="Instagram Followers • 2,000"
+            data-price="₹350"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    2,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹350
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 3000"
+            data-package="Instagram Followers • 3,000"
+            data-price="₹550"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    3,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹550
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 4000"
+            data-package="Instagram Followers • 4,000"
+            data-price="₹650"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    4,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹650
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 5000"
+            data-package="Instagram Followers • 5,000"
+            data-price="₹760"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    5,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹760
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 6000"
+            data-package="Instagram Followers • 6,000"
+            data-price="₹900"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    6,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹900
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 7000"
+            data-package="Instagram Followers • 7,000"
+            data-price="₹1100"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    7,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1100
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 8000"
+            data-package="Instagram Followers • 8,000"
+            data-price="₹1300"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    8,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1300
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 9000"
+            data-package="Instagram Followers • 9,000"
+            data-price="₹1400"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    9,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1400
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Followers 10000"
+            data-package="Instagram Followers • 10,000"
+            data-price="₹1500"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◎
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • FOLLOWERS
+                </span>
+
+                <h3>
+                    10,000 Followers
+                </h3>
+
+                <p>
+                    Instagram Followers
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1500
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             INSTAGRAM LIKES
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Likes 1000"
+            data-package="Instagram Likes • 1,000"
+            data-price="₹30"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ♥
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • LIKES
+                </span>
+
+                <h3>
+                    1,000 Likes
+                </h3>
+
+                <p>
+                    Instagram Likes
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹30
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Likes 2000"
+            data-package="Instagram Likes • 2,000"
+            data-price="₹50"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ♥
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • LIKES
+                </span>
+
+                <h3>
+                    2,000 Likes
+                </h3>
+
+                <p>
+                    Instagram Likes
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹50
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Likes 5000"
+            data-package="Instagram Likes • 5,000"
+            data-price="₹110"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ♥
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • LIKES
+                </span>
+
+                <h3>
+                    5,000 Likes
+                </h3>
+
+                <p>
+                    Instagram Likes
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹110
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Likes 10000"
+            data-package="Instagram Likes • 10,000"
+            data-price="₹160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ♥
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • LIKES
+                </span>
+
+                <h3>
+                    10,000 Likes
+                </h3>
+
+                <p>
+                    Instagram Likes
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             INSTAGRAM VIEWS
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Views 1000"
+            data-package="Instagram Views • 1,000"
+            data-price="₹30"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◉
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • VIEWS
+                </span>
+
+                <h3>
+                    1,000 Views
+                </h3>
+
+                <p>
+                    Instagram Views
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹30
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Views 5000"
+            data-package="Instagram Views • 5,000"
+            data-price="₹110"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◉
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • VIEWS
+                </span>
+
+                <h3>
+                    5,000 Views
+                </h3>
+
+                <p>
+                    Instagram Views
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹110
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="instagram"
+            data-name="Instagram Views 10000"
+            data-package="Instagram Views • 10,000"
+            data-price="₹160"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ◉
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    INSTAGRAM • VIEWS
+                </span>
+
+                <h3>
+                    10,000 Views
+                </h3>
+
+                <p>
+                    Instagram Views
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹160
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             YOUTUBE
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="youtube"
+            data-name="YouTube Subscribers"
+            data-package="YouTube Subscribers • Custom Quantity"
+            data-price="Contact"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ▶
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    YOUTUBE
+                </span>
+
+                <h3>
+                    YouTube Subscribers
+                </h3>
+
+                <p>
+                    Choose your required quantity
+                    through WhatsApp.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Contact
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="youtube"
+            data-name="YouTube Watch Time"
+            data-package="YouTube Watch Time • Custom Requirement"
+            data-price="Contact"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ▶
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    YOUTUBE
+                </span>
+
+                <h3>
+                    YouTube Watch Time
+                </h3>
+
+                <p>
+                    Submit your requirement
+                    for a custom quote.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Contact
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             TELEGRAM
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="telegram"
+            data-name="Telegram Members"
+            data-package="Telegram Members • Custom Quantity"
+            data-price="Contact"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ✈
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    TELEGRAM
+                </span>
+
+                <h3>
+                    Telegram Members
+                </h3>
+
+                <p>
+                    Grow your Telegram community.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Contact
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =============================================
+             DISCORD
+        ============================================== -->
+
+        <article
+            class="premium-product-card boost-card"
+            data-category="discord"
+            data-name="Discord Members"
+            data-package="Discord Members • Custom Quantity"
+            data-price="Contact"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    D
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    DISCORD
+                </span>
+
+                <h3>
+                    Discord Members
+                </h3>
+
+                <p>
+                    Grow your Discord community.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Contact
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
-</main>
 
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
 
-<!-- =====================================================
-     SUPPORT
-===================================================== -->
+    <aside
+        class="order-summary-card"
+        id="orderSummary"
+    >
 
-<section class="product-support">
-
-    <div class="container">
-
-        <div class="support-card">
+        <div class="summary-header">
 
             <div>
 
-                <span class="eyebrow">
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+                <h2>
+                    Boosting Order
+                </h2>
+
+            </div>
+
+            <div class="summary-status">
+                Pending
+            </div>
+
+        </div>
+
+
+        <div class="summary-body">
+
+            <div class="summary-row">
+
+                <span>
+                    Service
+                </span>
+
+                <strong id="summaryService">
+                    Social Boosting
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Package
+                </span>
+
+                <strong id="summaryProduct">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Price
+                </span>
+
+                <strong
+                    id="summaryPrice"
+                    class="summary-total"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <!-- CUSTOMER INPUT -->
+
+            <div class="boost-input-group">
+
+                <label for="targetInput">
+                    Target Username / Link
+                </label>
+
+                <input
+                    type="text"
+                    id="targetInput"
+                    placeholder="@username or profile/post link"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="payment-status">
+
+                <span>
+                    Payment Status
+                </span>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="order-button"
+                id="orderButton"
+            >
+
+                <span>
+                    ORDER VIA WHATSAPP
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="order-note">
+
+                📩 Make sure your target username
+                or link is correct before ordering.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SUPPORT CTA
+===================================================== -->
+
+<section class="support-cta">
+
+    <div class="container">
+
+        <div class="support-cta-inner">
+
+            <div>
+
+                <span class="section-label">
                     NEED HELP?
                 </span>
 
                 <h2>
-                    Pantheos Support is available 24/7
+                    Social Service Support 24/7
                 </h2>
 
                 <p>
-                    Not sure which boosting package you need?
-                    Contact us before ordering.
+                    Need a custom quantity or service?
+                    Contact Pantheos Global Store.
                 </p>
 
             </div>
@@ -2104,16 +1655,16 @@
                     href="https://wa.me/919310651934"
                     target="_blank"
                     rel="noopener"
-                    class="support-btn"
+                    class="primary-btn"
                 >
-                    WhatsApp
+                    WhatsApp Support
                 </a>
 
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
                     rel="noopener"
-                    class="support-btn secondary"
+                    class="secondary-btn"
                 >
                     Telegram
                 </a>
@@ -2126,6 +1677,8 @@
 
 </section>
 
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -2135,8 +1688,7 @@
 
     <div class="container">
 
-        <div class="footer-main">
-
+        <div class="footer-grid">
 
             <div class="footer-brand">
 
@@ -2150,8 +1702,13 @@
                 </h3>
 
                 <p>
-                    Fast • Secure • Trusted
+                    Fast, secure and trusted gaming
+                    top-ups and digital services.
                 </p>
+
+                <strong>
+                    Fast • Secure • Trusted
+                </strong>
 
             </div>
 
@@ -2251,9 +1808,10 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © 2026 Pantheos Global Store
-            </span>
+            <p>
+                © 2026 Pantheos Global Store.
+                All rights reserved.
+            </p>
 
             <span>
                 Fast • Secure • Trusted
@@ -2275,7 +1833,7 @@
     target="_blank"
     rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -2291,17 +1849,14 @@
 ===================================================== -->
 
 <button
-    id="backToTop"
     class="back-to-top"
+    id="backToTop"
+    type="button"
     aria-label="Back to top"
 >
     ↑
 </button>
 
-
-<!-- =====================================================
-     MAIN JAVASCRIPT
-===================================================== -->
 
 <script src="js/main.js"></script>
 
@@ -2316,66 +1871,34 @@ document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-
-        /* ================================================
-           ELEMENTS
-        ================================================ */
-
-        const nameField =
-            document.getElementById(
-                "customerName"
-            );
-
-        const contactField =
-            document.getElementById(
-                "customerContact"
-            );
-
-        const linkField =
-            document.getElementById(
-                "socialUsername"
-            );
-
-
         const cards =
             document.querySelectorAll(
-                ".price-card"
+                ".boost-card"
             );
 
-
-        const summaryName =
+        const search =
             document.getElementById(
-                "summaryName"
+                "boostSearch"
             );
 
-        const summaryContact =
-            document.getElementById(
-                "summaryContact"
+        const filters =
+            document.querySelectorAll(
+                ".service-filter"
             );
 
-        const summaryService =
+        const targetInput =
             document.getElementById(
-                "summaryService"
+                "targetInput"
             );
 
-        const summaryQuantity =
+        const summaryProduct =
             document.getElementById(
-                "summaryQuantity"
+                "summaryProduct"
             );
 
-        const summaryLink =
+        const summaryPrice =
             document.getElementById(
-                "summaryLink"
-            );
-
-        const summaryTotal =
-            document.getElementById(
-                "summaryTotal"
-            );
-
-        const selectionMessage =
-            document.getElementById(
-                "selectionMessage"
+                "summaryPrice"
             );
 
         const orderButton =
@@ -2384,136 +1907,122 @@ document.addEventListener(
             );
 
 
-        /* ================================================
-           ORDER STATE
-        ================================================ */
-
-        let selectedService = "";
-
-        let selectedQuantity = "";
+        let selectedProduct = "";
 
         let selectedPrice = "";
 
-
-        /* ================================================
-           UPDATE NAME
-        ================================================ */
-
-        nameField.addEventListener(
-            "input",
-            () => {
-
-                summaryName.textContent =
-                    nameField.value.trim() ||
-                    "Not entered";
-
-                updateOrderState();
-
-            }
-        );
+        let selectedCategory = "all";
 
 
-        /* ================================================
-           UPDATE CONTACT
-        ================================================ */
-
-        contactField.addEventListener(
-            "input",
-            () => {
-
-                summaryContact.textContent =
-                    contactField.value.trim() ||
-                    "Not entered";
-
-                updateOrderState();
-
-            }
-        );
-
-
-        /* ================================================
-           UPDATE SOCIAL LINK
-        ================================================ */
-
-        linkField.addEventListener(
-            "input",
-            () => {
-
-                const value =
-                    linkField.value.trim();
-
-                summaryLink.textContent =
-                    value ||
-                    "Not entered";
-
-                updateOrderState();
-
-            }
-        );
-
-
-        /* ================================================
-           SELECT PACKAGE
-        ================================================ */
+        /* ============================================
+           PRODUCT SELECTION
+        ============================================ */
 
         cards.forEach(
             card => {
 
-                card.addEventListener(
-                    "click",
-                    () => {
+                const button =
+                    card.querySelector(
+                        ".select-product"
+                    );
 
 
-                        cards.forEach(
-                            item => {
+                function selectProduct() {
 
-                                item.classList.remove(
-                                    "selected"
-                                );
+                    cards.forEach(
+                        item => {
 
-                            }
-                        );
-
-
-                        card.classList.add(
-                            "selected"
-                        );
-
-
-                        selectedService =
-                            card.dataset.service ||
-                            "";
-
-                        selectedQuantity =
-                            card.dataset.quantity ||
-                            "";
-
-                        selectedPrice =
-                            card.dataset.price ||
-                            "";
-
-
-                        summaryService.textContent =
-                            selectedService;
-
-                        summaryQuantity.textContent =
-                            selectedQuantity;
-
-
-                        const formattedPrice =
-                            Number(
-                                selectedPrice
-                            ).toLocaleString(
-                                "en-IN"
+                            item.classList.remove(
+                                "selected"
                             );
 
-
-                        summaryTotal.textContent =
-                            "₹" +
-                            formattedPrice;
+                        }
+                    );
 
 
-                        updateOrderState();
+                    card.classList.add(
+                        "selected"
+                    );
+
+
+                    selectedProduct =
+                        card.dataset.package ||
+                        card.dataset.name ||
+                        "";
+
+
+                    selectedPrice =
+                        card.dataset.price ||
+                        "";
+
+
+                    summaryProduct.textContent =
+                        selectedProduct;
+
+
+                    summaryPrice.textContent =
+                        selectedPrice;
+
+
+                    document
+                        .getElementById(
+                            "orderSummary"
+                        )
+                        ?.classList.add(
+                            "summary-active"
+                        );
+
+                }
+
+
+                card.addEventListener(
+                    "click",
+                    event => {
+
+                        if (
+                            event.target.closest(
+                                "button"
+                            )
+                        ) {
+
+                            selectProduct();
+
+                            return;
+
+                        }
+
+                        selectProduct();
+
+                    }
+                );
+
+
+                button?.addEventListener(
+                    "click",
+                    event => {
+
+                        event.stopPropagation();
+
+                        selectProduct();
+
+                    }
+                );
+
+
+                card.addEventListener(
+                    "keydown",
+                    event => {
+
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+
+                            event.preventDefault();
+
+                            selectProduct();
+
+                        }
 
                     }
                 );
@@ -2522,183 +2031,151 @@ document.addEventListener(
         );
 
 
-        /* ================================================
-           VALIDATE ORDER
-        ================================================ */
+        /* ============================================
+           FILTER
+        ============================================ */
 
-        function updateOrderState() {
+        filters.forEach(
+            filter => {
+
+                filter.addEventListener(
+                    "click",
+                    () => {
+
+                        filters.forEach(
+                            item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
 
 
-            const name =
-                nameField.value.trim();
-
-            const contact =
-                contactField.value.trim();
-
-            const socialLink =
-                linkField.value.trim();
+                        filter.classList.add(
+                            "active"
+                        );
 
 
-            const validContact =
-                contact.replace(
-                    /[^0-9]/g,
+                        selectedCategory =
+                            filter.dataset.filter ||
+                            "all";
+
+
+                        applyFilters();
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ============================================
+           SEARCH
+        ============================================ */
+
+        search?.addEventListener(
+            "input",
+            applyFilters
+        );
+
+
+        function applyFilters() {
+
+            const query =
+                (
+                    search?.value ||
                     ""
-                ).length >= 10;
+                )
+                .trim()
+                .toLowerCase();
 
 
-            if (
-                !name
-            ) {
+            cards.forEach(
+                card => {
 
-                orderButton.disabled = true;
-
-                selectionMessage.textContent =
-                    "Enter your name.";
-
-                selectionMessage.classList.remove(
-                    "ready"
-                );
-
-                return;
-
-            }
+                    const name =
+                        (
+                            card.dataset.name ||
+                            ""
+                        ).toLowerCase();
 
 
-            if (
-                !validContact
-            ) {
-
-                orderButton.disabled = true;
-
-                selectionMessage.textContent =
-                    "Enter a valid WhatsApp number.";
-
-                selectionMessage.classList.remove(
-                    "ready"
-                );
-
-                return;
-
-            }
+                    const category =
+                        (
+                            card.dataset.category ||
+                            ""
+                        ).toLowerCase();
 
 
-            if (
-                !socialLink
-            ) {
-
-                orderButton.disabled = true;
-
-                selectionMessage.textContent =
-                    "Enter your profile, post or channel link.";
-
-                selectionMessage.classList.remove(
-                    "ready"
-                );
-
-                return;
-
-            }
+                    const matchesSearch =
+                        !query ||
+                        name.includes(query);
 
 
-            if (
-                !selectedService
-            ) {
-
-                orderButton.disabled = true;
-
-                selectionMessage.textContent =
-                    "Select a boosting package.";
-
-                selectionMessage.classList.remove(
-                    "ready"
-                );
-
-                return;
-
-            }
+                    const matchesCategory =
+                        selectedCategory === "all" ||
+                        category === selectedCategory;
 
 
-            orderButton.disabled = false;
+                    card.style.display =
+                        matchesSearch &&
+                        matchesCategory
+                            ? ""
+                            : "none";
 
-            selectionMessage.textContent =
-                "Your boosting order is ready.";
-
-            selectionMessage.classList.add(
-                "ready"
+                }
             );
 
         }
 
 
-        /* ================================================
+        /* ============================================
            WHATSAPP ORDER
-        ================================================ */
+        ============================================ */
 
-        orderButton.addEventListener(
+        orderButton?.addEventListener(
             "click",
             () => {
 
+                if (!selectedProduct) {
 
-                const name =
-                    nameField.value.trim();
-
-                const contact =
-                    contactField.value.trim();
-
-                const socialLink =
-                    linkField.value.trim();
-
-
-                if (
-                    !name ||
-                    !contact ||
-                    !socialLink ||
-                    !selectedService
-                ) {
+                    alert(
+                        "Please select a boosting service first."
+                    );
 
                     return;
 
                 }
 
 
-                const formattedPrice =
-                    Number(
-                        selectedPrice
-                    ).toLocaleString(
-                        "en-IN"
-                    );
+                const target =
+                    targetInput?.value.trim() ||
+                    "Not provided";
 
 
                 const message =
-
 `🚀 Pantheos Global Store Order
 
-Category: Social Media Boosting
+Service: Social Media Boosting
 
-Customer Name:
-${name}
-
-WhatsApp Number:
-${contact}
-
-Service:
-${selectedService}
-
-Quantity:
-${selectedQuantity}
-
-Profile / Post / Channel:
-${socialLink}
+Package:
+${selectedProduct}
 
 Price:
-₹${formattedPrice}
+${selectedPrice}
+
+Target Username / Link:
+${target}
 
 Payment Status:
 Pending
 
 Please send payment screenshot after payment.
 
-⚡ Fast • Safe • Trusted`;
+⚡ Fast • Secure • Trusted`;
 
 
                 const whatsappURL =
@@ -2711,18 +2188,11 @@ Please send payment screenshot after payment.
                 window.open(
                     whatsappURL,
                     "_blank",
-                    "noopener"
+                    "noopener,noreferrer"
                 );
 
             }
         );
-
-
-        /* ================================================
-           INITIAL STATE
-        ================================================ */
-
-        updateOrderState();
 
     }
 );
