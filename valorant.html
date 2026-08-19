@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050711">
 
     <meta
         name="description"
-        content="Buy Valorant Points from Pantheos Global Store. Fast, secure and trusted Valorant VP top-up."
+        content="Valorant VP Top Up at Pantheos Global Store. Fast, secure and trusted."
     >
 
     <title>Valorant VP Top Up | Pantheos Global Store</title>
@@ -14,13 +16,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="product-page">
+<body>
 
 <!-- =====================================================
      LOADER
 ===================================================== -->
 
-<div id="pageLoader" class="page-loader">
+<div class="page-loader" id="loader">
 
     <div class="loader-content">
 
@@ -30,9 +32,19 @@
             class="loader-logo"
         >
 
-        <div class="loader-spinner"></div>
+        <div class="loader-title">PANTHEOS</div>
 
-        <p>Loading Pantheos Global Store...</p>
+        <div class="loader-subtitle">
+            FAST • SECURE • TRUSTED
+        </div>
+
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading Valorant...
+        </div>
 
     </div>
 
@@ -43,9 +55,9 @@
      HEADER
 ===================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header class="site-header">
 
-    <div class="container nav-container">
+    <div class="header-container">
 
         <a href="index.html" class="brand">
 
@@ -55,50 +67,58 @@
             >
 
             <div class="brand-text">
-                <strong>Pantheos</strong>
+                <strong>PANTHEOS</strong>
                 <span>GLOBAL STORE</span>
             </div>
 
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="nav-links">
 
             <a href="index.html">Home</a>
+
             <a href="index.html#games">Games</a>
+
             <a href="index.html#services">Services</a>
+
             <a href="index.html#community">Community</a>
+
             <a href="index.html#support">Support</a>
 
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
             <a
                 href="https://wa.me/919310651934"
                 target="_blank"
-                class="nav-whatsapp"
+                rel="noopener"
+                class="whatsapp-btn"
             >
                 WhatsApp
             </a>
 
             <a
                 href="#topup"
-                class="nav-topup"
+                class="primary-btn"
             >
-                Top Up Now
+                TOP UP NOW
             </a>
 
         </div>
 
 
         <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
             aria-label="Open menu"
         >
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
     </div>
@@ -107,16 +127,21 @@
     <div class="mobile-menu" id="mobileMenu">
 
         <a href="index.html">Home</a>
+
         <a href="index.html#games">Games</a>
+
         <a href="index.html#services">Services</a>
+
         <a href="index.html#community">Community</a>
+
         <a href="index.html#support">Support</a>
 
         <a
             href="https://wa.me/919310651934"
             target="_blank"
+            rel="noopener"
         >
-            WhatsApp
+            WhatsApp Support
         </a>
 
     </div>
@@ -124,50 +149,61 @@
 </header>
 
 
+<main>
+
 <!-- =====================================================
-     VALORANT HERO
+     HERO
 ===================================================== -->
 
-<section
-    class="product-hero"
-    style="background-image:url('assets/valorant-banner.jpg');"
->
+<section class="game-hero">
 
-    <div class="product-hero-overlay"></div>
+    <div class="game-hero-background">
 
-    <div class="container product-hero-content">
+        <img
+            src="assets/valorant-banner.jpg"
+            alt="Valorant"
+        >
 
-        <div class="product-game-logo">
+    </div>
+
+    <div class="game-hero-overlay"></div>
+
+
+    <div class="container game-hero-content">
+
+        <div class="game-logo-wrapper">
 
             <img
                 src="assets/valorant-logo.jpg"
-                alt="Valorant"
+                alt="Valorant Logo"
+                class="game-logo"
             >
 
         </div>
 
 
-        <div class="product-hero-info">
+        <div class="game-hero-info">
 
-            <span class="product-category">
-                RIOT GAMES
-            </span>
+            <div class="eyebrow">
+                RIOT GAMES • VALORANT
+            </div>
 
             <h1>
-                VALORANT VP TOP UP
+                VALORANT
+                <span>VP TOP UP</span>
             </h1>
 
             <p>
-                Recharge Valorant Points quickly with
-                Pantheos Global Store.
-                Fast delivery, secure ordering and trusted support.
+                Get Valorant Points quickly and securely
+                through Pantheos Global Store.
             </p>
 
-            <div class="hero-trust">
+
+            <div class="hero-trust-row">
 
                 <span>⚡ Fast Delivery</span>
                 <span>🔒 Secure</span>
-                <span>✓ Trusted</span>
+                <span>⭐ Trusted</span>
                 <span>🛡️ 24/7 Support</span>
 
             </div>
@@ -180,680 +216,516 @@
 
 
 <!-- =====================================================
-     MAIN ORDER AREA
+     TOP UP
 ===================================================== -->
 
-<main class="product-main" id="topup">
+<section
+    class="topup-section"
+    id="topup"
+>
 
-    <div class="container product-layout">
+<div class="container">
 
 
-        <!-- =================================================
-             LEFT
-        ================================================= -->
+    <div class="section-heading">
 
-        <div class="product-left">
+        <span class="section-label">
+            VALORANT TOP UP
+        </span>
 
+        <h2>
+            Complete Your Order
+        </h2>
 
-            <!-- RIOT ID -->
+        <p>
+            Enter your Riot ID and select your
+            preferred VP package.
+        </p>
 
-            <section class="order-section reveal">
+    </div>
 
-                <div class="section-heading">
 
-                    <span class="section-number">
-                        01
-                    </span>
+    <!-- =================================================
+         RIOT ID
+    ================================================== -->
 
-                    <div>
+    <div class="order-step-card">
 
-                        <span class="eyebrow">
-                            PLAYER INFORMATION
-                        </span>
+        <div class="step-heading">
 
-                        <h2>
-                            Enter Your Riot ID
-                        </h2>
+            <div class="step-number">
+                01
+            </div>
 
-                    </div>
+            <div>
 
-                </div>
+                <h3>
+                    Player Information
+                </h3>
 
+                <p>
+                    Enter your Valorant Riot ID.
+                </p>
 
-                <div class="input-card">
-
-                    <label for="riotId">
-                        Riot ID
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span class="input-icon">
-                            🎮
-                        </span>
-
-                        <input
-                            type="text"
-                            id="riotId"
-                            placeholder="Example: PlayerName#TAG"
-                            autocomplete="off"
-                        >
-
-                    </div>
-
-                    <small>
-                        Enter your Riot ID exactly as shown in Valorant.
-                    </small>
-
-                </div>
-
-
-                <div class="input-card">
-
-                    <label for="region">
-                        Region / Server
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span class="input-icon">
-                            🌐
-                        </span>
-
-                        <select id="region">
-
-                            <option value="">
-                                Select Region
-                            </option>
-
-                            <option value="India">
-                                India
-                            </option>
-
-                            <option value="Asia Pacific">
-                                Asia Pacific
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 VP PACKAGES
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            VALORANT POINTS
-                        </span>
-
-                        <h2>
-                            Choose Your VP Package
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <!-- 475 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="475 VP"
-                        data-price="475"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                475 VP
-                            </strong>
-
-                            <span>
-                                Valorant Points
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹475
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 1000 + 100 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="1000 + 100 VP"
-                        data-price="950"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                1000 + 100 VP
-                            </strong>
-
-                            <span class="bonus-text">
-                                +100 Bonus VP • Total 1100 VP
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹950
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 2050 + 200 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="2050 + 200 VP"
-                        data-price="1900"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                2050 + 200 VP
-                            </strong>
-
-                            <span class="bonus-text">
-                                +200 Bonus VP • Total 2250 VP
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹1,900
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 3650 + 350 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="3650 + 350 VP"
-                        data-price="2850"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                3650 + 350 VP
-                            </strong>
-
-                            <span class="bonus-text">
-                                +350 Bonus VP • Total 4000 VP
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹2,850
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 5350 + 500 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="5350 + 500 VP"
-                        data-price="3800"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                5350 + 500 VP
-                            </strong>
-
-                            <span class="bonus-text">
-                                +500 Bonus VP • Total 5850 VP
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹3,800
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <!-- 11000 + 1000 -->
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="11000 + 1000 VP"
-                        data-price="9500"
-                    >
-
-                        <div class="price-card-icon">
-                            ⚡
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                11000 + 1000 VP
-                            </strong>
-
-                            <span class="bonus-text">
-                                +1000 Bonus VP • Total 12000 VP
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>INR</small>
-
-                            <strong>
-                                ₹9,500
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 HOW TO ORDER
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            SIMPLE PROCESS
-                        </span>
-
-                        <h2>
-                            How To Order
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="steps-grid">
-
-                    <div class="step-card">
-
-                        <span>01</span>
-
-                        <h3>
-                            Enter Riot ID
-                        </h3>
-
-                        <p>
-                            Enter your correct Riot ID and tag.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>02</span>
-
-                        <h3>
-                            Select VP
-                        </h3>
-
-                        <p>
-                            Choose the Valorant Points package.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>03</span>
-
-                        <h3>
-                            Order
-                        </h3>
-
-                        <p>
-                            Continue through WhatsApp.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step-card">
-
-                        <span>04</span>
-
-                        <h3>
-                            Complete Payment
-                        </h3>
-
-                        <p>
-                            Send your payment screenshot after payment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
+            </div>
 
         </div>
 
 
-        <!-- =================================================
-             ORDER SUMMARY
-        ================================================= -->
+        <div class="input-grid">
 
-        <aside class="order-summary-container">
+            <div class="input-group">
 
-            <div class="order-summary">
+                <label for="riotId">
+                    Riot ID
+                </label>
 
-                <div class="summary-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUR ORDER
-                        </span>
-
-                        <h2>
-                            Order Summary
-                        </h2>
-
-                    </div>
-
-                    <span class="summary-status">
-                        ● READY
-                    </span>
-
-                </div>
-
-
-                <div class="summary-game">
-
-                    <img
-                        src="assets/valorant-logo.jpg"
-                        alt="Valorant"
-                    >
-
-                    <div>
-
-                        <strong>
-                            Valorant
-                        </strong>
-
-                        <span>
-                            VP Top Up
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-details">
-
-                    <div class="summary-row">
-
-                        <span>
-                            Riot ID
-                        </span>
-
-                        <strong id="summaryRiotId">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Region
-                        </span>
-
-                        <strong id="summaryRegion">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Package
-                        </span>
-
-                        <strong id="summaryProduct">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Price
-                        </span>
-
-                        <strong id="summaryPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="summaryTotal">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div
-                    id="selectionMessage"
-                    class="selection-message"
-                >
-                    Enter your Riot ID, choose your region and select a VP package.
-                </div>
-
-
-                <button
-                    type="button"
-                    id="orderButton"
-                    class="order-button"
-                    disabled
+                <input
+                    type="text"
+                    id="riotId"
+                    placeholder="Example: PlayerName#TAG"
+                    autocomplete="off"
+                    maxlength="40"
                 >
 
-                    <span>
-                        ORDER VIA WHATSAPP
-                    </span>
-
-                    <strong>
-                        →
-                    </strong>
-
-                </button>
-
-
-                <div class="payment-note">
-
-                    🔒 Secure ordering
-                    <br>
-                    ⚡ Fast • Safe • Trusted
-
-                </div>
+                <small>
+                    Enter your Riot ID exactly as shown
+                    in Valorant.
+                </small>
 
             </div>
 
-        </aside>
+        </div>
+
+
+        <div
+            class="input-notice"
+            id="riotNotice"
+        >
+            🔒 Never share your Riot password or OTP.
+        </div>
 
     </div>
 
-</main>
+
+    <!-- =================================================
+         VP PACKAGES
+    ================================================== -->
+
+    <div class="order-step-card">
+
+        <div class="step-heading">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Valorant Points
+                </h3>
+
+                <p>
+                    Select your preferred VP package.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="diamond-list">
+
+
+            <article
+                class="diamond-card"
+                data-package="475 VP"
+                data-price="₹475"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        475 VP
+                    </strong>
+
+                    <small>
+                        Instant Top Up
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹475
+                </div>
+
+            </article>
+
+
+            <article
+                class="diamond-card"
+                data-package="1000 + 100 VP"
+                data-price="₹950"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        1000 + 100 VP
+                    </strong>
+
+                    <small>
+                        100 VP Bonus Included
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹950
+                </div>
+
+            </article>
+
+
+            <article
+                class="diamond-card"
+                data-package="2050 + 200 VP"
+                data-price="₹1900"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        2050 + 200 VP
+                    </strong>
+
+                    <small>
+                        200 VP Bonus Included
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹1900
+                </div>
+
+            </article>
+
+
+            <article
+                class="diamond-card"
+                data-package="3650 + 350 VP"
+                data-price="₹2850"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        3650 + 350 VP
+                    </strong>
+
+                    <small>
+                        350 VP Bonus Included
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹2850
+                </div>
+
+            </article>
+
+
+            <article
+                class="diamond-card"
+                data-package="5350 + 500 VP"
+                data-price="₹3800"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        5350 + 500 VP
+                    </strong>
+
+                    <small>
+                        500 VP Bonus Included
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹3800
+                </div>
+
+            </article>
+
+
+            <article
+                class="diamond-card"
+                data-package="11000 + 1000 VP"
+                data-price="₹9500"
+                tabindex="0"
+            >
+
+                <div class="diamond-icon">
+                    ⚡
+                </div>
+
+                <div class="diamond-info">
+
+                    <span>
+                        VALORANT POINTS
+                    </span>
+
+                    <strong>
+                        11000 + 1000 VP
+                    </strong>
+
+                    <small>
+                        1000 VP Bonus Included
+                    </small>
+
+                </div>
+
+                <div class="diamond-price">
+                    ₹9500
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="horizontal-scroll-hint">
+            ← Swipe horizontally on mobile →
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
+
+    <aside
+        class="order-summary-card"
+        id="orderSummary"
+    >
+
+        <div class="summary-header">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+                <h2>
+                    Order Summary
+                </h2>
+
+            </div>
+
+            <div class="summary-status">
+                Pending
+            </div>
+
+        </div>
+
+
+        <div class="summary-body">
+
+            <div class="summary-row">
+
+                <span>
+                    Riot ID
+                </span>
+
+                <strong id="summaryRiot">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Selected Product
+                </span>
+
+                <strong id="summaryProduct">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Price
+                </span>
+
+                <strong
+                    id="summaryPrice"
+                    class="summary-total"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="payment-status">
+
+                <span>
+                    Payment Status
+                </span>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="order-button"
+                id="orderButton"
+            >
+
+                <span>
+                    ORDER VIA WHATSAPP
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="order-note">
+
+                📩 After placing your order,
+                send your payment screenshot
+                on WhatsApp.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         SECURITY
+    ================================================== -->
+
+    <div class="security-card">
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <div>
+
+            <h3>
+                Secure Valorant Ordering
+            </h3>
+
+            <p>
+                Pantheos Global Store never asks for
+                your Riot password or OTP.
+                Only provide the information required
+                for your order.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
 
 <!-- =====================================================
      SUPPORT
 ===================================================== -->
 
-<section class="product-support">
+<section class="support-cta">
 
     <div class="container">
 
-        <div class="support-card">
+        <div class="support-cta-inner">
 
             <div>
 
-                <span class="eyebrow">
+                <span class="section-label">
                     NEED HELP?
                 </span>
 
                 <h2>
-                    Pantheos Support is available 24/7
+                    Valorant Support Available 24/7
                 </h2>
 
                 <p>
-                    Need help with your Valorant order?
-                    Contact us before making payment.
+                    Need help with your Riot ID or VP
+                    package? Contact our support team.
                 </p>
 
             </div>
@@ -864,15 +736,17 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
-                    class="support-btn"
+                    rel="noopener"
+                    class="primary-btn"
                 >
-                    WhatsApp
+                    WhatsApp Support
                 </a>
 
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
-                    class="support-btn secondary"
+                    rel="noopener"
+                    class="secondary-btn"
                 >
                     Telegram
                 </a>
@@ -885,6 +759,8 @@
 
 </section>
 
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -894,7 +770,7 @@
 
     <div class="container">
 
-        <div class="footer-main">
+        <div class="footer-grid">
 
 
             <div class="footer-brand">
@@ -909,8 +785,13 @@
                 </h3>
 
                 <p>
-                    Fast • Secure • Trusted
+                    Fast, secure and trusted gaming
+                    top-ups and digital services.
                 </p>
+
+                <strong>
+                    Fast • Secure • Trusted
+                </strong>
 
             </div>
 
@@ -922,11 +803,17 @@
                 </h4>
 
                 <a href="mlbb.html">Mobile Legends</a>
+
                 <a href="bgmi.html">BGMI</a>
+
                 <a href="freefire.html">Free Fire</a>
+
                 <a href="codm.html">COD Mobile</a>
+
                 <a href="valorant.html">Valorant</a>
+
                 <a href="genshin.html">Genshin Impact</a>
+
                 <a href="hsr.html">Honkai Star Rail</a>
 
             </div>
@@ -938,9 +825,17 @@
                     Services
                 </h4>
 
-                <a href="giftcards.html">Gift Cards</a>
-                <a href="ott.html">OTT Services</a>
-                <a href="boosting.html">Boosting</a>
+                <a href="giftcards.html">
+                    Gift Cards
+                </a>
+
+                <a href="ott.html">
+                    OTT Services
+                </a>
+
+                <a href="boosting.html">
+                    Social Boosting
+                </a>
 
             </div>
 
@@ -954,6 +849,7 @@
                 <a
                     href="https://instagram.com/pantheosglobalstore"
                     target="_blank"
+                    rel="noopener"
                 >
                     Instagram
                 </a>
@@ -961,6 +857,7 @@
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
+                    rel="noopener"
                 >
                     Telegram
                 </a>
@@ -968,6 +865,7 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
+                    rel="noopener"
                 >
                     WhatsApp
                 </a>
@@ -979,9 +877,10 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © 2026 Pantheos Global Store
-            </span>
+            <p>
+                © 2026 Pantheos Global Store.
+                All rights reserved.
+            </p>
 
             <span>
                 Fast • Secure • Trusted
@@ -1001,8 +900,9 @@
 <a
     href="https://wa.me/919310651934"
     target="_blank"
+    rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -1018,8 +918,9 @@
 ===================================================== -->
 
 <button
-    id="backToTop"
     class="back-to-top"
+    id="backToTop"
+    type="button"
     aria-label="Back to top"
 >
     ↑
@@ -1035,208 +936,209 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-    const riotInput =
-        document.getElementById("riotId");
+        const riotInput =
+            document.getElementById(
+                "riotId"
+            );
 
-    const regionInput =
-        document.getElementById("region");
+        const summaryRiot =
+            document.getElementById(
+                "summaryRiot"
+            );
 
-    const riotSummary =
-        document.getElementById("summaryRiotId");
+        const summaryProduct =
+            document.getElementById(
+                "summaryProduct"
+            );
 
-    const regionSummary =
-        document.getElementById("summaryRegion");
+        const summaryPrice =
+            document.getElementById(
+                "summaryPrice"
+            );
 
-    const productSummary =
-        document.getElementById("summaryProduct");
+        const orderButton =
+            document.getElementById(
+                "orderButton"
+            );
 
-    const priceSummary =
-        document.getElementById("summaryPrice");
+        const riotNotice =
+            document.getElementById(
+                "riotNotice"
+            );
 
-    const totalSummary =
-        document.getElementById("summaryTotal");
 
-    const orderButton =
-        document.getElementById("orderButton");
+        let selectedProduct = "";
 
-    const selectionMessage =
-        document.getElementById("selectionMessage");
+        let selectedPrice = "";
 
-    const priceCards =
-        document.querySelectorAll(".price-card");
 
+        /* ============================================
+           RIOT ID
+        ============================================ */
 
-    let selectedProduct = "";
-    let selectedPrice = "";
+        riotInput?.addEventListener(
+            "input",
+            () => {
 
+                summaryRiot.textContent =
+                    riotInput.value.trim() ||
+                    "—";
 
-    /* ==========================================
-       RIOT ID
-    ========================================== */
+                riotInput.classList.remove(
+                    "input-error"
+                );
 
-    riotInput.addEventListener("input", () => {
+                if (riotNotice) {
 
-        const value =
-            riotInput.value.trim();
+                    riotNotice.innerHTML =
+                        "🔒 Never share your Riot password or OTP.";
 
-        riotSummary.textContent =
-            value || "Not entered";
-
-        updateOrderState();
-
-    });
-
-
-    /* ==========================================
-       REGION
-    ========================================== */
-
-    regionInput.addEventListener("change", () => {
-
-        regionSummary.textContent =
-            regionInput.value || "Not selected";
-
-        updateOrderState();
-
-    });
-
-
-    /* ==========================================
-       VP SELECTION
-    ========================================== */
-
-    priceCards.forEach(card => {
-
-        card.addEventListener("click", () => {
-
-            priceCards.forEach(item => {
-
-                item.classList.remove("selected");
-
-            });
-
-
-            card.classList.add("selected");
-
-
-            selectedProduct =
-                card.dataset.product;
-
-            selectedPrice =
-                card.dataset.price;
-
-
-            productSummary.textContent =
-                selectedProduct;
-
-
-            const formattedPrice =
-                Number(selectedPrice)
-                    .toLocaleString("en-IN");
-
-
-            priceSummary.textContent =
-                "₹" + formattedPrice;
-
-            totalSummary.textContent =
-                "₹" + formattedPrice;
-
-
-            updateOrderState();
-
-        });
-
-    });
-
-
-    /* ==========================================
-       ORDER VALIDATION
-    ========================================== */
-
-    function updateOrderState() {
-
-        const riotId =
-            riotInput.value.trim();
-
-        const region =
-            regionInput.value;
-
-
-        if (
-            riotId &&
-            region &&
-            selectedProduct
-        ) {
-
-            orderButton.disabled = false;
-
-            selectionMessage.textContent =
-                "Your order is ready. Continue through WhatsApp.";
-
-            selectionMessage.classList.add("ready");
-
-        } else {
-
-            orderButton.disabled = true;
-
-            selectionMessage.classList.remove("ready");
-
-
-            if (!riotId) {
-
-                selectionMessage.textContent =
-                    "Enter your Riot ID.";
-
-            } else if (!region) {
-
-                selectionMessage.textContent =
-                    "Select your region.";
-
-            } else {
-
-                selectionMessage.textContent =
-                    "Select a VP package to continue.";
+                }
 
             }
-
-        }
-
-    }
+        );
 
 
-    /* ==========================================
-       WHATSAPP ORDER
-    ========================================== */
+        /* ============================================
+           PRODUCT SELECTION
+        ============================================ */
 
-    orderButton.addEventListener("click", () => {
-
-        const riotId =
-            riotInput.value.trim();
-
-        const region =
-            regionInput.value;
+        const products =
+            document.querySelectorAll(
+                ".diamond-card"
+            );
 
 
-        if (
-            !riotId ||
-            !region ||
-            !selectedProduct
-        ) {
-
-            return;
-
-        }
+        products.forEach(
+            card => {
 
 
-        const formattedPrice =
-            Number(selectedPrice)
-                .toLocaleString("en-IN");
+                function selectProduct() {
+
+                    products.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        }
+                    );
 
 
-        const message =
+                    card.classList.add(
+                        "selected"
+                    );
 
+
+                    selectedProduct =
+                        card.dataset.package ||
+                        "";
+
+
+                    selectedPrice =
+                        card.dataset.price ||
+                        "";
+
+
+                    summaryProduct.textContent =
+                        selectedProduct;
+
+
+                    summaryPrice.textContent =
+                        selectedPrice;
+
+
+                    document
+                        .getElementById(
+                            "orderSummary"
+                        )
+                        ?.classList.add(
+                            "summary-active"
+                        );
+
+                }
+
+
+                card.addEventListener(
+                    "click",
+                    selectProduct
+                );
+
+
+                card.addEventListener(
+                    "keydown",
+                    event => {
+
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+
+                            event.preventDefault();
+
+                            selectProduct();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ============================================
+           WHATSAPP ORDER
+        ============================================ */
+
+        orderButton?.addEventListener(
+            "click",
+            () => {
+
+                const riotId =
+                    riotInput
+                        ?.value
+                        ?.trim() ||
+                    "";
+
+
+                if (!riotId) {
+
+                    riotInput?.focus();
+
+                    riotInput?.classList.add(
+                        "input-error"
+                    );
+
+                    if (riotNotice) {
+
+                        riotNotice.innerHTML =
+                            "⚠️ Please enter your Riot ID.";
+
+                    }
+
+                    return;
+
+                }
+
+
+                if (!selectedProduct) {
+
+                    alert(
+                        "Please select a VP package first."
+                    );
+
+                    return;
+
+                }
+
+
+                const message =
 `🎮 Pantheos Global Store Order
 
 Game: Valorant
@@ -1244,36 +1146,38 @@ Game: Valorant
 Riot ID:
 ${riotId}
 
-Region:
-${region}
-
 Package:
 ${selectedProduct}
 
 Price:
-₹${formattedPrice}
+${selectedPrice}
 
 Payment Status:
 Pending
 
 Please send payment screenshot after payment.
 
-⚡ Fast • Safe • Trusted`;
+⚡ Fast • Secure • Trusted`;
 
 
-        const whatsappURL =
-            "https://wa.me/919310651934?text=" +
-            encodeURIComponent(message);
+                const whatsappURL =
+                    "https://wa.me/919310651934?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            }
         );
 
-    });
-
-});
+    }
+);
 
 </script>
 
