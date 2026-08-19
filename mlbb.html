@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,17 +11,12 @@
 
     <meta
         name="theme-color"
-        content="#050711"
+        content="#060811"
     >
 
     <meta
         name="description"
-        content="Mobile Legends Diamond Top-Up at Pantheos Global Store. Fast, secure and trusted MLBB diamonds, Weekly Pass, Starlight and Twilight Pass."
-    >
-
-    <meta
-        name="keywords"
-        content="MLBB diamonds, Mobile Legends top up, MLBB recharge, MLBB India, Weekly Pass, Starlight, Twilight Pass, Pantheos Global Store"
+        content="Mobile Legends Diamond Top Up at Pantheos Global Store."
     >
 
     <title>
@@ -32,7 +27,6 @@
         rel="stylesheet"
         href="css/style.css"
     >
-
 </head>
 
 
@@ -40,7 +34,7 @@
 
 
 <!-- =====================================================
-     PREMIUM LOADER
+     LOADER
 ===================================================== -->
 
 <div
@@ -52,7 +46,7 @@
 
         <img
             src="assets/pantheos-logo.PNG"
-            alt="Pantheos Global Store"
+            alt="Pantheos"
             class="loader-logo"
         >
 
@@ -99,7 +93,7 @@
 
             <img
                 src="assets/pantheos-logo.PNG"
-                alt="Pantheos Global Store Logo"
+                alt="Pantheos Global Store"
             >
 
             <div class="brand-text">
@@ -156,10 +150,10 @@
             </a>
 
             <a
-                href="#topup"
+                href="#recharge"
                 class="primary-btn"
             >
-                TOP UP NOW
+                TOP UP
             </a>
 
         </div>
@@ -169,8 +163,8 @@
         <button
             class="menu-toggle"
             id="menuToggle"
-            aria-label="Open menu"
             type="button"
+            aria-label="Open menu"
         >
 
             <span></span>
@@ -182,8 +176,6 @@
     </div>
 
 
-
-    <!-- MOBILE MENU -->
 
     <div
         class="mobile-menu"
@@ -225,11 +217,8 @@
 
 
 <!-- =====================================================
-     MLBB HERO
+     GAME HERO
 ===================================================== -->
-
-<main>
-
 
 <section class="game-hero">
 
@@ -242,7 +231,6 @@
 
     </div>
 
-
     <div class="game-hero-overlay"></div>
 
 
@@ -252,7 +240,7 @@
 
             <img
                 src="assets/mlbb-logo.jpg"
-                alt="Mobile Legends Logo"
+                alt="Mobile Legends"
                 class="game-logo"
             >
 
@@ -261,9 +249,9 @@
 
         <div class="game-hero-info">
 
-            <div class="eyebrow">
+            <span class="eyebrow">
                 MOBILE LEGENDS
-            </div>
+            </span>
 
             <h1>
                 Mobile Legends
@@ -273,29 +261,19 @@
             </h1>
 
             <p>
-                Recharge your Mobile Legends account
-                with fast delivery, secure payment
-                and trusted customer support.
+                Instant and secure MLBB top-up
+                with competitive pricing.
             </p>
-
 
             <div class="hero-trust-row">
 
-                <span>
-                    ⚡ Fast Delivery
-                </span>
+                <span>⚡ Fast Delivery</span>
 
-                <span>
-                    🔒 Secure
-                </span>
+                <span>🔒 Secure</span>
 
-                <span>
-                    ⭐ Trusted
-                </span>
+                <span>⭐ Trusted</span>
 
-                <span>
-                    🛡️ 24/7 Support
-                </span>
+                <span>🛡️ Support</span>
 
             </div>
 
@@ -308,34 +286,33 @@
 
 
 <!-- =====================================================
-     ORDER AREA
+     RECHARGE
 ===================================================== -->
 
-<section
-    class="topup-section"
-    id="topup"
+<main
+    class="mlbb-page"
+    id="recharge"
 >
 
 <div class="container">
 
 
     <!-- =================================================
-         SECTION HEADING
+         TITLE
     ================================================== -->
 
-    <div class="section-heading">
+    <div class="section-heading compact-heading">
 
         <span class="section-label">
-            MLBB TOP UP
+            MLBB RECHARGE
         </span>
 
         <h2>
-            Complete Your Order
+            Choose Your Top Up
         </h2>
 
         <p>
-            Enter your Mobile Legends account details,
-            choose your package and place your order.
+            Enter your account details and select a package.
         </p>
 
     </div>
@@ -343,1542 +320,1425 @@
 
 
     <!-- =================================================
-         PLAYER INFORMATION
+         ACCOUNT + ORDER LAYOUT
     ================================================== -->
 
-    <div class="order-step-card">
-
-        <div class="step-heading">
-
-            <div class="step-number">
-                01
-            </div>
-
-            <div>
-
-                <h3>
-                    Player Information
-                </h3>
-
-                <p>
-                    Enter your MLBB Player ID and Server ID.
-                </p>
-
-            </div>
-
-        </div>
+    <div class="recharge-layout">
 
 
+        <!-- =================================================
+             LEFT SIDE
+        ================================================== -->
 
-        <div class="input-grid">
+        <div class="recharge-main">
 
 
-            <div class="input-group">
+            <!-- =============================================
+                 ACCOUNT DETAILS
+            ============================================== -->
 
-                <label for="playerId">
-                    Player ID
-                </label>
+            <section class="compact-step-card">
 
-                <input
-                    type="text"
-                    id="playerId"
-                    data-player-id
-                    placeholder="Enter Player ID"
-                    inputmode="numeric"
-                    autocomplete="off"
-                    maxlength="20"
+                <div class="compact-step-head">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Account Details
+                        </h3>
+
+                        <p>
+                            Enter your MLBB Player ID and Server ID.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-fields">
+
+                    <div class="input-group">
+
+                        <label for="playerId">
+                            Player ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="playerId"
+                            data-player-id
+                            inputmode="numeric"
+                            maxlength="20"
+                            autocomplete="off"
+                            placeholder="Enter Player ID"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="serverId">
+                            Server ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="serverId"
+                            data-server-id
+                            inputmode="numeric"
+                            maxlength="10"
+                            autocomplete="off"
+                            placeholder="Enter Server ID"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="input-notice"
+                    id="playerNotice"
                 >
 
-                <small>
-                    Enter the numeric Player ID linked to your account.
-                </small>
+                    🔒 Never share your MLBB password.
 
-            </div>
+                </div>
+
+            </section>
 
 
 
-            <div class="input-group">
+            <!-- =============================================
+                 DIAMONDS
+            ============================================== -->
 
-                <label for="serverId">
-                    Server ID
-                </label>
+            <section class="compact-step-card">
 
-                <input
-                    type="text"
-                    id="serverId"
-                    data-server-id
-                    placeholder="Enter Server ID"
-                    inputmode="numeric"
-                    autocomplete="off"
-                    maxlength="10"
+                <div class="compact-step-head">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Diamond Packages
+                        </h3>
+
+                        <p>
+                            Swipe horizontally to browse packages.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="premium-horizontal-list mlbb-package-slider"
+                    id="diamondList"
                 >
 
-                <small>
-                    Example: 1234
-                </small>
 
-            </div>
+                    <article
+                        class="mlbb-package-card"
+                        data-package="5 Diamonds"
+                        data-price="₹13"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                5
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹13
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="11 Diamonds"
+                        data-price="₹23"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                11
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹23
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="14 Diamonds"
+                        data-price="₹34"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                14
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹34
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="22 Diamonds"
+                        data-price="₹44"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                22
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹44
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="28 Diamonds"
+                        data-price="₹59"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹59
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="55 Diamonds"
+                        data-price="₹89"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                55
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹89
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="86 Diamonds"
+                        data-price="₹129"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                86
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹129
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="110 Diamonds"
+                        data-price="₹169"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                110
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹169
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="172 Diamonds"
+                        data-price="₹259"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                172
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹259
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="257 Diamonds"
+                        data-price="₹379"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                257
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹379
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="275 Diamonds"
+                        data-price="₹399"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                275
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹399
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="312 Diamonds"
+                        data-price="₹469"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                312
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹469
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="361 Diamonds"
+                        data-price="₹529"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                361
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹529
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="429 Diamonds"
+                        data-price="₹634"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                429
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹634
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="451 Diamonds"
+                        data-price="₹689"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                451
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹689
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="514 Diamonds"
+                        data-price="₹749"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                514
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹749
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="565 Diamonds"
+                        data-price="₹819"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                565
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹819
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="706 Diamonds"
+                        data-price="₹1029"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                706
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1029
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="720 Diamonds"
+                        data-price="₹1059"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                720
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1059
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="803 Diamonds"
+                        data-price="₹1179"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                803
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1179
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="900 Diamonds"
+                        data-price="₹1329"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                900
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1329
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="1049 Diamonds"
+                        data-price="₹1539"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                1049
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1539
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="1130 Diamonds"
+                        data-price="₹1649"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                1130
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹1649
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="1412 Diamonds"
+                        data-price="₹2059"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                1412
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹2059
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="1503 Diamonds"
+                        data-price="₹2199"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                1503
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹2199
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="2195 Diamonds"
+                        data-price="₹3089"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                2195
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹3089
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="3688 Diamonds"
+                        data-price="₹5139"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                3688
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹5139
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="5532 Diamonds"
+                        data-price="₹7649"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                5532
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹7649
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="6046 Diamonds"
+                        data-price="₹8399"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                6046
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹8399
+                        </b>
+
+                    </article>
+
+
+
+                    <article
+                        class="mlbb-package-card"
+                        data-package="9288 Diamonds"
+                        data-price="₹12899"
+                        tabindex="0"
+                    >
+
+                        <div class="package-icon">
+                            💎
+                        </div>
+
+                        <div class="package-info">
+
+                            <strong>
+                                9288
+                            </strong>
+
+                            <span>
+                                Diamonds
+                            </span>
+
+                        </div>
+
+                        <b>
+                            ₹12899
+                        </b>
+
+                    </article>
+
+                </div>
+
+
+                <div class="slider-hint">
+                    ← Swipe to explore packages →
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SPECIAL PASSES
+            ============================================== -->
+
+            <section class="compact-step-card">
+
+                <div class="compact-step-head">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Special Passes
+                        </h3>
+
+                        <p>
+                            Premium MLBB memberships.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="premium-horizontal-list pass-slider"
+                >
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Weekly Pass 1×"
+                        data-price="₹155"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/weekly-pass.jpg"
+                            alt="Weekly Pass"
+                        >
+
+                        <div>
+
+                            <small>
+                                WEEKLY PASS
+                            </small>
+
+                            <strong>
+                                Weekly Pass 1×
+                            </strong>
+
+                            <b>
+                                ₹155
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Weekly Pass 2×"
+                        data-price="₹310"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/weekly-pass.jpg"
+                            alt="Weekly Pass 2x"
+                        >
+
+                        <div>
+
+                            <small>
+                                WEEKLY PASS
+                            </small>
+
+                            <strong>
+                                Weekly Pass 2×
+                            </strong>
+
+                            <b>
+                                ₹310
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Weekly Pass 3×"
+                        data-price="₹465"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/weekly-pass.jpg"
+                            alt="Weekly Pass 3x"
+                        >
+
+                        <div>
+
+                            <small>
+                                WEEKLY PASS
+                            </small>
+
+                            <strong>
+                                Weekly Pass 3×
+                            </strong>
+
+                            <b>
+                                ₹465
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Weekly Pass 5×"
+                        data-price="₹775"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/weekly-pass.jpg"
+                            alt="Weekly Pass 5x"
+                        >
+
+                        <div>
+
+                            <small>
+                                BEST VALUE
+                            </small>
+
+                            <strong>
+                                Weekly Pass 5×
+                            </strong>
+
+                            <b>
+                                ₹775
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Starlight Normal"
+                        data-price="₹249"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/starlight-normal.jpg"
+                            alt="Starlight Normal"
+                        >
+
+                        <div>
+
+                            <small>
+                                STARLIGHT
+                            </small>
+
+                            <strong>
+                                Starlight Normal
+                            </strong>
+
+                            <b>
+                                ₹249
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Starlight Premium"
+                        data-price="₹499"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/starlight-premium.jpg"
+                            alt="Starlight Premium"
+                        >
+
+                        <div>
+
+                            <small>
+                                PREMIUM
+                            </small>
+
+                            <strong>
+                                Starlight Premium
+                            </strong>
+
+                            <b>
+                                ₹499
+                            </b>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="pass-card"
+                        data-package="Twilight Pass"
+                        data-price="₹849"
+                        tabindex="0"
+                    >
+
+                        <img
+                            src="assets/twilight-pass.jpg"
+                            alt="Twilight Pass"
+                        >
+
+                        <div>
+
+                            <small>
+                                SPECIAL
+                            </small>
+
+                            <strong>
+                                Twilight Pass
+                            </strong>
+
+                            <b>
+                                ₹849
+                            </b>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
 
         </div>
 
 
 
-        <div
-            class="input-notice"
-            id="playerNotice"
+        <!-- =================================================
+             ORDER PANEL
+        ================================================== -->
+
+        <aside
+            class="mlbb-order-panel"
+            id="orderSummary"
         >
 
-            🔒 Please double-check your Player ID and
-            Server ID before placing the order.
+            <div class="order-panel-top">
 
-        </div>
+                <div>
 
-    </div>
+                    <span>
+                        YOUR ORDER
+                    </span>
 
+                    <h2>
+                        Order Summary
+                    </h2>
 
+                </div>
 
-    <!-- =================================================
-         SPECIAL PASSES
-    ================================================== -->
-
-    <div class="order-step-card">
-
-        <div class="step-heading">
-
-            <div class="step-number">
-                02
-            </div>
-
-            <div>
-
-                <h3>
-                    Special Passes
-                </h3>
-
-                <p>
-                    Select your preferred Mobile Legends pass.
-                </p>
+                <div class="pending-badge">
+                    PENDING
+                </div>
 
             </div>
 
-        </div>
 
+            <div class="order-selected">
 
-
-        <div
-            class="premium-horizontal-list"
-            id="passList"
-        >
-
-
-            <!-- WEEKLY 1X -->
-
-            <article
-                class="premium-product-card"
-                data-package="Weekly Pass 1×"
-                data-price="₹155"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/weekly-pass.jpg"
-                        alt="Weekly Pass"
-                    >
-
-                    <span class="product-badge">
-                        POPULAR
-                    </span>
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        WEEKLY PASS
-                    </span>
-
-                    <h3>
-                        Weekly Pass 1×
-                    </h3>
-
-                    <p>
-                        Mobile Legends Weekly Pass
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹155
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- WEEKLY 2X -->
-
-            <article
-                class="premium-product-card"
-                data-package="Weekly Pass 2×"
-                data-price="₹310"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/weekly-pass.jpg"
-                        alt="Weekly Pass 2x"
-                    >
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        WEEKLY PASS
-                    </span>
-
-                    <h3>
-                        Weekly Pass 2×
-                    </h3>
-
-                    <p>
-                        Two Weekly Passes
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹310
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- WEEKLY 3X -->
-
-            <article
-                class="premium-product-card"
-                data-package="Weekly Pass 3×"
-                data-price="₹465"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/weekly-pass.jpg"
-                        alt="Weekly Pass 3x"
-                    >
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        WEEKLY PASS
-                    </span>
-
-                    <h3>
-                        Weekly Pass 3×
-                    </h3>
-
-                    <p>
-                        Three Weekly Passes
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹465
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- WEEKLY 5X -->
-
-            <article
-                class="premium-product-card"
-                data-package="Weekly Pass 5×"
-                data-price="₹775"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/weekly-pass.jpg"
-                        alt="Weekly Pass 5x"
-                    >
-
-                    <span class="product-badge">
-                        BEST VALUE
-                    </span>
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        WEEKLY PASS
-                    </span>
-
-                    <h3>
-                        Weekly Pass 5×
-                    </h3>
-
-                    <p>
-                        Five Weekly Passes
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹775
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- STARLIGHT NORMAL -->
-
-            <article
-                class="premium-product-card"
-                data-package="Starlight Normal"
-                data-price="₹249"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/starlight-normal.jpg"
-                        alt="Starlight Normal"
-                    >
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        STARLIGHT
-                    </span>
-
-                    <h3>
-                        Starlight Normal
-                    </h3>
-
-                    <p>
-                        Standard Starlight membership
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹249
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- STARLIGHT PREMIUM -->
-
-            <article
-                class="premium-product-card"
-                data-package="Starlight Premium"
-                data-price="₹499"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/starlight-premium.jpg"
-                        alt="Starlight Premium"
-                        loading="lazy"
-                    >
-
-                    <span class="product-badge">
-                        PREMIUM
-                    </span>
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        STARLIGHT
-                    </span>
-
-                    <h3>
-                        Starlight Premium
-                    </h3>
-
-                    <p>
-                        Premium Starlight membership
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹499
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- TWILIGHT -->
-
-            <article
-                class="premium-product-card"
-                data-package="Twilight Pass"
-                data-price="₹849"
-                data-type="pass"
-                tabindex="0"
-            >
-
-                <div class="product-image">
-
-                    <img
-                        src="assets/twilight-pass.jpg"
-                        alt="Twilight Pass"
-                        loading="lazy"
-                    >
-
-                    <span class="product-badge">
-                        SPECIAL
-                    </span>
-
-                </div>
-
-
-                <div class="product-content">
-
-                    <span class="product-category">
-                        SPECIAL PASS
-                    </span>
-
-                    <h3>
-                        Twilight Pass
-                    </h3>
-
-                    <p>
-                        Exclusive Twilight Pass
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            ₹849
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="select-product"
-                        >
-                            Select
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================================
-         DIAMOND CHART
-    ================================================== -->
-
-    <div class="order-step-card">
-
-        <div class="step-heading">
-
-            <div class="step-number">
-                03
-            </div>
-
-            <div>
-
-                <h3>
-                    Diamond Packages
-                </h3>
-
-                <p>
-                    Choose your preferred MLBB Diamond package.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="diamond-list"
-            id="diamondList"
-        >
-
-
-            <!-- 5 -->
-
-            <article
-                class="diamond-card"
-                data-package="5 Diamonds"
-                data-price="₹13"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">
+                <div class="selected-icon">
                     💎
                 </div>
 
-                <div class="diamond-info">
+                <div>
 
-                    <span>
-                        DIAMONDS
-                    </span>
+                    <small>
+                        SELECTED PACKAGE
+                    </small>
 
-                    <strong>
-                        5 💎
+                    <strong id="summaryProduct">
+                        Select a package
                     </strong>
 
                 </div>
 
-                <div class="diamond-price">
-                    ₹13
-                </div>
-
-            </article>
+            </div>
 
 
+            <div class="summary-details">
 
-            <!-- 11 -->
+                <div>
 
-            <article
-                class="diamond-card"
-                data-package="11 Diamonds"
-                data-price="₹23"
-                data-type="diamond"
-                tabindex="0"
-            >
+                    <span>
+                        Player ID
+                    </span>
 
-                <div class="diamond-icon">
-                    💎
-                </div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>11 💎</strong>
+                    <strong id="summaryPlayer">
+                        —
+                    </strong>
 
                 </div>
 
-                <div class="diamond-price">
-                    ₹23
-                </div>
 
-            </article>
+                <div>
 
+                    <span>
+                        Server ID
+                    </span>
 
-
-            <!-- 14 -->
-
-            <article
-                class="diamond-card"
-                data-package="14 Diamonds"
-                data-price="₹34"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">
-                    💎
-                </div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>14 💎</strong>
+                    <strong id="summaryServer">
+                        —
+                    </strong>
 
                 </div>
-
-                <div class="diamond-price">
-                    ₹34
-                </div>
-
-            </article>
-
-
-
-            <!-- 22 -->
-
-            <article
-                class="diamond-card"
-                data-package="22 Diamonds"
-                data-price="₹44"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>22 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹44
-                </div>
-
-            </article>
-
-
-
-            <!-- 28 -->
-
-            <article
-                class="diamond-card"
-                data-package="28 Diamonds"
-                data-price="₹59"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>28 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹59
-                </div>
-
-            </article>
-
-
-
-            <!-- 55 -->
-
-            <article
-                class="diamond-card"
-                data-package="55 Diamonds"
-                data-price="₹89"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>55 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹89
-                </div>
-
-            </article>
-
-
-
-            <!-- 86 -->
-
-            <article
-                class="diamond-card"
-                data-package="86 Diamonds"
-                data-price="₹129"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>86 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹129
-                </div>
-
-            </article>
-
-
-
-            <!-- 110 -->
-
-            <article
-                class="diamond-card"
-                data-package="110 Diamonds"
-                data-price="₹169"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>110 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹169
-                </div>
-
-            </article>
-
-
-
-            <!-- 172 -->
-
-            <article
-                class="diamond-card"
-                data-package="172 Diamonds"
-                data-price="₹259"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>172 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹259
-                </div>
-
-            </article>
-
-
-
-            <!-- 257 -->
-
-            <article
-                class="diamond-card"
-                data-package="257 Diamonds"
-                data-price="₹379"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>257 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹379
-                </div>
-
-            </article>
-
-
-
-            <!-- 275 -->
-
-            <article
-                class="diamond-card"
-                data-package="275 Diamonds"
-                data-price="₹399"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>275 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹399
-                </div>
-
-            </article>
-
-
-
-            <!-- 312 -->
-
-            <article
-                class="diamond-card"
-                data-package="312 Diamonds"
-                data-price="₹469"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>312 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹469
-                </div>
-
-            </article>
-
-
-
-            <!-- 361 -->
-
-            <article
-                class="diamond-card"
-                data-package="361 Diamonds"
-                data-price="₹529"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>361 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹529
-                </div>
-
-            </article>
-
-
-
-            <!-- 429 -->
-
-            <article
-                class="diamond-card"
-                data-package="429 Diamonds"
-                data-price="₹634"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>429 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹634
-                </div>
-
-            </article>
-
-
-
-            <!-- 451 -->
-
-            <article
-                class="diamond-card"
-                data-package="451 Diamonds"
-                data-price="₹689"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>451 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹689
-                </div>
-
-            </article>
-
-
-
-            <!-- 514 -->
-
-            <article
-                class="diamond-card"
-                data-package="514 Diamonds"
-                data-price="₹749"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>514 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹749
-                </div>
-
-            </article>
-
-
-
-            <!-- 565 -->
-
-            <article
-                class="diamond-card"
-                data-package="565 Diamonds"
-                data-price="₹819"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>565 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹819
-                </div>
-
-            </article>
-
-
-
-            <!-- 706 -->
-
-            <article
-                class="diamond-card"
-                data-package="706 Diamonds"
-                data-price="₹1029"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>706 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1029
-                </div>
-
-            </article>
-
-
-
-            <!-- 720 -->
-
-            <article
-                class="diamond-card"
-                data-package="720 Diamonds"
-                data-price="₹1059"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>720 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1059
-                </div>
-
-            </article>
-
-
-
-            <!-- 803 -->
-
-            <article
-                class="diamond-card"
-                data-package="803 Diamonds"
-                data-price="₹1179"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>803 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1179
-                </div>
-
-            </article>
-
-
-
-            <!-- 900 -->
-
-            <article
-                class="diamond-card"
-                data-package="900 Diamonds"
-                data-price="₹1329"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>900 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1329
-                </div>
-
-            </article>
-
-
-
-            <!-- 1049 -->
-
-            <article
-                class="diamond-card"
-                data-package="1049 Diamonds"
-                data-price="₹1539"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>1049 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1539
-                </div>
-
-            </article>
-
-
-
-            <!-- 1130 -->
-
-            <article
-                class="diamond-card"
-                data-package="1130 Diamonds"
-                data-price="₹1649"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>1130 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹1649
-                </div>
-
-            </article>
-
-
-
-            <!-- 1412 -->
-
-            <article
-                class="diamond-card"
-                data-package="1412 Diamonds"
-                data-price="₹2059"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>1412 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹2059
-                </div>
-
-            </article>
-
-
-
-            <!-- 1503 -->
-
-            <article
-                class="diamond-card"
-                data-package="1503 Diamonds"
-                data-price="₹2199"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>1503 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹2199
-                </div>
-
-            </article>
-
-
-
-            <!-- 2195 -->
-
-            <article
-                class="diamond-card"
-                data-package="2195 Diamonds"
-                data-price="₹3089"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>2195 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹3089
-                </div>
-
-            </article>
-
-
-
-            <!-- 3688 -->
-
-            <article
-                class="diamond-card"
-                data-package="3688 Diamonds"
-                data-price="₹5139"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>3688 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹5139
-                </div>
-
-            </article>
-
-
-
-            <!-- 5532 -->
-
-            <article
-                class="diamond-card"
-                data-package="5532 Diamonds"
-                data-price="₹7649"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>5532 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹7649
-                </div>
-
-            </article>
-
-
-
-            <!-- 6046 -->
-
-            <article
-                class="diamond-card"
-                data-package="6046 Diamonds"
-                data-price="₹8399"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>6046 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹8399
-                </div>
-
-            </article>
-
-
-
-            <!-- 9288 -->
-
-            <article
-                class="diamond-card"
-                data-package="9288 Diamonds"
-                data-price="₹12899"
-                data-type="diamond"
-                tabindex="0"
-            >
-
-                <div class="diamond-icon">💎</div>
-
-                <div class="diamond-info">
-
-                    <span>DIAMONDS</span>
-
-                    <strong>9288 💎</strong>
-
-                </div>
-
-                <div class="diamond-price">
-                    ₹12899
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <div class="horizontal-scroll-hint">
-
-            ← Swipe horizontally on mobile →
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =================================================
-         ORDER SUMMARY
-    ================================================== -->
-
-    <aside
-        class="order-summary-card"
-        id="orderSummary"
-    >
-
-        <div class="summary-header">
-
-            <div>
-
-                <span class="section-label">
-                    YOUR ORDER
-                </span>
-
-                <h2>
-                    Order Summary
-                </h2>
 
             </div>
 
-            <div class="summary-status">
-                Pending
-            </div>
 
-        </div>
-
-
-
-        <div class="summary-body">
-
-
-            <div class="summary-row">
+            <div class="summary-total-row">
 
                 <span>
-                    Player ID
+                    Total
                 </span>
 
-                <strong
-                    id="summaryPlayer"
-                >
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="summary-row">
-
-                <span>
-                    Server ID
-                </span>
-
-                <strong
-                    id="summaryServer"
-                >
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="summary-row">
-
-                <span>
-                    Selected Product
-                </span>
-
-                <strong
-                    id="summaryProduct"
-                >
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="summary-row">
-
-                <span>
-                    Price
-                </span>
-
-                <strong
-                    id="summaryPrice"
-                    class="summary-total"
-                >
+                <strong id="summaryPrice">
                     ₹0
-                </strong>
-
-            </div>
-
-
-            <div class="summary-divider"></div>
-
-
-            <div class="payment-status">
-
-                <span>
-                    Payment Status
-                </span>
-
-                <strong>
-                    Pending
                 </strong>
 
             </div>
@@ -1901,56 +1761,53 @@
             </button>
 
 
+            <div class="order-security">
+
+                <span>
+                    🔒
+                </span>
+
+                <p>
+                    We never ask for your game password.
+                    Only your Player ID and Server ID are required.
+                </p>
+
+            </div>
+
+
+            <div class="order-method">
+
+                <span>
+                    PAYMENT
+                </span>
+
+                <strong>
+                    Manual Confirmation
+                </strong>
+
+            </div>
+
+
             <p class="order-note">
 
-                📩 After placing your order,
-                send your payment screenshot
-                on WhatsApp.
+                After placing your order, send the
+                payment screenshot through WhatsApp.
 
             </p>
 
-        </div>
+        </aside>
 
-    </aside>
-
-
-
-    <!-- =================================================
-         TRUST NOTICE
-    ================================================== -->
-
-    <div class="security-card">
-
-        <div class="security-icon">
-            🔐
-        </div>
-
-        <div>
-
-            <h3>
-                Secure Ordering
-            </h3>
-
-            <p>
-                Pantheos Global Store never asks for
-                your Mobile Legends password. Only
-                provide your Player ID and Server ID.
-            </p>
-
-        </div>
 
     </div>
 
-
-
 </div>
 
-</section>
+</main>
 
 
 
 <!-- =====================================================
-     SUPPORT CTA
+     SUPPORT
 ===================================================== -->
 
 <section class="support-cta">
@@ -1966,13 +1823,12 @@
                 </span>
 
                 <h2>
-                    Our Support Team Is Available 24/7
+                    Pantheos Support
                 </h2>
 
                 <p>
-                    Having trouble finding your Player ID
-                    or placing an order? Contact Pantheos
-                    Global Store anytime.
+                    Need help finding your Player ID,
+                    Server ID or completing your order?
                 </p>
 
             </div>
@@ -1986,7 +1842,7 @@
                     rel="noopener"
                     class="primary-btn"
                 >
-                    WhatsApp Support
+                    WhatsApp
                 </a>
 
                 <a
@@ -2008,10 +1864,6 @@
 
 
 
-</main>
-
-
-
 <!-- =====================================================
      FOOTER
 ===================================================== -->
@@ -2022,12 +1874,11 @@
 
         <div class="footer-grid">
 
-
             <div class="footer-brand">
 
                 <img
                     src="assets/pantheos-logo.PNG"
-                    alt="Pantheos Global Store"
+                    alt="Pantheos"
                 >
 
                 <h3>
@@ -2039,12 +1890,7 @@
                     top-ups and digital services.
                 </p>
 
-                <strong>
-                    Fast • Secure • Trusted
-                </strong>
-
             </div>
-
 
 
             <div class="footer-column">
@@ -2076,7 +1922,6 @@
             </div>
 
 
-
             <div class="footer-column">
 
                 <h4>
@@ -2096,7 +1941,6 @@
                 </a>
 
             </div>
-
 
 
             <div class="footer-column">
@@ -2142,7 +1986,7 @@
             </p>
 
             <span>
-                Fast • Secure • Trusted
+                FAST • SECURE • TRUSTED
             </span>
 
         </div>
@@ -2162,7 +2006,7 @@
     target="_blank"
     rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos Global Store on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -2184,165 +2028,121 @@
     type="button"
     aria-label="Back to top"
 >
-
     ↑
-
 </button>
 
 
 
 <!-- =====================================================
-     PAGE SCRIPT
+     MAIN JS
 ===================================================== -->
 
 <script src="js/main.js"></script>
 
 
-<script>
 
-/* =====================================================
-   MLBB PAGE ORDER SYSTEM
-===================================================== */
+<!-- =====================================================
+     MLBB PAGE JS
+===================================================== -->
+
+<script>
 
 document.addEventListener(
     "DOMContentLoaded",
-    () => {
+    function () {
 
+        const player =
+            document.getElementById("playerId");
 
-        const playerId =
-            document.getElementById(
-                "playerId"
-            );
-
-
-        const serverId =
-            document.getElementById(
-                "serverId"
-            );
-
+        const server =
+            document.getElementById("serverId");
 
         const summaryPlayer =
-            document.getElementById(
-                "summaryPlayer"
-            );
-
+            document.getElementById("summaryPlayer");
 
         const summaryServer =
-            document.getElementById(
-                "summaryServer"
-            );
-
+            document.getElementById("summaryServer");
 
         const summaryProduct =
-            document.getElementById(
-                "summaryProduct"
-            );
-
+            document.getElementById("summaryProduct");
 
         const summaryPrice =
-            document.getElementById(
-                "summaryPrice"
-            );
-
+            document.getElementById("summaryPrice");
 
         const orderButton =
-            document.getElementById(
-                "orderButton"
-            );
+            document.getElementById("orderButton");
+
+        const notice =
+            document.getElementById("playerNotice");
 
 
-        const playerNotice =
-            document.getElementById(
-                "playerNotice"
-            );
+        let selectedProduct = "";
+
+        let selectedPrice = "";
 
 
-        let selectedProduct =
-            "";
+        /* ==========================================
+           INPUTS
+        ========================================== */
 
-        let selectedPrice =
-            "";
+        player.addEventListener(
+            "input",
+            function () {
 
-
-
-        /* =============================================
-           PLAYER ID
-        ============================================= */
-
-        if (playerId) {
-
-            playerId.addEventListener(
-                "input",
-                () => {
-
-                    playerId.value =
-                        playerId.value.replace(
-                            /\D/g,
-                            ""
-                        );
-
-                    summaryPlayer.textContent =
-                        playerId.value ||
-                        "—";
-
-                }
-            );
-
-        }
-
-
-
-        /* =============================================
-           SERVER ID
-        ============================================= */
-
-        if (serverId) {
-
-            serverId.addEventListener(
-                "input",
-                () => {
-
-                    serverId.value =
-                        serverId.value.replace(
-                            /\D/g,
-                            ""
-                        );
-
-                    summaryServer.textContent =
-                        serverId.value ||
-                        "—";
-
-                }
-            );
-
-        }
-
-
-
-        /* =============================================
-           ALL PRODUCT CARDS
-        ============================================= */
-
-        const productCards =
-            document.querySelectorAll(
-                ".premium-product-card, .diamond-card"
-            );
-
-
-        productCards.forEach(
-            card => {
-
-
-                const selectButton =
-                    card.querySelector(
-                        ".select-product"
+                this.value =
+                    this.value.replace(
+                        /\D/g,
+                        ""
                     );
 
+                summaryPlayer.textContent =
+                    this.value || "—";
 
-                function selectCard() {
+                this.classList.remove(
+                    "input-error"
+                );
+
+            }
+        );
 
 
-                    productCards.forEach(
+        server.addEventListener(
+            "input",
+            function () {
+
+                this.value =
+                    this.value.replace(
+                        /\D/g,
+                        ""
+                    );
+
+                summaryServer.textContent =
+                    this.value || "—";
+
+                this.classList.remove(
+                    "input-error"
+                );
+
+            }
+        );
+
+
+        /* ==========================================
+           PACKAGE SELECTION
+        ========================================== */
+
+        const packages =
+            document.querySelectorAll(
+                ".mlbb-package-card, .pass-card"
+            );
+
+
+        packages.forEach(
+            card => {
+
+                function selectPackage() {
+
+                    packages.forEach(
                         item => {
 
                             item.classList.remove(
@@ -2360,7 +2160,7 @@ document.addEventListener(
 
                     selectedProduct =
                         card.dataset.package ||
-                        "Selected Product";
+                        "";
 
 
                     selectedPrice =
@@ -2376,6 +2176,28 @@ document.addEventListener(
                         selectedPrice;
 
 
+                    const icon =
+                        card.classList.contains(
+                            "pass-card"
+                        )
+                            ? "🎟️"
+                            : "💎";
+
+
+                    const selectedIcon =
+                        document.querySelector(
+                            ".selected-icon"
+                        );
+
+
+                    if (selectedIcon) {
+
+                        selectedIcon.textContent =
+                            icon;
+
+                    }
+
+
                     document
                         .getElementById(
                             "orderSummary"
@@ -2384,89 +2206,27 @@ document.addEventListener(
                             "summary-active"
                         );
 
-
-                    /* Mobile users automatically
-                       see the order summary */
-
-                    if (
-                        window.innerWidth < 768
-                    ) {
-
-                        setTimeout(
-                            () => {
-
-                                document
-                                    .getElementById(
-                                        "orderSummary"
-                                    )
-                                    ?.scrollIntoView({
-                                        behavior:
-                                            "smooth",
-                                        block:
-                                            "center"
-                                    });
-
-                            },
-                            150
-                        );
-
-                    }
-
                 }
 
 
                 card.addEventListener(
                     "click",
-                    event => {
-
-                        if (
-                            event.target.closest(
-                                "button"
-                            )
-                        ) {
-
-                            selectCard();
-
-                            return;
-
-                        }
-
-                        selectCard();
-
-                    }
+                    selectPackage
                 );
-
-
-                if (selectButton) {
-
-                    selectButton.addEventListener(
-                        "click",
-                        event => {
-
-                            event.stopPropagation();
-
-                            selectCard();
-
-                        }
-                    );
-
-                }
 
 
                 card.addEventListener(
                     "keydown",
-                    event => {
+                    function (event) {
 
                         if (
-                            event.key ===
-                                "Enter" ||
-                            event.key ===
-                                " "
+                            event.key === "Enter" ||
+                            event.key === " "
                         ) {
 
                             event.preventDefault();
 
-                            selectCard();
+                            selectPackage();
 
                         }
 
@@ -2477,192 +2237,137 @@ document.addEventListener(
         );
 
 
+        /* ==========================================
+           ORDER
+        ========================================== */
 
-        /* =============================================
-           ORDER BUTTON
-        ============================================= */
+        orderButton.addEventListener(
+            "click",
+            function () {
 
-        if (orderButton) {
+                const playerId =
+                    player.value.trim();
 
-            orderButton.addEventListener(
-                "click",
-                () => {
+                const serverId =
+                    server.value.trim();
 
 
-                    const id =
+                /* PLAYER */
+
+                if (
+                    !/^[0-9]{4,20}$/.test(
                         playerId
-                            ?.value
-                            ?.trim() ||
-                        "";
+                    )
+                ) {
 
-
-                    const server =
-                        serverId
-                            ?.value
-                            ?.trim() ||
-                        "";
-
-
-                    /* PLAYER VALIDATION */
-
-                    if (!id) {
-
-                        playerId?.focus();
-
-                        playerId?.classList.add(
-                            "input-error"
-                        );
-
-                        if (playerNotice) {
-
-                            playerNotice.innerHTML =
-                                "⚠️ Please enter your Player ID.";
-
-                        }
-
-                        return;
-
-                    }
-
-
-                    if (
-                        !/^[0-9]{4,20}$/.test(
-                            id
-                        )
-                    ) {
-
-                        playerId?.focus();
-
-                        playerId?.classList.add(
-                            "input-error"
-                        );
-
-                        if (playerNotice) {
-
-                            playerNotice.innerHTML =
-                                "⚠️ Please enter a valid Player ID.";
-
-                        }
-
-                        return;
-
-                    }
-
-
-                    /* SERVER VALIDATION */
-
-                    if (!server) {
-
-                        serverId?.focus();
-
-                        serverId?.classList.add(
-                            "input-error"
-                        );
-
-                        if (playerNotice) {
-
-                            playerNotice.innerHTML =
-                                "⚠️ Please enter your Server ID.";
-
-                        }
-
-                        return;
-
-                    }
-
-
-                    if (
-                        !/^[0-9]{2,10}$/.test(
-                            server
-                        )
-                    ) {
-
-                        serverId?.focus();
-
-                        serverId?.classList.add(
-                            "input-error"
-                        );
-
-                        if (playerNotice) {
-
-                            playerNotice.innerHTML =
-                                "⚠️ Please enter a valid Server ID.";
-
-                        }
-
-                        return;
-
-                    }
-
-
-                    /* PRODUCT VALIDATION */
-
-                    if (!selectedProduct) {
-
-                        alert(
-                            "Please select a Diamond Package or Special Pass first."
-                        );
-
-                        return;
-
-                    }
-
-
-                    playerId?.classList.remove(
+                    player.classList.add(
                         "input-error"
                     );
 
-                    serverId?.classList.remove(
-                        "input-error"
-                    );
+                    notice.innerHTML =
+                        "⚠️ Please enter a valid Player ID.";
 
+                    player.focus();
 
-                    /* =================================
-                       WHATSAPP MESSAGE
-                    ================================= */
-
-                    const message =
-`🎮 Pantheos Global Store Order
-
-Game: Mobile Legends
-
-Player ID:
-${id}
-
-Server ID:
-${server}
-
-Package:
-${selectedProduct}
-
-Price:
-${selectedPrice}
-
-Payment Status:
-Pending
-
-Please send payment screenshot after payment.
-
-⚡ Fast • Secure • Trusted`;
-
-
-                    const whatsappURL =
-                        "https://wa.me/919310651934?text=" +
-                        encodeURIComponent(
-                            message
-                        );
-
-
-                    window.open(
-                        whatsappURL,
-                        "_blank",
-                        "noopener,noreferrer"
-                    );
+                    return;
 
                 }
-            );
 
-        }
+
+                /* SERVER */
+
+                if (
+                    !/^[0-9]{2,10}$/.test(
+                        serverId
+                    )
+                ) {
+
+                    server.classList.add(
+                        "input-error"
+                    );
+
+                    notice.innerHTML =
+                        "⚠️ Please enter a valid Server ID.";
+
+                    server.focus();
+
+                    return;
+
+                }
+
+
+                /* PACKAGE */
+
+                if (!selectedProduct) {
+
+                    notice.innerHTML =
+                        "⚠️ Please select a Diamond Package or Special Pass.";
+
+                    document
+                        .getElementById(
+                            "diamondList"
+                        )
+                        ?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    return;
+
+                }
+
+
+                notice.innerHTML =
+                    "✅ Details verified. Opening WhatsApp...";
+
+
+                const message =
+`╔══════════════════════╗
+   🎮 PANTHEOS GLOBAL STORE
+      MLBB ORDER
+╚══════════════════════╝
+
+🎮 Game:
+Mobile Legends
+
+🆔 Player ID:
+${playerId}
+
+🌐 Server ID:
+${serverId}
+
+💎 Package:
+${selectedProduct}
+
+💰 Price:
+${selectedPrice}
+
+💳 Payment:
+Pending
+
+━━━━━━━━━━━━━━━━━━━━━━
+📸 Please send payment
+screenshot after payment.
+
+⚡ Fast • Secure • Trusted
+━━━━━━━━━━━━━━━━━━━━━━`;
+
+
+                const whatsapp =
+                    "https://wa.me/919310651934?text=" +
+                    encodeURIComponent(
+                        message
+                    );
+
+
+                window.open(
+                    whatsapp,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            }
+        );
 
     }
 );
