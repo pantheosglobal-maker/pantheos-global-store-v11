@@ -3539,3 +3539,298 @@ input:focus-visible {
     }
 
 }
+/* =========================================================
+   V11 MOBILE RECHARGE COMPACT FIX
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Make the recharge section tighter */
+    .topup-section {
+        padding: 38px 12px 55px;
+    }
+
+    .section-heading {
+        margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Smaller order cards */
+    .order-step-card {
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 18px;
+    }
+
+    .step-heading {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .step-number {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 12px;
+    }
+
+    .step-heading h3 {
+        font-size: 17px;
+    }
+
+    .step-heading p {
+        font-size: 11px;
+        margin-top: 3px;
+    }
+
+    /* Player inputs */
+    .input-grid {
+        gap: 11px;
+    }
+
+    .input-group label {
+        font-size: 12px;
+    }
+
+    .input-group input {
+        height: 44px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .input-group small {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .input-notice {
+        font-size: 10px;
+        padding: 9px 10px;
+        margin-top: 12px;
+    }
+
+    /* Special pass cards */
+    .premium-horizontal-list {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 3px 2px 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .premium-horizontal-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .premium-product-card {
+        min-width: 190px;
+        max-width: 190px;
+        border-radius: 15px;
+        scroll-snap-align: start;
+    }
+
+    .premium-product-card .product-image {
+        height: 105px;
+    }
+
+    .premium-product-card .product-content {
+        padding: 11px;
+    }
+
+    .premium-product-card h3 {
+        font-size: 14px;
+        margin: 4px 0;
+    }
+
+    .premium-product-card p {
+        font-size: 10px;
+        line-height: 1.35;
+        margin-bottom: 8px;
+    }
+
+    .product-category {
+        font-size: 8px;
+    }
+
+    .product-bottom strong {
+        font-size: 16px;
+    }
+
+    .select-product {
+        padding: 7px 10px;
+        font-size: 10px;
+        border-radius: 8px;
+    }
+
+    .product-badge {
+        font-size: 7px;
+        padding: 4px 6px;
+    }
+
+    /* Diamond cards — much more compact */
+    .diamond-list {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 3px 2px 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .diamond-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .diamond-card {
+        min-width: 145px;
+        max-width: 145px;
+        min-height: 62px;
+        padding: 10px;
+        border-radius: 13px;
+        scroll-snap-align: start;
+    }
+
+    .diamond-icon {
+        font-size: 19px;
+    }
+
+    .diamond-info span {
+        font-size: 8px;
+    }
+
+    .diamond-info strong {
+        font-size: 13px;
+    }
+
+    .diamond-price {
+        font-size: 14px;
+    }
+
+    .horizontal-scroll-hint {
+        font-size: 9px;
+        margin-top: 4px;
+    }
+
+    /* Order summary */
+    .order-summary-card {
+        padding: 16px;
+        border-radius: 18px;
+        margin-top: 16px;
+    }
+
+    .summary-header h2 {
+        font-size: 20px;
+    }
+
+    .summary-row {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    .summary-total {
+        font-size: 18px;
+    }
+
+    .order-button {
+        min-height: 46px;
+        font-size: 11px;
+        border-radius: 11px;
+    }
+
+    .order-note {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    /* Security */
+    .security-card {
+        padding: 13px;
+        gap: 10px;
+        border-radius: 15px;
+    }
+
+    .security-icon {
+        font-size: 20px;
+    }
+
+    .security-card h3 {
+        font-size: 13px;
+    }
+
+    .security-card p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    /* Support */
+    .support-cta {
+        padding: 38px 12px;
+    }
+
+    .support-cta-inner {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .support-cta h2 {
+        font-size: 21px;
+    }
+
+    .support-cta p {
+        font-size: 11px;
+    }
+
+    /* Floating WhatsApp */
+    .floating-whatsapp {
+        width: 48px !important;
+        height: 48px !important;
+        right: 14px !important;
+        bottom: 14px !important;
+        z-index: 9998 !important;
+    }
+
+    .floating-whatsapp img {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 50%;
+    }
+
+    /* Back to top */
+    .back-to-top {
+        position: fixed !important;
+        right: 14px !important;
+        bottom: 74px !important;
+        width: 42px !important;
+        height: 42px !important;
+        z-index: 9999 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        pointer-events: auto !important;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition:
+            opacity .25s ease,
+            visibility .25s ease,
+            transform .25s ease;
+    }
+
+    .back-to-top.visible {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0);
+    }
+
+}
