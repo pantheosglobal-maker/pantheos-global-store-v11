@@ -1,19 +1,22 @@
 /* =========================================================
    PANTHEOS GLOBAL STORE V11
    MAIN JAVASCRIPT
-   Version: 11.0
+   Mobile-first • Premium • Lightweight
    ========================================================= */
 
 "use strict";
 
 /* =========================================================
-   GLOBAL CONFIG
-   ========================================================= */
+   STORE CONFIG
+========================================================= */
 
 const PANTHEOS = {
     storeName: "Pantheos Global Store",
 
     whatsapp: "919310651934",
+
+    whatsappLink:
+        "https://wa.me/919310651934",
 
     instagram:
         "https://instagram.com/pantheosglobalstore",
@@ -21,19 +24,13 @@ const PANTHEOS = {
     telegram:
         "https://t.me/pantheosglobal",
 
-    whatsappLink:
-        "https://wa.me/919310651934",
-
-    support:
-        "24/7",
-
     currency: "₹"
 };
 
 
 /* =========================================================
    DOM READY
-   ========================================================= */
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -55,38 +52,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initBackToTop();
 
-    initFloatingWhatsApp();
-
     initCommunityLinks();
 
     initGameCards();
-
-    initLiveNotifications();
 
     initImageEffects();
 
     initActiveNavigation();
 
+    initFloatingWhatsApp();
+
+    initGenericOrderButtons();
+
+    initPackageSelection();
+
+    initLiveNotifications();
+
+    initHeroParticles();
+
+    updateCopyright();
+
 });
 
 
 /* =========================================================
-   PREMIUM LOADER
-   ========================================================= */
+   LOADER
+========================================================= */
 
 function initLoader() {
 
     const loader =
+        document.querySelector(".page-loader") ||
         document.querySelector(".loader") ||
-        document.querySelector("#loader") ||
-        document.querySelector(".page-loader");
+        document.querySelector("#loader");
 
     if (!loader) return;
 
     const progress =
         loader.querySelector(".loader-progress") ||
-        loader.querySelector(".progress-bar") ||
-        loader.querySelector("[data-loader-progress]");
+        loader.querySelector(".progress-bar");
 
     let value = 0;
 
@@ -94,101 +98,185 @@ function initLoader() {
 
         const interval = setInterval(() => {
 
-            value += Math.floor(Math.random() * 8) + 4;
+            value += Math.floor(Math.random() * 10) + 5;
 
             if (value >= 100) {
 
                 value = 100;
 
+                progress.style.width = "100%";
+
                 clearInterval(interval);
 
                 setTimeout(() => {
+
                     loader.classList.add("loaded");
-                }, 350);
+
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 700);
+
+                }, 250);
+
+            } else {
+
+                progress.style.width =
+                    `${value}%`;
 
             }
 
-            progress.style.width = `${value}%`;
-
-        }, 80);
+        }, 70);
 
     } else {
 
         setTimeout(() => {
+
             loader.classList.add("loaded");
-        }, 1200);
+
+            setTimeout(() => {
+                loader.remove();
+            }, 700);
+
+        }, 900);
 
     }
 
-    setTimeout(() => {
-        loader.classList.add("loaded");
-    }, 3000);
 }
 
 
 /* =========================================================
    MOBILE MENU
-   ========================================================= */
+========================================================= */
 
 function initMobileMenu() {
 
-    const menuButton =
+    const toggle =
         document.querySelector(".menu-toggle") ||
         document.querySelector("#menuToggle") ||
         document.querySelector("[data-menu-toggle]");
 
-    const mobileMenu =
+    const menu =
         document.querySelector(".mobile-menu") ||
         document.querySelector("#mobileMenu") ||
         document.querySelector("[data-mobile-menu]");
 
-    if (!menuButton || !mobileMenu) return;
+    if (!toggle || !menu) return;
 
-    menuButton.addEventListener("click", () => {
+    toggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
 
-        menuButton.classList.toggle("active");
+    function closeMenu() {
 
-        mobileMenu.classList.toggle("active");
+        toggle.classList.remove("active");
 
-        document.body.classList.toggle("menu-open");
+        menu.classList.remove("active");
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+        toggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+    function openMenu() {
+
+        toggle.classList.add("active");
+
+        menu.classList.add("active");
+
+        document.body.classList.add(
+            "menu-open"
+        );
+
+        toggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+    }
+
+    toggle.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        if (
+            menu.classList.contains("active")
+        ) {
+
+            closeMenu();
+
+        } else {
+
+            openMenu();
+
+        }
 
     });
 
-    mobileMenu
-        .querySelectorAll("a")
-        .forEach(link => {
 
-            link.addEventListener("click", () => {
+    menu.querySelectorAll("a").forEach(link => {
 
-                menuButton.classList.remove("active");
+        link.addEventListener(
+            "click",
+            closeMenu
+        );
 
-                mobileMenu.classList.remove("active");
+    });
 
-                document.body.classList.remove("menu-open");
 
-            });
+    document.addEventListener(
+        "click",
+        event => {
 
-        });
+            if (
+                menu.classList.contains("active") &&
+                !menu.contains(event.target) &&
+                !toggle.contains(event.target)
+            ) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (window.innerWidth > 900) {
+                closeMenu();
+            }
+
+        }
+    );
 
 }
 
 
 /* =========================================================
    STICKY HEADER
-   ========================================================= */
+========================================================= */
 
 function initStickyHeader() {
 
     const header =
-        document.querySelector("header") ||
-        document.querySelector(".header") ||
-        document.querySelector(".navbar");
+        document.querySelector(".site-header") ||
+        document.querySelector("header");
 
     if (!header) return;
 
-    const updateHeader = () => {
+    function update() {
 
-        if (window.scrollY > 30) {
+        if (window.scrollY > 25) {
 
             header.classList.add("scrolled");
 
@@ -198,13 +286,13 @@ function initStickyHeader() {
 
         }
 
-    };
+    }
 
-    updateHeader();
+    update();
 
     window.addEventListener(
         "scroll",
-        updateHeader,
+        update,
         { passive: true }
     );
 
@@ -213,39 +301,73 @@ function initStickyHeader() {
 
 /* =========================================================
    SMOOTH SCROLL
-   ========================================================= */
+========================================================= */
 
 function initSmoothScroll() {
 
     document
         .querySelectorAll('a[href^="#"]')
-        .forEach(anchor => {
+        .forEach(link => {
 
-            anchor.addEventListener("click", event => {
+            link.addEventListener(
+                "click",
+                event => {
 
-                const targetId =
-                    anchor.getAttribute("href");
+                    const href =
+                        link.getAttribute("href");
 
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
+                    if (
+                        !href ||
+                        href === "#"
+                    ) {
+                        return;
+                    }
+
+                    let target;
+
+                    try {
+
+                        target =
+                            document.querySelector(
+                                href
+                            );
+
+                    } catch {
+
+                        return;
+
+                    }
+
+                    if (!target) return;
+
+                    event.preventDefault();
+
+                    const header =
+                        document.querySelector(
+                            ".site-header"
+                        );
+
+                    const offset =
+                        header
+                            ? header.offsetHeight + 12
+                            : 10;
+
+                    const position =
+                        target.getBoundingClientRect()
+                            .top +
+                        window.scrollY -
+                        offset;
+
+                    window.scrollTo({
+                        top: Math.max(
+                            0,
+                            position
+                        ),
+                        behavior: "smooth"
+                    });
+
                 }
-
-                const target =
-                    document.querySelector(targetId);
-
-                if (!target) return;
-
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            });
+            );
 
         });
 
@@ -253,43 +375,49 @@ function initSmoothScroll() {
 
 
 /* =========================================================
-   SEARCH SYSTEM
-   ========================================================= */
+   SEARCH
+========================================================= */
 
 function initSearch() {
 
-    const searchInputs =
+    const inputs =
         document.querySelectorAll(
-            ".search-input, #searchInput, [data-search]"
+            ".search-input, " +
+            "#searchInput, " +
+            "[data-search]"
         );
 
-    if (!searchInputs.length) return;
+    if (!inputs.length) return;
 
-    searchInputs.forEach(input => {
+    inputs.forEach(input => {
 
         input.addEventListener(
             "input",
             () => {
 
-                const query =
+                performSearch(
                     input.value
                         .trim()
-                        .toLowerCase();
-
-                performSearch(query);
+                        .toLowerCase()
+                );
 
             }
         );
+
 
         input.addEventListener(
             "keydown",
             event => {
 
-                if (event.key === "Escape") {
+                if (
+                    event.key === "Escape"
+                ) {
 
                     input.value = "";
 
                     performSearch("");
+
+                    input.blur();
 
                 }
 
@@ -303,7 +431,7 @@ function initSearch() {
 
 function performSearch(query) {
 
-    const searchableItems =
+    const items =
         document.querySelectorAll(
             "[data-search-item], " +
             ".game-card, " +
@@ -313,26 +441,35 @@ function performSearch(query) {
             ".ott-card"
         );
 
-    searchableItems.forEach(item => {
+    items.forEach(item => {
 
-        const text =
-            item.textContent
-                .toLowerCase();
+        const searchableText =
+            (
+                item.dataset.searchText ||
+                item.textContent ||
+                ""
+            ).toLowerCase();
 
-        if (!query || text.includes(query)) {
+        const visible =
+            !query ||
+            searchableText.includes(query);
 
-            item.style.display = "";
+        item.classList.toggle(
+            "search-hidden",
+            !visible
+        );
 
-            item.classList.remove(
-                "search-hidden"
+        if (!visible) {
+
+            item.setAttribute(
+                "aria-hidden",
+                "true"
             );
 
         } else {
 
-            item.style.display = "none";
-
-            item.classList.add(
-                "search-hidden"
+            item.removeAttribute(
+                "aria-hidden"
             );
 
         }
@@ -344,7 +481,7 @@ function performSearch(query) {
 
 /* =========================================================
    SCROLL REVEAL
-   ========================================================= */
+========================================================= */
 
 function initScrollReveal() {
 
@@ -361,12 +498,17 @@ function initScrollReveal() {
         !("IntersectionObserver" in window)
     ) {
 
-        elements.forEach(element => {
-            element.classList.add("visible");
-        });
+        elements.forEach(
+            element =>
+                element.classList.add(
+                    "visible"
+                )
+        );
 
         return;
+
     }
+
 
     const observer =
         new IntersectionObserver(
@@ -392,21 +534,25 @@ function initScrollReveal() {
 
             },
             {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
+                threshold: 0.08,
+                rootMargin:
+                    "0px 0px -30px 0px"
             }
         );
 
+
     elements.forEach(element => {
+
         observer.observe(element);
+
     });
 
 }
 
 
 /* =========================================================
-   ANIMATED STATISTICS
-   ========================================================= */
+   COUNTERS
+========================================================= */
 
 function initCounters() {
 
@@ -421,12 +567,14 @@ function initCounters() {
         !("IntersectionObserver" in window)
     ) {
 
-        counters.forEach(counter => {
-            animateCounter(counter);
-        });
+        counters.forEach(
+            animateCounter
+        );
 
         return;
+
     }
+
 
     const observer =
         new IntersectionObserver(
@@ -456,8 +604,11 @@ function initCounters() {
             }
         );
 
+
     counters.forEach(counter => {
+
         observer.observe(counter);
+
     });
 
 }
@@ -466,40 +617,42 @@ function initCounters() {
 function animateCounter(element) {
 
     if (
-        element.dataset.counterStarted === "true"
+        element.dataset.counterStarted ===
+        "true"
     ) {
         return;
     }
 
-    element.dataset.counterStarted = "true";
+    element.dataset.counterStarted =
+        "true";
+
 
     const target =
-        parseInt(
-            element.dataset.counter,
-            10
+        Number(
+            element.dataset.counter
         );
 
-    if (
-        Number.isNaN(target)
-    ) {
+
+    if (!Number.isFinite(target)) {
         return;
     }
 
-    const duration = 1800;
 
-    const startTime =
+    const duration = 1500;
+
+    const start =
         performance.now();
 
-    function update(currentTime) {
 
-        const elapsed =
-            currentTime - startTime;
+    function frame(now) {
 
         const progress =
             Math.min(
-                elapsed / duration,
+                (now - start) /
+                duration,
                 1
             );
+
 
         const eased =
             1 -
@@ -508,44 +661,36 @@ function animateCounter(element) {
                 3
             );
 
-        const current =
+
+        const value =
             Math.floor(
                 target * eased
             );
 
+
         element.textContent =
-            formatNumber(current);
+            new Intl.NumberFormat(
+                "en-IN"
+            ).format(value);
+
 
         if (progress < 1) {
 
-            requestAnimationFrame(update);
-
-        } else {
-
-            element.textContent =
-                formatNumber(target);
+            requestAnimationFrame(frame);
 
         }
 
     }
 
-    requestAnimationFrame(update);
 
-}
-
-
-function formatNumber(number) {
-
-    return new Intl.NumberFormat(
-        "en-IN"
-    ).format(number);
+    requestAnimationFrame(frame);
 
 }
 
 
 /* =========================================================
-   FAQ ACCORDION
-   ========================================================= */
+   FAQ
+========================================================= */
 
 function initFAQ() {
 
@@ -555,8 +700,6 @@ function initFAQ() {
             ".faq-header, " +
             "[data-faq-question]"
         );
-
-    if (!questions.length) return;
 
     questions.forEach(question => {
 
@@ -576,50 +719,54 @@ function initFAQ() {
                         ".faq-answer"
                     );
 
-                const isActive =
+                const active =
                     item.classList.contains(
                         "active"
                     );
+
 
                 document
                     .querySelectorAll(
                         ".faq-item.active"
                     )
-                    .forEach(activeItem => {
+                    .forEach(other => {
 
                         if (
-                            activeItem !== item
+                            other === item
                         ) {
+                            return;
+                        }
 
-                            activeItem.classList.remove(
-                                "active"
+                        other.classList.remove(
+                            "active"
+                        );
+
+                        const otherAnswer =
+                            other.querySelector(
+                                ".faq-answer"
                             );
 
-                            const activeAnswer =
-                                activeItem.querySelector(
-                                    ".faq-answer"
-                                );
+                        if (otherAnswer) {
 
-                            if (activeAnswer) {
-
-                                activeAnswer.style.maxHeight =
-                                    null;
-
-                            }
+                            otherAnswer.style.maxHeight =
+                                null;
 
                         }
 
                     });
 
-                if (isActive) {
+
+                if (active) {
 
                     item.classList.remove(
                         "active"
                     );
 
                     if (answer) {
+
                         answer.style.maxHeight =
                             null;
+
                     }
 
                 } else {
@@ -648,49 +795,10 @@ function initFAQ() {
 
 /* =========================================================
    BACK TO TOP
-   ========================================================= */
+   FIXED MOBILE POSITION
+========================================================= */
 
 function initBackToTop() {
-
-    const button =
-        document.querySelector(".back-to-top") ||
-        document.querySelector("#backToTop") ||
-        document.querySelector("[data-back-top]");
-
-    if (!button) return;
-
-    function updateBackToTop() {
-
-        if (window.scrollY > 350) {
-            button.classList.add("visible");
-        } else {
-            button.classList.remove("visible");
-        }
-
-    }
-
-    updateBackToTop();
-
-    window.addEventListener(
-        "scroll",
-        updateBackToTop,
-        { passive: true }
-    );
-
-    button.addEventListener("click", function (event) {
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
 
     const button =
         document.querySelector(
@@ -705,23 +813,19 @@ function initBackToTop() {
 
     if (!button) return;
 
-    const update = () => {
 
-        if (window.scrollY > 500) {
+    function update() {
 
-            button.classList.add(
-                "visible"
-            );
+        button.classList.toggle(
+            "visible",
+            window.scrollY > 450
+        );
 
-        } else {
+    }
 
-            button.classList.remove(
-                "visible"
-            );
 
-        }
+    update();
 
-    };
 
     window.addEventListener(
         "scroll",
@@ -729,9 +833,12 @@ function initBackToTop() {
         { passive: true }
     );
 
+
     button.addEventListener(
         "click",
-        () => {
+        event => {
+
+            event.preventDefault();
 
             window.scrollTo({
                 top: 0,
@@ -745,57 +852,8 @@ function initBackToTop() {
 
 
 /* =========================================================
-   FLOATING WHATSAPP
-   ========================================================= */
-
-function initFloatingWhatsApp() {
-
-    const buttons =
-        document.querySelectorAll(
-            ".whatsapp-btn, " +
-            ".floating-whatsapp, " +
-            "[data-whatsapp]"
-        );
-
-    if (!buttons.length) return;
-
-    buttons.forEach(button => {
-
-        if (
-            button.tagName.toLowerCase() === "a"
-        ) {
-
-            if (
-                !button.getAttribute("href")
-            ) {
-
-                button.href =
-                    PANTHEOS.whatsappLink;
-
-            }
-
-            return;
-        }
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                openWhatsApp(
-                    "Hello Pantheos Global Store! I need assistance."
-                );
-
-            }
-        );
-
-    });
-
-}
-
-
-/* =========================================================
    COMMUNITY LINKS
-   ========================================================= */
+========================================================= */
 
 function initCommunityLinks() {
 
@@ -805,12 +863,11 @@ function initCommunityLinks() {
         )
         .forEach(link => {
 
-            link.setAttribute(
-                "href",
-                PANTHEOS.instagram
-            );
+            link.href =
+                PANTHEOS.instagram;
 
         });
+
 
     document
         .querySelectorAll(
@@ -818,12 +875,11 @@ function initCommunityLinks() {
         )
         .forEach(link => {
 
-            link.setAttribute(
-                "href",
-                PANTHEOS.telegram
-            );
+            link.href =
+                PANTHEOS.telegram;
 
         });
+
 
     document
         .querySelectorAll(
@@ -831,10 +887,8 @@ function initCommunityLinks() {
         )
         .forEach(link => {
 
-            link.setAttribute(
-                "href",
-                PANTHEOS.whatsappLink
-            );
+            link.href =
+                PANTHEOS.whatsappLink;
 
         });
 
@@ -843,7 +897,7 @@ function initCommunityLinks() {
 
 /* =========================================================
    GAME CARD NAVIGATION
-   ========================================================= */
+========================================================= */
 
 function initGameCards() {
 
@@ -852,8 +906,6 @@ function initGameCards() {
             "[data-game-page]"
         );
 
-    if (!cards.length) return;
-
     cards.forEach(card => {
 
         card.addEventListener(
@@ -861,18 +913,23 @@ function initGameCards() {
             event => {
 
                 if (
-                    event.target.closest("a") ||
-                    event.target.closest("button")
+                    event.target.closest(
+                        "a, button"
+                    )
                 ) {
                     return;
                 }
 
+
                 const page =
                     card.dataset.gamePage;
 
+
                 if (page) {
+
                     window.location.href =
                         page;
+
                 }
 
             }
@@ -884,179 +941,100 @@ function initGameCards() {
 
 
 /* =========================================================
-   LIVE ORDER NOTIFICATIONS
-   ========================================================= */
-
-function initLiveNotifications() {
-
-    const container =
-        document.querySelector(
-            ".live-notification"
-        ) ||
-        document.querySelector(
-            "#liveNotification"
-        ) ||
-        document.querySelector(
-            "[data-live-notification]"
-        );
-
-    if (!container) return;
-
-    const notifications = [
-
-        "⚡ A customer just placed an order",
-
-        "💎 MLBB Diamonds order received",
-
-        "🔥 Popular package purchased",
-
-        "🎮 Gaming top-up order confirmed",
-
-        "🚀 New order processed",
-
-        "⭐ Customer order received",
-
-        "💳 New digital product order"
-
-    ];
-
-    let index = 0;
-
-    function showNotification() {
-
-        container.classList.remove(
-            "show"
-        );
-
-        setTimeout(() => {
-
-            container.textContent =
-                notifications[index];
-
-            container.classList.add(
-                "show"
-            );
-
-            index =
-                (index + 1) %
-                notifications.length;
-
-        }, 300);
-
-    }
-
-    showNotification();
-
-    setInterval(
-        showNotification,
-        6000
-    );
-
-}
-
-
-/* =========================================================
-   IMAGE HOVER EFFECTS
-   ========================================================= */
+   IMAGE EFFECTS
+========================================================= */
 
 function initImageEffects() {
 
-    const images =
-        document.querySelectorAll(
+    document
+        .querySelectorAll(
             ".game-card img, " +
             ".product-card img, " +
             ".service-card img"
-        );
+        )
+        .forEach(image => {
 
-    images.forEach(image => {
+            image.addEventListener(
+                "error",
+                () => {
 
-        image.addEventListener(
-            "mouseenter",
-            () => {
+                    image.classList.add(
+                        "image-load-error"
+                    );
 
-                image.classList.add(
-                    "image-hover"
-                );
+                }
+            );
 
-            }
-        );
-
-        image.addEventListener(
-            "mouseleave",
-            () => {
-
-                image.classList.remove(
-                    "image-hover"
-                );
-
-            }
-        );
-
-    });
+        });
 
 }
 
 
 /* =========================================================
    ACTIVE NAVIGATION
-   ========================================================= */
+========================================================= */
 
 function initActiveNavigation() {
 
-    const currentPage =
+    const current =
         window.location.pathname
             .split("/")
             .pop()
-            .toLowerCase();
+            .toLowerCase() ||
+        "index.html";
 
-    const links =
-        document.querySelectorAll(
+
+    document
+        .querySelectorAll(
             "nav a, " +
             ".nav-links a, " +
             ".mobile-menu a"
-        );
+        )
+        .forEach(link => {
 
-    links.forEach(link => {
+            const href =
+                link.getAttribute(
+                    "href"
+                );
 
-        const href =
-            link.getAttribute("href");
+            if (!href) return;
 
-        if (!href) return;
+            const clean =
+                href
+                    .split("/")
+                    .pop()
+                    .split("?")[0]
+                    .split("#")[0]
+                    .toLowerCase();
 
-        const linkPage =
-            href
-                .split("/")
-                .pop()
-                .split("?")[0]
-                .toLowerCase();
 
-        if (
-            linkPage &&
-            linkPage === currentPage
-        ) {
+            if (
+                clean &&
+                clean === current
+            ) {
 
-            link.classList.add(
-                "active"
-            );
+                link.classList.add(
+                    "active"
+                );
 
-        }
+            }
 
-    });
+        });
 
 }
 
 
 /* =========================================================
-   WHATSAPP ORDER SYSTEM
-   ========================================================= */
+   WHATSAPP
+========================================================= */
 
 function openWhatsApp(message) {
 
-    const encoded =
+    const url =
+        PANTHEOS.whatsappLink +
+        "?text=" +
         encodeURIComponent(message);
 
-    const url =
-        `https://wa.me/${PANTHEOS.whatsapp}?text=${encoded}`;
 
     window.open(
         url,
@@ -1068,8 +1046,8 @@ function openWhatsApp(message) {
 
 
 /* =========================================================
-   GENERATE STANDARD ORDER MESSAGE
-   ========================================================= */
+   STANDARD ORDER MESSAGE
+========================================================= */
 
 function generateOrderMessage({
 
@@ -1087,35 +1065,44 @@ function generateOrderMessage({
 
 } = {}) {
 
+
     let message =
-`🎮 Pantheos Global Store Order
+`🎮 PANTHEOS GLOBAL STORE
 
-Game: ${game}
+━━━━━━━━━━━━━━━━━━
+ORDER DETAILS
+━━━━━━━━━━━━━━━━━━
 
+Game:
+${game}
 `;
+
 
     if (playerId) {
 
         message +=
-`Player ID:
+`
+Player ID:
 ${playerId}
-
 `;
 
     }
+
 
     if (serverId) {
 
         message +=
-`Server ID:
+`
+Server ID:
 ${serverId}
-
 `;
 
     }
 
+
     message +=
-`Package:
+`
+Package:
 ${packageName}
 
 Price:
@@ -1123,6 +1110,10 @@ ${price}
 
 Payment Status:
 ${paymentStatus}
+
+━━━━━━━━━━━━━━━━━━
+⚡ FAST • SECURE • TRUSTED
+━━━━━━━━━━━━━━━━━━
 
 Please send payment screenshot after payment.`;
 
@@ -1132,8 +1123,8 @@ Please send payment screenshot after payment.`;
 
 
 /* =========================================================
-   GENERIC ORDER BUTTON
-   ========================================================= */
+   GENERIC ORDER BUTTONS
+========================================================= */
 
 function initGenericOrderButtons() {
 
@@ -1145,57 +1136,61 @@ function initGenericOrderButtons() {
 
             button.addEventListener(
                 "click",
-                () => {
+                event => {
+
+                    event.preventDefault();
+
 
                     const game =
                         button.dataset.game ||
                         "Gaming Top-Up";
 
+
                     const packageName =
                         button.dataset.package ||
                         "Selected Package";
+
 
                     const price =
                         button.dataset.price ||
                         "₹0";
 
-                    const playerInput =
+
+                    const player =
                         document.querySelector(
                             "[data-player-id]"
                         );
 
-                    const serverInput =
+
+                    const server =
                         document.querySelector(
                             "[data-server-id]"
                         );
 
-                    const playerId =
-                        playerInput
-                            ? playerInput.value.trim()
-                            : "";
-
-                    const serverId =
-                        serverInput
-                            ? serverInput.value.trim()
-                            : "";
 
                     const message =
                         generateOrderMessage({
 
                             game,
 
-                            playerId,
+                            playerId:
+                                player
+                                    ?.value
+                                    ?.trim() ||
+                                "",
 
-                            serverId,
+                            serverId:
+                                server
+                                    ?.value
+                                    ?.trim() ||
+                                "",
 
                             packageName,
 
-                            price,
-
-                            paymentStatus:
-                                "Pending"
+                            price
 
                         });
+
 
                     openWhatsApp(message);
 
@@ -1208,85 +1203,8 @@ function initGenericOrderButtons() {
 
 
 /* =========================================================
-   FORM VALIDATION
-   ========================================================= */
-
-function validateRequiredInputs(
-    container = document
-) {
-
-    const required =
-        container.querySelectorAll(
-            "[required]"
-        );
-
-    let valid = true;
-
-    required.forEach(input => {
-
-        const value =
-            input.value.trim();
-
-        if (!value) {
-
-            input.classList.add(
-                "input-error"
-            );
-
-            valid = false;
-
-        } else {
-
-            input.classList.remove(
-                "input-error"
-            );
-
-        }
-
-    });
-
-    return valid;
-
-}
-
-
-/* =========================================================
-   PLAYER ID VALIDATION
-   ========================================================= */
-
-function validatePlayerId(value) {
-
-    if (!value) {
-        return false;
-    }
-
-    return /^[0-9]{4,20}$/.test(
-        value
-    );
-
-}
-
-
-/* =========================================================
-   SERVER ID VALIDATION
-   ========================================================= */
-
-function validateServerId(value) {
-
-    if (!value) {
-        return false;
-    }
-
-    return /^[0-9]{2,10}$/.test(
-        value
-    );
-
-}
-
-
-/* =========================================================
-   GENERIC PACKAGE SELECTION
-   ========================================================= */
+   PACKAGE SELECTION
+========================================================= */
 
 function initPackageSelection() {
 
@@ -1295,37 +1213,42 @@ function initPackageSelection() {
             "[data-package]"
         );
 
-    packages.forEach(packageCard => {
 
-        packageCard.addEventListener(
+    if (!packages.length) return;
+
+
+    packages.forEach(card => {
+
+        card.setAttribute(
+            "aria-selected",
+            "false"
+        );
+
+
+        card.addEventListener(
             "click",
             () => {
 
-                packages.forEach(card => {
+                selectPackage(card);
 
-                    card.classList.remove(
-                        "selected"
-                    );
+            }
+        );
 
-                    card.setAttribute(
-                        "aria-selected",
-                        "false"
-                    );
 
-                });
+        card.addEventListener(
+            "keydown",
+            event => {
 
-                packageCard.classList.add(
-                    "selected"
-                );
+                if (
+                    event.key === "Enter" ||
+                    event.key === " "
+                ) {
 
-                packageCard.setAttribute(
-                    "aria-selected",
-                    "true"
-                );
+                    event.preventDefault();
 
-                updateOrderSummary(
-                    packageCard
-                );
+                    selectPackage(card);
+
+                }
 
             }
         );
@@ -1335,57 +1258,110 @@ function initPackageSelection() {
 }
 
 
+function selectPackage(card) {
+
+    const packages =
+        document.querySelectorAll(
+            "[data-package]"
+        );
+
+
+    packages.forEach(item => {
+
+        item.classList.remove(
+            "selected"
+        );
+
+        item.setAttribute(
+            "aria-selected",
+            "false"
+        );
+
+    });
+
+
+    card.classList.add(
+        "selected"
+    );
+
+
+    card.setAttribute(
+        "aria-selected",
+        "true"
+    );
+
+
+    updateOrderSummary(card);
+
+}
+
+
 /* =========================================================
    ORDER SUMMARY
-   ========================================================= */
+========================================================= */
 
-function updateOrderSummary(
-    selectedCard
-) {
+function updateOrderSummary(card) {
 
-    if (!selectedCard) return;
+    if (!card) return;
+
 
     const packageName =
-        selectedCard.dataset.package ||
-        selectedCard
-            .querySelector(
-                "[data-package-name]"
-            )
-            ?.textContent
-            ?.trim() ||
+        card.dataset.package ||
+        card.querySelector(
+            "[data-package-name]"
+        )?.textContent?.trim() ||
         "Selected Package";
 
+
     const price =
-        selectedCard.dataset.price ||
-        selectedCard
-            .querySelector(
-                "[data-price]"
-            )
-            ?.textContent
-            ?.trim() ||
+        card.dataset.price ||
+        card.querySelector(
+            "[data-price]"
+        )?.textContent?.trim() ||
         "₹0";
 
-    const summaryPackage =
+
+    const packageElement =
         document.querySelector(
-            "[data-summary-package]"
+            "[data-summary-package], " +
+            "#summaryProduct"
         );
 
-    const summaryPrice =
+
+    const priceElement =
         document.querySelector(
-            "[data-summary-price]"
+            "[data-summary-price], " +
+            "#summaryPrice"
         );
 
-    if (summaryPackage) {
 
-        summaryPackage.textContent =
+    if (packageElement) {
+
+        packageElement.textContent =
             packageName;
 
     }
 
-    if (summaryPrice) {
 
-        summaryPrice.textContent =
+    if (priceElement) {
+
+        priceElement.textContent =
             price;
+
+    }
+
+
+    const summary =
+        document.querySelector(
+            ".order-summary-card"
+        );
+
+
+    if (summary) {
+
+        summary.classList.add(
+            "summary-active"
+        );
 
     }
 
@@ -1393,29 +1369,266 @@ function updateOrderSummary(
 
 
 /* =========================================================
-   INITIALIZE ORDER HELPERS
-   ========================================================= */
+   LIVE NOTIFICATION
+========================================================= */
 
-initGenericOrderButtons();
+function initLiveNotifications() {
 
-initPackageSelection();
+    const element =
+        document.querySelector(
+            ".live-notification"
+        ) ||
+        document.querySelector(
+            "#liveNotification"
+        ) ||
+        document.querySelector(
+            "[data-live-notification]"
+        );
+
+
+    if (!element) return;
+
+
+    const messages = [
+
+        "⚡ A new order was received",
+
+        "💎 MLBB Diamond package selected",
+
+        "🎮 Gaming top-up order received",
+
+        "🔥 Popular package purchased",
+
+        "🚀 Order processed successfully",
+
+        "⭐ New customer order received"
+
+    ];
+
+
+    let index = 0;
+
+
+    function show() {
+
+        element.classList.remove(
+            "show"
+        );
+
+
+        setTimeout(() => {
+
+            element.textContent =
+                messages[index];
+
+
+            element.classList.add(
+                "show"
+            );
+
+
+            index =
+                (index + 1) %
+                messages.length;
+
+        }, 250);
+
+    }
+
+
+    show();
+
+
+    setInterval(
+        show,
+        6500
+    );
+
+}
 
 
 /* =========================================================
-   GLOBAL ESCAPE KEY
-   ========================================================= */
+   HERO PARTICLES
+========================================================= */
+
+function initHeroParticles() {
+
+    const hero =
+        document.querySelector(
+            ".hero"
+        ) ||
+        document.querySelector(
+            ".game-hero"
+        );
+
+
+    if (!hero) return;
+
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+        return;
+    }
+
+
+    const container =
+        document.createElement(
+            "div"
+        );
+
+
+    container.className =
+        "hero-particles";
+
+
+    container.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    const amount =
+        window.innerWidth < 600
+            ? 10
+            : 18;
+
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        const particle =
+            document.createElement(
+                "span"
+            );
+
+
+        particle.className =
+            "hero-particle";
+
+
+        particle.style.left =
+            `${Math.random() * 100}%`;
+
+
+        particle.style.animationDelay =
+            `${Math.random() * 5}s`;
+
+
+        particle.style.animationDuration =
+            `${5 + Math.random() * 7}s`;
+
+
+        container.appendChild(
+            particle
+        );
+
+    }
+
+
+    hero.appendChild(
+        container
+    );
+
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+function initFloatingWhatsApp() {
+
+    document
+        .querySelectorAll(
+            ".floating-whatsapp, " +
+            ".whatsapp-btn, " +
+            "[data-whatsapp]"
+        )
+        .forEach(button => {
+
+            if (
+                button.tagName.toLowerCase() ===
+                "a"
+            ) {
+
+                if (
+                    !button.getAttribute(
+                        "href"
+                    )
+                ) {
+
+                    button.href =
+                        PANTHEOS.whatsappLink;
+
+                }
+
+                return;
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    openWhatsApp(
+                        "Hello Pantheos Global Store! I need assistance."
+                    );
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+function updateCopyright() {
+
+    document
+        .querySelectorAll(
+            "[data-current-year]"
+        )
+        .forEach(element => {
+
+            element.textContent =
+                new Date()
+                    .getFullYear();
+
+        });
+
+}
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
 
 document.addEventListener(
     "keydown",
     event => {
 
-        if (event.key !== "Escape") {
+        if (
+            event.key !== "Escape"
+        ) {
             return;
         }
+
 
         document.body.classList.remove(
             "menu-open"
         );
+
 
         document
             .querySelectorAll(
@@ -1429,6 +1642,7 @@ document.addEventListener(
 
             });
 
+
         document
             .querySelectorAll(
                 ".menu-toggle.active"
@@ -1439,6 +1653,11 @@ document.addEventListener(
                     "active"
                 );
 
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
             });
 
     }
@@ -1447,7 +1666,7 @@ document.addEventListener(
 
 /* =========================================================
    PAGE VISIBILITY
-   ========================================================= */
+========================================================= */
 
 document.addEventListener(
     "visibilitychange",
@@ -1469,25 +1688,36 @@ document.addEventListener(
 
 
 /* =========================================================
-   ERROR PROTECTION
-   ========================================================= */
+   IMAGE LOAD SAFETY
+========================================================= */
 
-window.addEventListener(
+document.addEventListener(
     "error",
     event => {
 
-        console.warn(
-            "Pantheos V11:",
-            event.message
-        );
+        const element =
+            event.target;
 
-    }
+
+        if (
+            element &&
+            element.tagName === "IMG"
+        ) {
+
+            element.classList.add(
+                "image-load-error"
+            );
+
+        }
+
+    },
+    true
 );
 
 
 /* =========================================================
-   EXPORT GLOBAL FUNCTIONS
-   ========================================================= */
+   GLOBAL API
+========================================================= */
 
 window.Pantheos = {
 
@@ -1497,16 +1727,19 @@ window.Pantheos = {
 
     generateOrderMessage,
 
-    validateRequiredInputs,
+    updateOrderSummary,
 
-    validatePlayerId,
+    selectPackage,
 
-    validateServerId,
-
-    updateOrderSummary
+    performSearch
 
 };
 
+
+/* =========================================================
+   READY MESSAGE
+========================================================= */
+
 console.log(
-    "🎮 Pantheos Global Store V11 loaded successfully."
+    "🎮 Pantheos Global Store V11 — Main JS loaded."
 );
