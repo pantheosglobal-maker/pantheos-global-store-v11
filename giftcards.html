@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050711"
+    >
 
     <meta
         name="description"
-        content="Premium gift cards from Pantheos Global Store."
+        content="Premium gift cards and digital vouchers at Pantheos Global Store."
     >
 
     <title>Gift Cards | Pantheos Global Store</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 </head>
 
-<body class="product-page">
+<body>
 
 <!-- =====================================================
      LOADER
 ===================================================== -->
 
-<div id="pageLoader" class="page-loader">
+<div class="page-loader" id="loader">
 
     <div class="loader-content">
 
@@ -30,9 +42,21 @@
             class="loader-logo"
         >
 
-        <div class="loader-spinner"></div>
+        <div class="loader-title">
+            PANTHEOS
+        </div>
 
-        <p>Loading Pantheos Global Store...</p>
+        <div class="loader-subtitle">
+            FAST • SECURE • TRUSTED
+        </div>
+
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+
+        <div class="loader-text">
+            Loading Gift Cards...
+        </div>
 
     </div>
 
@@ -43,11 +67,14 @@
      HEADER
 ===================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header class="site-header">
 
-    <div class="container nav-container">
+    <div class="header-container">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+        >
 
             <img
                 src="assets/pantheos-logo.PNG"
@@ -55,68 +82,113 @@
             >
 
             <div class="brand-text">
-                <strong>Pantheos</strong>
-                <span>GLOBAL STORE</span>
+
+                <strong>
+                    PANTHEOS
+                </strong>
+
+                <span>
+                    GLOBAL STORE
+                </span>
+
             </div>
 
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="nav-links">
 
-            <a href="index.html">Home</a>
-            <a href="index.html#games">Games</a>
-            <a href="index.html#services">Services</a>
-            <a href="index.html#community">Community</a>
-            <a href="index.html#support">Support</a>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#games">
+                Games
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+            <a href="index.html#support">
+                Support
+            </a>
 
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
             <a
                 href="https://wa.me/919310651934"
                 target="_blank"
-                class="nav-whatsapp"
+                rel="noopener"
+                class="whatsapp-btn"
             >
                 WhatsApp
             </a>
 
             <a
                 href="#products"
-                class="nav-topup"
+                class="primary-btn"
             >
-                Shop Now
+                SHOP NOW
             </a>
 
         </div>
 
 
         <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
             aria-label="Open menu"
         >
-            ☰
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
     </div>
 
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
 
-        <a href="index.html">Home</a>
-        <a href="index.html#games">Games</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#community">Community</a>
-        <a href="index.html#support">Support</a>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#games">
+            Games
+        </a>
+
+        <a href="index.html#services">
+            Services
+        </a>
+
+        <a href="index.html#community">
+            Community
+        </a>
+
+        <a href="index.html#support">
+            Support
+        </a>
 
         <a
             href="https://wa.me/919310651934"
             target="_blank"
+            rel="noopener"
         >
-            WhatsApp
+            WhatsApp Support
         </a>
 
     </div>
@@ -128,45 +200,70 @@
      HERO
 ===================================================== -->
 
-<section
-    class="product-hero"
-    style="background-image:url('assets/hero-banner.jpg');"
->
+<main>
 
-    <div class="product-hero-overlay"></div>
+<section class="game-hero">
 
-    <div class="container product-hero-content">
+    <div class="game-hero-background">
 
-        <div class="product-game-logo">
+        <img
+            src="assets/hero-banner.jpg"
+            alt="Pantheos Gift Cards"
+        >
 
-            <div class="service-hero-icon">
-                🎁
-            </div>
+    </div>
+
+    <div class="game-hero-overlay"></div>
+
+
+    <div class="container game-hero-content">
+
+        <div class="game-logo-wrapper">
+
+            <img
+                src="assets/pantheos-logo.PNG"
+                alt="Pantheos Global Store"
+                class="game-logo"
+            >
 
         </div>
 
 
-        <div class="product-hero-info">
+        <div class="game-hero-info">
 
-            <span class="product-category">
+            <div class="eyebrow">
                 DIGITAL PRODUCTS
-            </span>
+            </div>
 
             <h1>
-                PREMIUM GIFT CARDS
+                PREMIUM
+                <span>GIFT CARDS</span>
             </h1>
 
             <p>
-                Shop popular gift cards and digital vouchers
-                with fast delivery from Pantheos Global Store.
+                Get your favourite digital gift cards,
+                vouchers and entertainment products
+                at competitive prices.
             </p>
 
-            <div class="hero-trust">
 
-                <span>⚡ Fast Delivery</span>
-                <span>🔒 Secure</span>
-                <span>✓ Trusted</span>
-                <span>🛡️ 24/7 Support</span>
+            <div class="hero-trust-row">
+
+                <span>
+                    ⚡ Fast Delivery
+                </span>
+
+                <span>
+                    🔒 Secure
+                </span>
+
+                <span>
+                    ⭐ Trusted
+                </span>
+
+                <span>
+                    🛡️ 24/7 Support
+                </span>
 
             </div>
 
@@ -178,1169 +275,1394 @@
 
 
 <!-- =====================================================
-     MAIN
+     PRODUCTS
 ===================================================== -->
 
-<main class="product-main" id="products">
+<section
+    class="topup-section"
+    id="products"
+>
 
-    <div class="container product-layout">
-
-
-        <!-- =================================================
-             PRODUCTS
-        ================================================= -->
-
-        <div class="product-left">
+<div class="container">
 
 
-            <!-- CUSTOMER INFORMATION -->
+    <div class="section-heading">
 
-            <section class="order-section reveal">
+        <span class="section-label">
+            GIFT CARD MARKETPLACE
+        </span>
 
-                <div class="section-heading">
+        <h2>
+            Choose Your Gift Card
+        </h2>
 
-                    <span class="section-number">
-                        01
-                    </span>
+        <p>
+            Select a product below and place your
+            order directly through WhatsApp.
+        </p>
 
-                    <div>
+    </div>
 
-                        <span class="eyebrow">
-                            ORDER INFORMATION
-                        </span>
 
-                        <h2>
-                            Enter Your Details
-                        </h2>
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
 
-                    </div>
+    <div class="gift-search-wrapper">
 
+        <input
+            type="search"
+            id="giftSearch"
+            placeholder="Search gift cards..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <!-- =================================================
+         PRODUCT LIST
+    ================================================== -->
+
+    <div
+        class="premium-horizontal-list"
+        id="giftCardList"
+    >
+
+
+        <!-- GOOGLE PLAY -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Google Play"
+            data-package="Google Play Gift Card ₹1000"
+            data-price="₹980"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ▶️
                 </div>
 
+            </div>
 
-                <div class="input-card">
+            <div class="product-content">
 
-                    <label for="customerName">
-                        Your Name
-                    </label>
+                <span class="product-category">
+                    GOOGLE PLAY
+                </span>
 
-                    <div class="input-wrapper">
+                <h3>
+                    Google Play
+                </h3>
 
-                        <span class="input-icon">
-                            👤
-                        </span>
+                <p>
+                    ₹1000 Google Play Gift Card
+                </p>
 
-                        <input
-                            type="text"
-                            id="customerName"
-                            placeholder="Enter your name"
-                            autocomplete="name"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="input-card">
-
-                    <label for="customerContact">
-                        WhatsApp Number
-                    </label>
-
-                    <div class="input-wrapper">
-
-                        <span class="input-icon">
-                            📱
-                        </span>
-
-                        <input
-                            type="tel"
-                            id="customerContact"
-                            placeholder="Enter your WhatsApp number"
-                            inputmode="tel"
-                            autocomplete="tel"
-                        >
-
-                    </div>
-
-                    <small>
-                        We use this number to process your order.
-                    </small>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 NORDVPN
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            VPN
-                        </span>
-
-                        <h2>
-                            NordVPN
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="NordVPN - 1 Month"
-                        data-price="150"
-                    >
-
-                        <div class="price-card-icon">
-                            🛡️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                NordVPN
-                            </strong>
-
-                            <span>
-                                1 Month
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-
-                            <strong>
-                                ₹150
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="NordVPN - 3 Months"
-                        data-price="350"
-                    >
-
-                        <div class="price-card-icon">
-                            🛡️
-                        </div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                NordVPN
-                            </strong>
-
-                            <span>
-                                3 Months
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-
-                            <strong>
-                                ₹350
-                            </strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">
-                            →
-                        </div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 SHOPPING / FOOD
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            POPULAR VOUCHERS
-                        </span>
-
-                        <h2>
-                            Shopping & Food
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Google Play Gift Card ₹1000"
-                        data-price="980"
-                    >
-
-                        <div class="price-card-icon">▶️</div>
-
-                        <div class="price-card-main">
-
-                            <strong>
-                                Google Play
-                            </strong>
-
-                            <span>
-                                ₹1,000 Gift Card
-                            </span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹980</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Flipkart Gift Card ₹1000"
-                        data-price="990"
-                    >
-
-                        <div class="price-card-icon">🛍️</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Flipkart</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹990</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Domino's Pizza Gift Card ₹1000"
-                        data-price="929"
-                    >
-
-                        <div class="price-card-icon">🍕</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Domino's Pizza</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹929</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Pizza Hut Gift Card ₹1000"
-                        data-price="950"
-                    >
-
-                        <div class="price-card-icon">🍕</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Pizza Hut</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹950</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Starbucks E-Gift Card ₹1000"
-                        data-price="960"
-                    >
-
-                        <div class="price-card-icon">☕</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Starbucks</strong>
-
-                            <span>₹1,000 E-Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹960</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="KFC E-Gift Card ₹1000"
-                        data-price="960"
-                    >
-
-                        <div class="price-card-icon">🍗</div>
-
-                        <div class="price-card-main">
-
-                            <strong>KFC</strong>
-
-                            <span>₹1,000 E-Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹960</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Subway E-Gift Card ₹2000"
-                        data-price="1900"
-                    >
-
-                        <div class="price-card-icon">🥪</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Subway</strong>
-
-                            <span>₹2,000 E-Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹1,900</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Myntra E-Gift Card ₹1000"
-                        data-price="980"
-                    >
-
-                        <div class="price-card-icon">👗</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Myntra</strong>
-
-                            <span>₹1,000 E-Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹980</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Nykaa E-Gift Card ₹1000"
-                        data-price="975"
-                    >
-
-                        <div class="price-card-icon">💄</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Nykaa</strong>
-
-                            <span>₹1,000 E-Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹975</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="FirstCry Gift Card ₹1000"
-                        data-price="965"
-                    >
-
-                        <div class="price-card-icon">🧸</div>
-
-                        <div class="price-card-main">
-
-                            <strong>FirstCry</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹965</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Zomato Gift Card ₹1000"
-                        data-price="990"
-                    >
-
-                        <div class="price-card-icon">🍽️</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Zomato</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹990</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Swiggy Gift Card ₹1000"
-                        data-price="990"
-                    >
-
-                        <div class="price-card-icon">🍔</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Swiggy</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹990</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Amazon Shopping Gift Card ₹1000"
-                        data-price="995"
-                    >
-
-                        <div class="price-card-icon">📦</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Amazon Shopping</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹995</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 ENTERTAINMENT
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        04
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            ENTERTAINMENT
-                        </span>
-
-                        <h2>
-                            Movies & Travel
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="BookMyShow Gift Card ₹1000"
-                        data-price="980"
-                    >
-
-                        <div class="price-card-icon">🎬</div>
-
-                        <div class="price-card-main">
-
-                            <strong>BookMyShow</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹980</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="PVR Gift Card ₹1000"
-                        data-price="860"
-                    >
-
-                        <div class="price-card-icon">🎥</div>
-
-                        <div class="price-card-main">
-
-                            <strong>PVR</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹860</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Uber Gift Card ₹1000"
-                        data-price="975"
-                    >
-
-                        <div class="price-card-icon">🚕</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Uber</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹975</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="MakeMyTrip Gift Card ₹1000"
-                        data-price="965"
-                    >
-
-                        <div class="price-card-icon">✈️</div>
-
-                        <div class="price-card-main">
-
-                            <strong>MakeMyTrip</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹965</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Goibibo Hotel Gift Card ₹1000"
-                        data-price="895"
-                    >
-
-                        <div class="price-card-icon">🏨</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Goibibo Hotel</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹895</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 GAMING
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        05
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            GAMING
-                        </span>
-
-                        <h2>
-                            Gaming Gift Cards
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="premium-price-list">
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="Steam Gift Card ₹1000"
-                        data-price="980"
-                    >
-
-                        <div class="price-card-icon">🎮</div>
-
-                        <div class="price-card-main">
-
-                            <strong>Steam</strong>
-
-                            <span>₹1,000 Gift Card</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹980</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="PlayStation Gift Card ₹1000"
-                        data-price="1199"
-                    >
-
-                        <div class="price-card-icon">🎮</div>
-
-                        <div class="price-card-main">
-
-                            <strong>PlayStation</strong>
-
-                            <span>₹1,000 Gift Card • ₹1,300 Value</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹1,199</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="price-card"
-                        data-product="PlayStation Gift Card ₹3000"
-                        data-price="3150"
-                    >
-
-                        <div class="price-card-icon">🎮</div>
-
-                        <div class="price-card-main">
-
-                            <strong>PlayStation</strong>
-
-                            <span>₹3,000 Gift Card • ₹3,400 Value</span>
-
-                        </div>
-
-                        <div class="price-card-price">
-
-                            <small>OUR PRICE</small>
-                            <strong>₹3,150</strong>
-
-                        </div>
-
-                        <div class="price-card-arrow">→</div>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 ORDER INFO
-            ================================================= -->
-
-            <section class="order-section reveal">
-
-                <div class="section-heading">
-
-                    <span class="section-number">
-                        06
-                    </span>
-
-                    <div>
-
-                        <span class="eyebrow">
-                            IMPORTANT
-                        </span>
-
-                        <h2>
-                            Before Ordering
-                        </h2>
-
-                    </div>
-
-                </div>
-
-
-                <div class="notice-card">
-
-                    <div class="notice-icon">
-                        ⚠️
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Please check your product carefully
-                        </h3>
-
-                        <p>
-                            Gift-card availability, denomination,
-                            region and delivery details may vary.
-                            Confirm the selected product with
-                            Pantheos Support before payment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
-
-
-        <!-- =================================================
-             ORDER SUMMARY
-        ================================================= -->
-
-        <aside class="order-summary-container">
-
-            <div class="order-summary">
-
-                <div class="summary-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            YOUR ORDER
-                        </span>
-
-                        <h2>
-                            Order Summary
-                        </h2>
-
-                    </div>
-
-                    <span class="summary-status">
-                        ● READY
-                    </span>
-
-                </div>
-
-
-                <div class="summary-game">
-
-                    <div class="summary-product-icon">
-                        🎁
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Gift Cards
-                        </strong>
-
-                        <span>
-                            Digital Product
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-details">
-
-                    <div class="summary-row">
-
-                        <span>
-                            Name
-                        </span>
-
-                        <strong id="summaryName">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            WhatsApp
-                        </span>
-
-                        <strong id="summaryContact">
-                            Not entered
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Product
-                        </span>
-
-                        <strong id="summaryProduct">
-                            Not selected
-                        </strong>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span>
-                            Price
-                        </span>
-
-                        <strong id="summaryPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
-
-                    <strong id="summaryTotal">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div
-                    id="selectionMessage"
-                    class="selection-message"
-                >
-                    Enter your details and select a product.
-                </div>
-
-
-                <button
-                    type="button"
-                    id="orderButton"
-                    class="order-button"
-                    disabled
-                >
-
-                    <span>
-                        ORDER VIA WHATSAPP
-                    </span>
+                <div class="product-bottom">
 
                     <strong>
-                        →
+                        ₹980
                     </strong>
 
-                </button>
-
-
-                <div class="payment-note">
-
-                    🔒 Secure ordering
-                    <br>
-                    ⚡ Fast • Safe • Trusted
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
 
                 </div>
 
             </div>
 
-        </aside>
+        </article>
+
+
+        <!-- FLIPKART -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Flipkart"
+            data-package="Flipkart Gift Card ₹1000"
+            data-price="₹990"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🛒
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SHOPPING
+                </span>
+
+                <h3>
+                    Flipkart
+                </h3>
+
+                <p>
+                    ₹1000 Flipkart Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹990
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- DOMINOS -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Dominos Pizza"
+            data-package="Domino's Pizza Gift Card ₹1000"
+            data-price="₹929"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🍕
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    Domino's Pizza
+                </h3>
+
+                <p>
+                    ₹1000 Domino's Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹929
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PIZZA HUT -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Pizza Hut"
+            data-package="Pizza Hut Gift Card ₹1000"
+            data-price="₹950"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🍕
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    Pizza Hut
+                </h3>
+
+                <p>
+                    ₹1000 Pizza Hut Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹950
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- STARBUCKS -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Starbucks"
+            data-package="Starbucks E-Gift Card ₹1000"
+            data-price="₹960"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ☕
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD & DRINK
+                </span>
+
+                <h3>
+                    Starbucks
+                </h3>
+
+                <p>
+                    ₹1000 Starbucks E-Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹960
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- KFC -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="KFC"
+            data-package="KFC E-Gift Card ₹1000"
+            data-price="₹960"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🍗
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    KFC
+                </h3>
+
+                <p>
+                    ₹1000 KFC E-Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹960
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SUBWAY -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Subway"
+            data-package="Subway E-Gift Card ₹2000"
+            data-price="₹1900"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🥪
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    Subway
+                </h3>
+
+                <p>
+                    ₹2000 Subway E-Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1900
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MYNTRA -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Myntra"
+            data-package="Myntra E-Gift Card ₹1000"
+            data-price="₹980"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    👗
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FASHION
+                </span>
+
+                <h3>
+                    Myntra
+                </h3>
+
+                <p>
+                    ₹1000 Myntra E-Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹980
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- NYKAA -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Nykaa"
+            data-package="Nykaa E-Gift Card ₹1000"
+            data-price="₹975"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    💄
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    BEAUTY
+                </span>
+
+                <h3>
+                    Nykaa
+                </h3>
+
+                <p>
+                    ₹1000 Nykaa E-Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹975
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- FIRSTCRY -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="FirstCry"
+            data-package="FirstCry Gift Card ₹1000"
+            data-price="₹965"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🧸
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SHOPPING
+                </span>
+
+                <h3>
+                    FirstCry
+                </h3>
+
+                <p>
+                    ₹1000 FirstCry Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹965
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ZOMATO -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Zomato"
+            data-package="Zomato Gift Card ₹1000"
+            data-price="₹990"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🍔
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    Zomato
+                </h3>
+
+                <p>
+                    ₹1000 Zomato Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹990
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SWIGGY -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Swiggy"
+            data-package="Swiggy Gift Card ₹1000"
+            data-price="₹990"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🛵
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    FOOD
+                </span>
+
+                <h3>
+                    Swiggy
+                </h3>
+
+                <p>
+                    ₹1000 Swiggy Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹990
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- AMAZON -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Amazon Shopping"
+            data-package="Amazon Shopping Gift Card ₹1000"
+            data-price="₹995"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    📦
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    SHOPPING
+                </span>
+
+                <h3>
+                    Amazon Shopping
+                </h3>
+
+                <p>
+                    ₹1000 Amazon Shopping Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹995
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- BOOKMYSHOW -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="BookMyShow"
+            data-package="BookMyShow Gift Card ₹1000"
+            data-price="₹980"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🎬
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    ENTERTAINMENT
+                </span>
+
+                <h3>
+                    BookMyShow
+                </h3>
+
+                <p>
+                    ₹1000 BookMyShow Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹980
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PVR -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="PVR"
+            data-package="PVR Gift Card ₹1000"
+            data-price="₹860"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🎥
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    ENTERTAINMENT
+                </span>
+
+                <h3>
+                    PVR
+                </h3>
+
+                <p>
+                    ₹1000 PVR Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹860
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- UBER -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Uber"
+            data-package="Uber Gift Card ₹1000"
+            data-price="₹975"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🚕
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    TRAVEL
+                </span>
+
+                <h3>
+                    Uber
+                </h3>
+
+                <p>
+                    ₹1000 Uber Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹975
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- MAKEMYTRIP -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="MakeMyTrip"
+            data-package="MakeMyTrip Gift Card ₹1000"
+            data-price="₹965"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    ✈️
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    TRAVEL
+                </span>
+
+                <h3>
+                    MakeMyTrip
+                </h3>
+
+                <p>
+                    ₹1000 MakeMyTrip Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹965
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- GOIBIBO -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Goibibo Hotel"
+            data-package="Goibibo Hotel Gift Card ₹1000"
+            data-price="₹895"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🏨
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    TRAVEL
+                </span>
+
+                <h3>
+                    Goibibo Hotel
+                </h3>
+
+                <p>
+                    ₹1000 Goibibo Hotel Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹895
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- STEAM -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="Steam"
+            data-package="Steam Gift Card ₹1000"
+            data-price="₹980"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🎮
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    GAMING
+                </span>
+
+                <h3>
+                    Steam
+                </h3>
+
+                <p>
+                    ₹1000 Steam Gift Card
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹980
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYSTATION 1000 -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="PlayStation 1000"
+            data-package="PlayStation Gift Card ₹1000"
+            data-price="₹1199"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🎮
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    GAMING
+                </span>
+
+                <h3>
+                    PlayStation
+                </h3>
+
+                <p>
+                    ₹1000 Value • ₹1300 Listed Value
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹1199
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYSTATION 3000 -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="PlayStation 3000"
+            data-package="PlayStation Gift Card ₹3000"
+            data-price="₹3150"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🎮
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    GAMING
+                </span>
+
+                <h3>
+                    PlayStation
+                </h3>
+
+                <p>
+                    ₹3000 Value • ₹3400 Listed Value
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹3150
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- NORDVPN -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="NordVPN"
+            data-package="NordVPN One Month"
+            data-price="₹150"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🛡️
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    DIGITAL SERVICE
+                </span>
+
+                <h3>
+                    NordVPN
+                </h3>
+
+                <p>
+                    One Month
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹150
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- NORDVPN 3 MONTHS -->
+
+        <article
+            class="premium-product-card gift-card"
+            data-name="NordVPN Three Months"
+            data-package="NordVPN Three Months"
+            data-price="₹350"
+            tabindex="0"
+        >
+
+            <div class="product-image">
+
+                <div class="product-icon-large">
+                    🛡️
+                </div>
+
+            </div>
+
+            <div class="product-content">
+
+                <span class="product-category">
+                    DIGITAL SERVICE
+                </span>
+
+                <h3>
+                    NordVPN
+                </h3>
+
+                <p>
+                    Three Months
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        ₹350
+                    </strong>
+
+                    <button
+                        type="button"
+                        class="select-product"
+                    >
+                        Select
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
-</main>
 
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
 
-<!-- =====================================================
-     SUPPORT
-===================================================== -->
+    <aside
+        class="order-summary-card"
+        id="orderSummary"
+    >
 
-<section class="product-support">
-
-    <div class="container">
-
-        <div class="support-card">
+        <div class="summary-header">
 
             <div>
 
-                <span class="eyebrow">
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+                <h2>
+                    Order Summary
+                </h2>
+
+            </div>
+
+            <div class="summary-status">
+                Pending
+            </div>
+
+        </div>
+
+
+        <div class="summary-body">
+
+            <div class="summary-row">
+
+                <span>
+                    Product
+                </span>
+
+                <strong id="summaryProduct">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Price
+                </span>
+
+                <strong
+                    id="summaryPrice"
+                    class="summary-total"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="payment-status">
+
+                <span>
+                    Payment Status
+                </span>
+
+                <strong>
+                    Pending
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="order-button"
+                id="orderButton"
+            >
+
+                <span>
+                    ORDER VIA WHATSAPP
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p class="order-note">
+
+                📩 After placing your order,
+                send your payment screenshot
+                on WhatsApp.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SUPPORT CTA
+===================================================== -->
+
+<section class="support-cta">
+
+    <div class="container">
+
+        <div class="support-cta-inner">
+
+            <div>
+
+                <span class="section-label">
                     NEED HELP?
                 </span>
 
                 <h2>
-                    Pantheos Support is available 24/7
+                    Gift Card Support Available 24/7
                 </h2>
 
                 <p>
-                    Contact us before payment if you need
-                    help selecting a gift card.
+                    Need help choosing a gift card?
+                    Contact Pantheos Global Store.
                 </p>
 
             </div>
@@ -1351,15 +1673,17 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
-                    class="support-btn"
+                    rel="noopener"
+                    class="primary-btn"
                 >
-                    WhatsApp
+                    WhatsApp Support
                 </a>
 
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
-                    class="support-btn secondary"
+                    rel="noopener"
+                    class="secondary-btn"
                 >
                     Telegram
                 </a>
@@ -1372,6 +1696,8 @@
 
 </section>
 
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -1381,7 +1707,8 @@
 
     <div class="container">
 
-        <div class="footer-main">
+        <div class="footer-grid">
+
 
             <div class="footer-brand">
 
@@ -1395,45 +1722,85 @@
                 </h3>
 
                 <p>
-                    Fast • Secure • Trusted
+                    Fast, secure and trusted gaming
+                    top-ups and digital services.
                 </p>
 
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Games</h4>
-
-                <a href="mlbb.html">Mobile Legends</a>
-                <a href="bgmi.html">BGMI</a>
-                <a href="freefire.html">Free Fire</a>
-                <a href="codm.html">COD Mobile</a>
-                <a href="valorant.html">Valorant</a>
-                <a href="genshin.html">Genshin Impact</a>
-                <a href="hsr.html">Honkai Star Rail</a>
+                <strong>
+                    Fast • Secure • Trusted
+                </strong>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>Services</h4>
+                <h4>
+                    Games
+                </h4>
 
-                <a href="giftcards.html">Gift Cards</a>
-                <a href="ott.html">OTT Services</a>
-                <a href="boosting.html">Boosting</a>
+                <a href="mlbb.html">
+                    Mobile Legends
+                </a>
+
+                <a href="bgmi.html">
+                    BGMI
+                </a>
+
+                <a href="freefire.html">
+                    Free Fire
+                </a>
+
+                <a href="codm.html">
+                    COD Mobile
+                </a>
+
+                <a href="valorant.html">
+                    Valorant
+                </a>
+
+                <a href="genshin.html">
+                    Genshin Impact
+                </a>
+
+                <a href="hsr.html">
+                    Honkai Star Rail
+                </a>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>Community</h4>
+                <h4>
+                    Services
+                </h4>
+
+                <a href="giftcards.html">
+                    Gift Cards
+                </a>
+
+                <a href="ott.html">
+                    OTT Services
+                </a>
+
+                <a href="boosting.html">
+                    Social Boosting
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Community
+                </h4>
 
                 <a
                     href="https://instagram.com/pantheosglobalstore"
                     target="_blank"
+                    rel="noopener"
                 >
                     Instagram
                 </a>
@@ -1441,6 +1808,7 @@
                 <a
                     href="https://t.me/pantheosglobal"
                     target="_blank"
+                    rel="noopener"
                 >
                     Telegram
                 </a>
@@ -1448,6 +1816,7 @@
                 <a
                     href="https://wa.me/919310651934"
                     target="_blank"
+                    rel="noopener"
                 >
                     WhatsApp
                 </a>
@@ -1459,9 +1828,10 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © 2026 Pantheos Global Store
-            </span>
+            <p>
+                © 2026 Pantheos Global Store.
+                All rights reserved.
+            </p>
 
             <span>
                 Fast • Secure • Trusted
@@ -1481,8 +1851,9 @@
 <a
     href="https://wa.me/919310651934"
     target="_blank"
+    rel="noopener"
     class="floating-whatsapp"
-    aria-label="Contact Pantheos on WhatsApp"
+    aria-label="WhatsApp"
 >
 
     <img
@@ -1498,8 +1869,9 @@
 ===================================================== -->
 
 <button
-    id="backToTop"
     class="back-to-top"
+    id="backToTop"
+    type="button"
     aria-label="Back to top"
 >
     ↑
@@ -1515,246 +1887,263 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-    const nameInput =
-        document.getElementById("customerName");
+        const summaryProduct =
+            document.getElementById(
+                "summaryProduct"
+            );
 
-    const contactInput =
-        document.getElementById("customerContact");
+        const summaryPrice =
+            document.getElementById(
+                "summaryPrice"
+            );
 
-    const nameSummary =
-        document.getElementById("summaryName");
+        const orderButton =
+            document.getElementById(
+                "orderButton"
+            );
 
-    const contactSummary =
-        document.getElementById("summaryContact");
+        const search =
+            document.getElementById(
+                "giftSearch"
+            );
 
-    const productSummary =
-        document.getElementById("summaryProduct");
+        const cards =
+            document.querySelectorAll(
+                ".gift-card"
+            );
 
-    const priceSummary =
-        document.getElementById("summaryPrice");
 
-    const totalSummary =
-        document.getElementById("summaryTotal");
+        let selectedProduct = "";
 
-    const orderButton =
-        document.getElementById("orderButton");
+        let selectedPrice = "";
 
-    const selectionMessage =
-        document.getElementById("selectionMessage");
 
-    const priceCards =
-        document.querySelectorAll(".price-card");
+        /* ============================================
+           PRODUCT SELECTION
+        ============================================ */
 
+        cards.forEach(
+            card => {
 
-    let selectedProduct = "";
-    let selectedPrice = "";
+                const selectButton =
+                    card.querySelector(
+                        ".select-product"
+                    );
 
 
-    /* ==========================================
-       NAME
-    ========================================== */
+                function selectProduct() {
 
-    nameInput.addEventListener("input", () => {
+                    cards.forEach(
+                        item => {
 
-        const value =
-            nameInput.value.trim();
+                            item.classList.remove(
+                                "selected"
+                            );
 
-        nameSummary.textContent =
-            value || "Not entered";
+                        }
+                    );
 
-        updateOrderState();
 
-    });
+                    card.classList.add(
+                        "selected"
+                    );
 
 
-    /* ==========================================
-       CONTACT
-    ========================================== */
+                    selectedProduct =
+                        card.dataset.package ||
+                        card.dataset.name ||
+                        "";
 
-    contactInput.addEventListener("input", () => {
 
-        const value =
-            contactInput.value.trim();
+                    selectedPrice =
+                        card.dataset.price ||
+                        "";
 
-        contactSummary.textContent =
-            value || "Not entered";
 
-        updateOrderState();
+                    summaryProduct.textContent =
+                        selectedProduct;
 
-    });
 
+                    summaryPrice.textContent =
+                        selectedPrice;
 
-    /* ==========================================
-       PRODUCT SELECTION
-    ========================================== */
 
-    priceCards.forEach(card => {
+                    document
+                        .getElementById(
+                            "orderSummary"
+                        )
+                        ?.classList.add(
+                            "summary-active"
+                        );
 
-        card.addEventListener("click", () => {
+                }
 
-            priceCards.forEach(item => {
 
-                item.classList.remove("selected");
+                card.addEventListener(
+                    "click",
+                    event => {
 
-            });
+                        if (
+                            event.target.closest(
+                                "button"
+                            )
+                        ) {
 
-            card.classList.add("selected");
+                            selectProduct();
 
-            selectedProduct =
-                card.dataset.product;
+                            return;
 
-            selectedPrice =
-                card.dataset.price;
+                        }
 
+                        selectProduct();
 
-            productSummary.textContent =
-                selectedProduct;
+                    }
+                );
 
 
-            const formattedPrice =
-                Number(selectedPrice)
-                    .toLocaleString("en-IN");
+                selectButton?.addEventListener(
+                    "click",
+                    event => {
 
+                        event.stopPropagation();
 
-            priceSummary.textContent =
-                "₹" + formattedPrice;
+                        selectProduct();
 
-            totalSummary.textContent =
-                "₹" + formattedPrice;
+                    }
+                );
 
 
-            updateOrderState();
+                card.addEventListener(
+                    "keydown",
+                    event => {
 
-        });
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
 
-    });
+                            event.preventDefault();
 
+                            selectProduct();
 
-    /* ==========================================
-       VALIDATION
-    ========================================== */
+                        }
 
-    function updateOrderState() {
-
-        const name =
-            nameInput.value.trim();
-
-        const contact =
-            contactInput.value.trim();
-
-
-        if (
-            name &&
-            contact &&
-            selectedProduct
-        ) {
-
-            orderButton.disabled = false;
-
-            selectionMessage.textContent =
-                "Your order is ready. Continue through WhatsApp.";
-
-            selectionMessage.classList.add("ready");
-
-        } else {
-
-            orderButton.disabled = true;
-
-            selectionMessage.classList.remove("ready");
-
-
-            if (!name) {
-
-                selectionMessage.textContent =
-                    "Enter your name.";
-
-            } else if (!contact) {
-
-                selectionMessage.textContent =
-                    "Enter your WhatsApp number.";
-
-            } else {
-
-                selectionMessage.textContent =
-                    "Select a gift card to continue.";
+                    }
+                );
 
             }
-
-        }
-
-    }
+        );
 
 
-    /* ==========================================
-       WHATSAPP ORDER
-    ========================================== */
+        /* ============================================
+           SEARCH
+        ============================================ */
 
-    orderButton.addEventListener("click", () => {
+        search?.addEventListener(
+            "input",
+            () => {
 
-        const name =
-            nameInput.value.trim();
-
-        const contact =
-            contactInput.value.trim();
-
-
-        if (
-            !name ||
-            !contact ||
-            !selectedProduct
-        ) {
-
-            return;
-
-        }
+                const query =
+                    search.value
+                        .trim()
+                        .toLowerCase();
 
 
-        const formattedPrice =
-            Number(selectedPrice)
-                .toLocaleString("en-IN");
+                cards.forEach(
+                    card => {
+
+                        const name =
+                            (
+                                card.dataset.name ||
+                                ""
+                            ).toLowerCase();
 
 
-        const message =
+                        const packageName =
+                            (
+                                card.dataset.package ||
+                                ""
+                            ).toLowerCase();
 
+
+                        const matches =
+                            !query ||
+                            name.includes(query) ||
+                            packageName.includes(query);
+
+
+                        card.style.display =
+                            matches
+                                ? ""
+                                : "none";
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ============================================
+           WHATSAPP
+        ============================================ */
+
+        orderButton?.addEventListener(
+            "click",
+            () => {
+
+                if (!selectedProduct) {
+
+                    alert(
+                        "Please select a gift card first."
+                    );
+
+                    return;
+
+                }
+
+
+                const message =
 `🎁 Pantheos Global Store Order
 
 Category: Gift Card
-
-Customer Name:
-${name}
-
-WhatsApp Number:
-${contact}
 
 Product:
 ${selectedProduct}
 
 Price:
-₹${formattedPrice}
+${selectedPrice}
 
 Payment Status:
 Pending
 
 Please send payment screenshot after payment.
 
-⚡ Fast • Safe • Trusted`;
+⚡ Fast • Secure • Trusted`;
 
 
-        const whatsappURL =
-            "https://wa.me/919310651934?text=" +
-            encodeURIComponent(message);
+                const whatsappURL =
+                    "https://wa.me/919310651934?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            }
         );
 
-    });
-
-});
+    }
+);
 
 </script>
 
