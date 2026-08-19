@@ -653,6 +653,46 @@ function initFAQ() {
 function initBackToTop() {
 
     const button =
+        document.querySelector(".back-to-top") ||
+        document.querySelector("#backToTop") ||
+        document.querySelector("[data-back-top]");
+
+    if (!button) return;
+
+    function updateBackToTop() {
+
+        if (window.scrollY > 350) {
+            button.classList.add("visible");
+        } else {
+            button.classList.remove("visible");
+        }
+
+    }
+
+    updateBackToTop();
+
+    window.addEventListener(
+        "scroll",
+        updateBackToTop,
+        { passive: true }
+    );
+
+    button.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+    const button =
         document.querySelector(
             ".back-to-top"
         ) ||
